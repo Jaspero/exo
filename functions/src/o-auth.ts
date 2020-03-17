@@ -1,10 +1,10 @@
-import * as functions from "firebase-functions";
-import * as express from "express";
-import * as simpleOauth from "simple-oauth2";
-import * as randomstring from "randomstring";
+import * as functions from 'firebase-functions';
+import * as express from 'express';
+import * as simpleOauth from 'simple-oauth2';
+import * as randomstring from 'randomstring';
 
 const oauth = functions.config().oauth;
-const oauth_provider = oauth.provider || "github";
+const oauth_provider = oauth.provider || 'github';
 
 function getScript(mess: string, content: any) {
   return `<!doctype html><html><body><script>
@@ -30,33 +30,33 @@ const oauth2 = simpleOauth.create({
     secret: oauth.client_secret
   },
   auth: {
-    tokenHost: oauth.git_hostname || "https://github.com",
-    tokenPath: oauth.token_path || "/login/oauth/access_token",
-    authorizePath: oauth.authorize_path || "/login/oauth/authorize"
+    tokenHost: oauth.git_hostname || 'https://github.com',
+    tokenPath: oauth.token_path || '/login/oauth/access_token',
+    authorizePath: oauth.authorize_path || '/login/oauth/authorize'
   }
 });
 
 const oauthApp = express();
 
-oauthApp.get("/auth", (req, res) => {
+oauthApp.get('/auth', (req, res) => {
   const authorizationUri = oauth2.authorizationCode.authorizeURL({
     redirect_uri: oauth.redirect_url,
-    scope: oauth.scopes || "repo,user",
+    scope: oauth.scopes || 'repo,user',
     state: randomstring.generate(32)
   });
 
   res.redirect(authorizationUri);
 });
 
-oauthApp.get("/callback", (req, res) => {
+oauthApp.get('/callback', (req, res) => {
   const options: any = {
     code: req.query.code
   };
 
-  if (oauth_provider === "gitlab") {
+  if (oauth_provider === 'gitlab') {
     options.client_id = oauth.client_id;
     options.client_secret = oauth.client_secret;
-    options.grant_type = "authorization_code";
+    options.grant_type = 'authorization_code';
     options.redirect_uri = oauth.redirect_url;
   }
 
@@ -65,23 +65,23 @@ oauthApp.get("/callback", (req, res) => {
     .then(result => {
       const token = oauth2.accessToken.create(result);
       return res.send(
-        getScript("success", {
+        getScript('success', {
           token: token.token.access_token as string,
           provider: oauth_provider
         })
       );
     })
     .catch(error => {
-      console.error("Access Token Error", error.message);
-      res.send(getScript("error", error));
+      console.error('Access Token Error', error.message);
+      res.send(getScript('error', error));
     });
 });
 
-oauthApp.get("/success", (req, res) => {
-  res.send("");
+oauthApp.get('/success', (req, res) => {
+  res.send('');
 });
 
-oauthApp.get("/", (req, res) => {
+oauthApp.get('/', (req, res) => {
   res.redirect(301, `/oauth/auth`);
 });
 
