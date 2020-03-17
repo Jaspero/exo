@@ -1,12 +1,12 @@
 exports.config = {
   projectRoot: "./src",
   projectName: "exo",
-  outDir: '../docs',
+  outDir: './dist/static',
   routes: {
     '/blog/:id': {
       type: 'contentFolder',
       id: {
-        folder: "./../docs/collections/blog"
+        folder: "./dist/collections/blog"
       }
     },
   }

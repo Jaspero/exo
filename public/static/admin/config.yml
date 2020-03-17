@@ -7,7 +7,7 @@ backend:
 publish_mode: editorial_workflow
 
 # Media files will be stored in the repo under docs/uploads
-media_folder: "public/uploads"
+media_folder: "public/static/uploads"
 
 # The src attribute for uploaded media will begin with /uploads
 public_folder: "/uploads"
@@ -15,7 +15,7 @@ public_folder: "/uploads"
 collections:
   - name: 'blog'
     label: 'Blog'
-    folder: 'docs/collections/blog'
+    folder: 'public/static/collections/blog'
     create: true
     slug: '{{slug}}'
     editor:
@@ -34,7 +34,7 @@ collections:
     files:
       - label: 'Home'
         name: 'home'
-        file: 'docs/collections/pages/home.md'
+        file: 'public/static/collections/pages/home.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'hidden', default: 'home' }
           - { label: 'Layout', name: 'title', widget: 'hidden', default: 'home' }

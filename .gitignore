@@ -1,5 +1,3 @@
 node_modules
+.firebaserc
 .idea
-public/!*/admin
-public/!*/uploads
-public/!*/collections

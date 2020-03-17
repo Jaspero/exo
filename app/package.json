@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:scully": "scully --nw",
     "test": "ng test",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",

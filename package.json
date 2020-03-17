@@ -6,7 +6,11 @@
   "scripts": {
     "lint:app": "npm --prefix app run lint:fix",
     "lint:functions": "npm --prefix functions run lint:fix",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "cleanup": "del-cli \"public/**\"  \"!public\" \"!public/static\"",
+    "copy:collections": "cp -r public/static/collections app/dist/",
+    "copy:app": "cp -r app/dist/static/* public/",
+    "build:app": "npm --prefix app run build && npm run copy:collections && npm --prefix app run build:scully && npm run cleanup && npm run copy:app"
   },
   "repository": {
     "type": "git",
@@ -45,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "del-cli": "^3.0.0",
     "firebase-tools": "7.15.1",
     "husky": "4.2.3",
     "lint-staged": "10.0.8",
