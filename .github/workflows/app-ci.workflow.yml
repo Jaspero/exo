@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'app/**/*'
+      - '.github/workflows/app-ci.workflow.yml'
 jobs:
   lint:
     if: contains(github.ref, 'dev') || contains(github.ref, 'master')
@@ -50,3 +51,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: false

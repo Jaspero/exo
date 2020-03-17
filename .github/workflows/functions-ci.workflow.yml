@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'functions/**/*'
+      - '.github/workflows/functions-ci.workflow.yml'
 jobs:
   lint:
     if: contains(github.ref, 'dev') || contains(github.ref, 'master')
@@ -22,7 +23,7 @@ jobs:
         run: |
           npm ci
           npm --prefix functions ci
-          npm --prefix app run lint
+          npm --prefix functions run lint
   deploy:
     if: contains(github.ref, 'dev') || contains(github.ref, 'master')
     name: Deploy

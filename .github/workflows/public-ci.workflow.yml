@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'public/**/*'
+      - '.github/workflows/public-ci.workflow.yml'
 jobs:
   deploy:
     if: contains(github.ref, 'master')
