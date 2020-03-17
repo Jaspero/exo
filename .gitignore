@@ -1,2 +1,5 @@
-docs/!*/admin
-docs/!*/uploads
+node_modules
+.idea
+public/!*/admin
+public/!*/uploads
+public/!*/collections

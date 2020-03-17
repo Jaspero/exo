@@ -1,0 +1,53 @@
+{
+  "name": "exo",
+  "version": "0.0.1",
+  "description": "Source code for the exo website",
+  "main": "index.js",
+  "scripts": {
+    "lint:app": "npm --prefix app run lint:fix",
+    "lint:functions": "npm --prefix functions run lint:fix",
+    "deploy": "firebase deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaspero/exo.git"
+  },
+  "keywords": [
+    "jam",
+    "firebase",
+    "scully",
+    "angular"
+  ],
+  "author": "Jaspero Ltd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jaspero/exo/issues"
+  },
+  "homepage": "https://github.com/Jaspero/exo#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index -g"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "app/**/*.{ts}": [
+      "npm run lint:app",
+      "git add"
+    ],
+    "functions/**/*.{ts}": [
+      "npm run lint:functions",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "firebase-tools": "7.15.1",
+    "husky": "4.2.3",
+    "lint-staged": "10.0.8",
+    "prettier": "1.19.1"
+  }
+}
