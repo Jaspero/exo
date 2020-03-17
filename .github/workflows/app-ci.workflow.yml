@@ -1,0 +1,5 @@
+name: Lint and Build Website
+on:
+  push:
+    paths:
+      - 'app/**/*'
