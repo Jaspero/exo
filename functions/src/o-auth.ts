@@ -3,8 +3,8 @@ import * as express from 'express';
 import * as simpleOauth from 'simple-oauth2';
 import * as randomstring from 'randomstring';
 
-const oauth = functions.config().oauth;
-const oauth_provider = oauth.provider || 'github';
+const credentials = functions.config().oauth;
+const oauth_provider = credentials.provider || 'github';
 
 function getScript(mess: string, content: any) {
   return `<!doctype html><html><body><script>
@@ -26,13 +26,13 @@ function getScript(mess: string, content: any) {
 
 const oauth2 = simpleOauth.create({
   client: {
-    id: oauth.client_id,
-    secret: oauth.client_secret
+    id: credentials.client_id,
+    secret: credentials.client_secret
   },
   auth: {
-    tokenHost: oauth.git_hostname || 'https://github.com',
-    tokenPath: oauth.token_path || '/login/oauth/access_token',
-    authorizePath: oauth.authorize_path || '/login/oauth/authorize'
+    tokenHost: credentials.git_hostname || 'https://github.com',
+    tokenPath: credentials.token_path || '/login/oauth/access_token',
+    authorizePath: credentials.authorize_path || '/login/oauth/authorize'
   }
 });
 
@@ -40,8 +40,8 @@ const oauthApp = express();
 
 oauthApp.get('/auth', (req, res) => {
   const authorizationUri = oauth2.authorizationCode.authorizeURL({
-    redirect_uri: oauth.redirect_url,
-    scope: oauth.scopes || 'repo,user',
+    redirect_uri: credentials.redirect_url,
+    scope: credentials.scopes || 'repo,user',
     state: randomstring.generate(32)
   });
 
@@ -54,10 +54,10 @@ oauthApp.get('/callback', (req, res) => {
   };
 
   if (oauth_provider === 'gitlab') {
-    options.client_id = oauth.client_id;
-    options.client_secret = oauth.client_secret;
+    options.client_id = credentials.client_id;
+    options.client_secret = credentials.client_secret;
     options.grant_type = 'authorization_code';
-    options.redirect_uri = oauth.redirect_url;
+    options.redirect_uri = credentials.redirect_url;
   }
 
   return oauth2.authorizationCode
@@ -85,4 +85,4 @@ oauthApp.get('/', (req, res) => {
   res.redirect(301, `/oauth/auth`);
 });
 
-export const oAuth = functions.https.onRequest(oauthApp);
+export const oauth = functions.https.onRequest(oauthApp);

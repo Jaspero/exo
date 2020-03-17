@@ -3,7 +3,7 @@ backend:
   repo: Jaspero/exo
   branch: master
   base_url: https://us-central1-exo-brands.cloudfunctions.net/
-  auth_endpoint: /oAuth/auth
+  auth_endpoint: /oauth/auth
 publish_mode: editorial_workflow
 
 # Media files will be stored in the repo under docs/uploads
