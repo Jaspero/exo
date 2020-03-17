@@ -1,7 +1,8 @@
 {
   "name": "functions",
   "scripts": {
-    "lint": "tslint --project tsconfig.json --fix",
+    "lint": "tslint --project tsconfig.json",
+    "lint:fix": "tslint --project tsconfig.json --fix",
     "build": "tsc",
     "serve": "npm run build && firebase serve --only functions",
     "logs": "firebase functions:log"

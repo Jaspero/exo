@@ -22,7 +22,7 @@ jobs:
         run: |
           npm ci
           npm --prefix app ci
-          npm run lint:app
+          npm --prefix app run lint
   build:
     if: contains(github.ref, 'master')
     name: Deploy

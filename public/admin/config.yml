@@ -2,12 +2,12 @@ backend:
   name: github
   repo: Jaspero/exo
   branch: master
-  base_url: https://us-central1-exo-brands.cloudfunctions.net/oAuth
-  auth_endpoint: /oauth/auth
+  base_url: https://us-central1-exo-brands.cloudfunctions.net/
+  auth_endpoint: /oAuth/auth
 publish_mode: editorial_workflow
 
 # Media files will be stored in the repo under docs/uploads
-media_folder: "public/static/uploads"
+media_folder: "public/uploads"
 
 # The src attribute for uploaded media will begin with /uploads
 public_folder: "/uploads"
@@ -15,7 +15,7 @@ public_folder: "/uploads"
 collections:
   - name: 'blog'
     label: 'Blog'
-    folder: 'public/static/collections/blog'
+    folder: 'public/collections/blog'
     create: true
     slug: '{{slug}}'
     editor:
@@ -34,7 +34,7 @@ collections:
     files:
       - label: 'Home'
         name: 'home'
-        file: 'public/static/collections/pages/home.md'
+        file: 'public/collections/pages/home.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'hidden', default: 'home' }
           - { label: 'Layout', name: 'title', widget: 'hidden', default: 'home' }
