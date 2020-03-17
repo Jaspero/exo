@@ -1,0 +1,56 @@
+/* Sections
+*============================================================================*/
+
+.section {
+  padding: 50px 10em;
+
+  @media (max-width: 1400px) { padding: 50px 7em; }
+  @media (max-width: 900px) { padding: 50px 4em }
+  @media (max-width: 600px) { padding: 50px 1em; }
+}
+
+
+
+/* Container
+*============================================================================*/
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 4px;
+  background: var(--primary-primary);
+  box-shadow: var(--shadow);
+}
+
+
+
+/* Rating
+*============================================================================*/
+
+.rating {
+  color: var(--accent-theme);
+  & > * { margin-left: -2px; }
+}
+
+
+
+/* Headers
+*============================================================================*/
+
+.header { border-bottom: 1px solid var(--light-tertiary); }
+
+.header-with-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-no-button { padding-bottom: 6px; }
+
+
+
+/* Headers
+*============================================================================*/
+
+.favorite { color: var(--warn-theme); }

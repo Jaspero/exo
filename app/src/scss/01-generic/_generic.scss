@@ -1,0 +1,48 @@
+/**
+ * Generic
+ *
+ * Style for generic & low-spec HTML elements.
+ *
+ *============================================================================*/
+
+
+
+/* Fonts
+ *============================================================================*/
+
+@import url('https://fonts.googleapis.com/css?family=Asap:400,700&display=swap');
+
+
+
+/* HTML
+ *============================================================================*/
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Asap", sans-serif;
+}
+
+
+/* Body
+ *============================================================================*/
+
+body {
+  background-color: var(--light-theme);
+}
+
+
+
+/* Headings
+ *============================================================================*/
+
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: Bold;
+}
+
+h1 { font-size: 50px; }
+h2 { font-size: 35px; }
+h3 { font-size: 25px; }
+h4 { font-size: 20px; }
+h5 { font-size: 22px; }
