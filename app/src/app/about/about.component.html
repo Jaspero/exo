@@ -1,6 +1,12 @@
-<exo-header></exo-header>
-<section class="main bg-dark flex ai-center">
+<div class="wrapper" [@animate]="animate">
+<section class="main  flex ai-center">
   <div class="grid ai-center">
     <h1 class="p-a-m c-accent">This is about page</h1>
   </div>
 </section>
+<div class="col-5 ta-center">
+  <button class="bg-accent color-primary" (click)="toggleMove()">
+    <p>Test button</p>
+  </button>
+</div>
+</div>

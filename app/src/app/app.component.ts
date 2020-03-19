@@ -9,19 +9,21 @@ import {
   group,
   animateChild
 } from '@angular/animations';
-import {slideInAnimation} from './animations';
+import {slideInAnimation, aboutAnimate} from './animations';
 
 @Component({
   selector: 'exo-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [ slideInAnimation ]
+  animations: [ slideInAnimation, aboutAnimate]
 })
 
 export class AppComponent {
+
   title = 'exo';
+
   prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData[`animation`];
   }
 }
 

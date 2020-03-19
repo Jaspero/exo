@@ -5,61 +5,56 @@ import {
   style,
   animate,
   group,
-  animateChild
+  animateChild, state
 } from '@angular/animations';
 
 
 export const slideInAnimation =
   trigger('routeAnimations', [
-    transition('Contact => *', [
-      query(':enter, :leave',
-        style({ position: 'fixed', width: '100%' }),
-        { optional: true }),
-      group([
-        query(':enter', [
-          style({ transform: 'translateX(-100%)' }),
-          animate('0.5s ease-in-out',
-            style({ transform: 'translateX(0%)' }))
-        ], { optional: true }),
-        query(':leave', [
-          style({ transform:   'translateX(0%)'}),
-          animate('0.5s ease-in-out',
-            style({ transform: 'translateX(100%)' }))
-        ], { optional: true }),
-      ])
-    ]),
-    transition('Home => About', [
-      query(':enter, :leave',
-        style({ position: 'fixed',  width: '100%' }),
-        { optional: true }),
-      group([
-        query(':enter', [
-          style({ transform: 'translateX(100%)' }),
-          animate('0.5s ease-in-out',
-            style({ transform: 'translateX(0%)' }))
-        ], { optional: true }),
-        query(':leave', [
-          style({ transform: 'translateX(0%)' }),
-          animate('0.5s ease-in-out',
-            style({ transform: 'translateX(-100%)' }))
-        ], { optional: true }),
-      ])
-    ]),
-    transition('About => Home', [
-      query(':enter, :leave',
-        style({ position: 'fixed', width: '100%' }),
-        { optional: true }),
-      group([
-        query(':enter', [
-          style({ transform: 'translateX(100%)' }),
-          animate('0.5s ease-in-out',
-            style({ transform: 'translateX(0%)' }))
-        ], { optional: true }),
-        query(':leave', [
-          style({ transform: 'translateX(0%)' }),
-          animate('0.5s ease-in-out',
-            style({ transform: 'translateX(-100%)' }))
-        ], { optional: true }),
-      ])
-    ]),
+    // transition('Home <=> About', [
+    //   query(':enter, :leave ',
+    //     style({ position: 'absolute',  width: '100%', backgroundColor: 'black'}),
+    //     { optional: true }),
+    //   group([
+    //     query(':enter', [
+    //       style({ transform: 'translateY(100%)', backgroundColor: 'black', opacity: '1' }),
+    //       animate('1.5s ease-out',
+    //         style({ transform: 'translateY(0%)', backgroundColor: 'black', opacity: '1'})),
+    //     ], { optional: true }),
+    //     query(':leave', [
+    //       style({ transform: 'translateY(0%)', backgroundColor: 'black', opacity: '1'}),
+    //       animate('1.5s ease-out',
+    //         style({ transform: 'translateY(-100%)', backgroundColor: 'black', opacity: '1'}))
+    //     ], { optional: true }),
+    //   ])
+    // ])
   ]);
+
+export const aboutAnimate =
+  trigger('animate', [
+  state('inactive',
+    style({
+      transform: 'translateY(100%)',
+      backgroundColor: 'black',
+      height: '0%',
+      position: 'absolute',
+      bottom: '0',
+      left: '0',
+      width: '100%',
+  })),
+  state('active', style({
+    transform: 'translateY(0%)',
+    backgroundColor: 'black',
+    height: '100%',
+    position: 'absolute',
+    bottom: '0',
+    left: '0',
+    width: '100%',
+  })),
+  transition('inactive => active', animate('1s ease-in')),
+  transition('active => inactive', animate('1s ease-out'))
+]);
+
+
+
+
