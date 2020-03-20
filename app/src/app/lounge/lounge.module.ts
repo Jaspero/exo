@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {SharedModule} from '../shared.module';
-import {AboutRoutingModule} from './about-routing.module';
-import {AboutComponent} from './about.component';
+import {LoungeRoutingModule} from './lounge-routing.module';
+import {LoungeComponent} from './lounge.component';
 
 
 
 @NgModule({
-  declarations: [AboutComponent],
+  declarations: [LoungeComponent],
   imports: [
     CommonModule,
-    AboutRoutingModule,
+    LoungeRoutingModule,
     SharedModule
   ]
 })
-export class AboutModule { }
+export class LoungeModule { }
