@@ -6,11 +6,12 @@ import {HeaderComponent} from './header/header.component';
 
 
 
+
 const IMPORTS = [
   CommonModule,
 ];
 const COMPONENTS = [
-  HeaderComponent
+  HeaderComponent,
 ];
 
 

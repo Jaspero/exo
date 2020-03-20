@@ -19,3 +19,37 @@
 .main-wrapper {
   height: 90%;
 }
+
+.custom-bg {
+  background-image: url("../../assets/images/nail/nail-3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.wrapper {
+  background: transparent;
+  height: 300px;
+  width: 40%;
+}
+
+.wrapper:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: .2;
+}
+
+.exo-nail {
+  background-image: url("../../assets/images/nail/nail-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
