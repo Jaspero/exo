@@ -42,7 +42,7 @@
 </section>
 <section class="brands m-y-l">
   <div class="grid jc-end">
-    <div class="col-12 ta-left">
+    <div class="col-12 ta-left m-y-l">
       <h1>Explore Our <br> Brands</h1>
       <p class="m-t-s">From. Exquisite night life experiences, to elegant <br> nails, and aesthetics.</p>
     </div>
@@ -54,7 +54,7 @@
     </div>
   </div>
 </section>
-<section class="yummi m-y-l"></section>
+<section class="full-bg m-y-l"></section>
 <section class="welcome m-y-l">
   <div class="grid jc-between ai-center">
     <div class="col-7 ta-center">
@@ -62,8 +62,8 @@
     </div>
     <div class="col-5 c-dark flex fd-col ai-start jc-center p-a-l">
       <h1>Welcome to <br>Exo</h1>
-      <p class="m-t-s">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>
-      <img src="assets/images/home/home-9.png" alt="" class="m-t-l">
+      <p class="m-t-m">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>
+      <img src="assets/images/home/home-9.png" alt="" class="m-t-xxl">
     </div>
   </div>
 </section>
@@ -72,8 +72,8 @@
   <div class="grid jc-between ai-center">
     <div class="col-5 c-dark flex fd-col ai-start jc-center p-a-l">
       <h1>Welcome to <br>Exo</h1>
-      <p class="m-t-s">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>
-      <img src="assets/images/home/home-10.png" alt="" class="m-t-l">
+      <p class="m-t-m">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>
+      <img src="assets/images/home/home-10.png" alt="" class="m-t-xxl">
     </div>
     <div class="col-7 ta-center">
       <img src="assets/images/home/home-logo.png">
@@ -81,25 +81,9 @@
   </div>
 </section>
 <div class="flex w-full">
-  <div class="col-4 events flex jc-center ai-end">
+  <div class="col-4 events flex jc-center ai-end" *ngFor="let background of links.backgrounds" [ngStyle]="{'background-image': 'url('+ background.background +')'}">
     <div class="bg-wrapper relative ta-center p-a-s flex fd-col ai-center m-b-m">
-      <h1 class="c-light z-index">Events</h1>
-      <a href="" class="z-index">
-        <img src="assets/icons/right.svg" alt="link" class="z-index m-t-m">
-      </a>
-    </div>
-  </div>
-  <div class="col-4 blog flex jc-center ai-end">
-    <div class="bg-wrapper relative ta-center p-a-s flex fd-col ai-center m-b-m">
-      <h1 class="c-light z-index">Blog</h1>
-      <a href="" class="z-index">
-        <img src="assets/icons/right.svg" alt="link" class="z-index m-t-m">
-      </a>
-    </div>
-  </div>
-  <div class="col-4 news flex jc-center ai-end">
-    <div class="bg-wrapper relative ta-center p-a-s flex fd-col ai-center m-b-m">
-      <h1 class="c-light z-index">News & Press</h1>
+      <h1 class="c-light z-index">{{background.name}}</h1>
       <a href="" class="z-index">
         <img src="assets/icons/right.svg" alt="link" class="z-index m-t-m">
       </a>

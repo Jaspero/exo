@@ -56,74 +56,75 @@
       <h1>Visit Us</h1>
     </div>
     <div class="col-8 no-padding flex jc-around">
-      <div class="col-3">
-        <h4 class="m-y-m">EXO Lounge</h4>
-        <div class="flex jc-between">
-          <p>Monday</p>
-          <p>8:30am to 5pm</p>
-        </div>
-        <div class="flex jc-between">
-          <p>Tuesday</p>
-          <p>8:30am to 5pm</p>
-        </div>
-        <div class="flex jc-between">
-          <p>Wednesday</p>
-          <p>8:30am to 5pm</p>
-        </div>
-        <div class="flex jc-between">
-          <p>Thursday</p>
-          <p>8:30am to 5pm</p>
-        </div>
-        <div class="flex jc-between">
-          <p>Friday</p>
-          <p>8:30am to 5pm</p>
-        </div>
-        <div class="flex jc-between">
-          <p>Saturday</p>
-          <p>Closed</p>
-        </div>
-        <div class="flex jc-between">
-          <p>Sunday</p>
-          <p>Closed</p>
-        </div>
-      </div>
-      <div class="col-3">
-        <h4 class="m-y-m">Nail Bar</h4>
-        <div class="flex jc-between">
-          <p>Monday</p>
-          <p>8:30am to 5pm</p>
-        </div>
-        <div class="flex jc-between">
-          <p>Tuesday</p>
-          <p>8:30am to 5pm</p>
-        </div>
-        <div class="flex jc-between">
-          <p>Wednesday</p>
-          <p>8:30am to 5pm</p>
-        </div>
-        <div class="flex jc-between">
-          <p>Thursday</p>
-          <p>8:30am to 5pm</p>
-        </div>
-        <div class="flex jc-between">
-          <p>Friday</p>
-          <p>8:30am to 5pm</p>
-        </div>
-        <div class="flex jc-between">
-          <p>Saturday</p>
-          <p>Closed</p>
-        </div>
-        <div class="flex jc-between">
-          <p>Sunday</p>
-          <p>Closed</p>
+      <div class="col-6 flex fd-col ai-center fw-wrap" *ngFor="let services of exo.services">
+        <h4 class="m-y-m">{{services.name}}</h4>
+        <div class="flex jc-between col-8 no-padding" *ngFor="let day of week.days">
+          <p>{{day.day}}</p>
+          <p>{{day.time}}</p>
         </div>
       </div>
     </div>
     <div class="col-12 m-y-l ta-center">
       <h1>Request A Call Back</h1>
     </div>
-    <div class="col-6">
-      <input matInput placeholder="Ex. Pizza" value="Sushi">
+    <div class="col-10 flex  fw-wrap">
+    <div class="col-6 relative m-y-m">
+        <input type="text" required class="w-full inputs">
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Name</label>
     </div>
+    <div class="col-6 relative m-y-m">
+      <input type="text" required class="w-full inputs">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Email</label>
+    </div>
+    <div class="col-6 relative m-y-m">
+      <input type="number" required class="w-full inputs">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Phone</label>
+    </div>
+    <div class="col-6 relative m-y-m">
+      <input type="text" required class="w-full inputs">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Subject</label>
+    </div>
+    <div class="col-12 relative m-y-m">
+      <textarea type="text" required class="w-full inputs"></textarea>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Your message</label>
+    </div>
+    </div>
+    <div class="col-3 ta-center">
+      <button class="send">Send</button>
+    </div>
+    <div class="col-12 ta-center m-y-l">
+      <h3>Keep In Touch</h3>
+      <div class="flex jc-center w-full ai-center m-t-m">
+      <a href="">
+        <img src="assets/icons/facebook-black.svg" alt="social-icon">
+      </a>
+      <a href="">
+        <img src="assets/icons/instagram-black.svg" alt="social-icon" class="m-x-m">
+      </a>
+      <a href="">
+        <img src="assets/icons/twitter-black.svg" alt="social-icon">
+      </a>
+      </div>
+    </div>
+    <div class="col-12 ta-center">
+      <h3 class="m-y-m">Where are we</h3>
+      <div class="location w-full m-y-l"></div>
+    </div>
+  </div>
+</section>
+<section class="exo-events m-t-l flex jc-center ai-center">
+  <div class="col-6 wrapper relative c-light z-index ta-center flex fd-col ai-center jc-center">
+    <h1 class="z-index m-y-m">Exo Events</h1>
+    <button class="btn-secondary z-index">Inquire Now</button>
   </div>
 </section>
