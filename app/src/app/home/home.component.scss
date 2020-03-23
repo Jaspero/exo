@@ -74,23 +74,37 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+  height: 550px;
 }
 
-.lights {
-  background-image: url("../../assets/images/home/home-8.png");
+.blog {
+  background-image: url("../../assets/images/home/home-4.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 550px;
 }
 
-.lights {
-  background-image: url("../../assets/images/home/home-8.png");
+.news {
+  background-image: url("../../assets/images/home/home-5.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 550px;
 }
 
+.bg-wrapper {
+  background: transparent;
+  min-width: 230px;
+}
 
+.bg-wrapper:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  opacity: .4;
+}
