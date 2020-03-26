@@ -334,6 +334,17 @@
   padding: 0;
 }
 
+.m-s-0 {
+  @media (max-width: 600px) {
+    margin: 0;
+  }
+}
+
+.p-s-0 {
+  @media (max-width: 600px) {
+    padding: 0;
+  }
+}
 
 .z-index {
   z-index: 23;
