@@ -2,3 +2,24 @@
   font-size: 20px;
   font-weight: 300;
 }
+
+
+
+
+/* Mobile styles
+ *============================================================================*/
+
+@media (max-width: 600px) {
+  .social-icons-wrapper {
+    justify-content: center;
+  }
+  .adress {
+    text-align: center;
+  }
+  .footer {
+    padding: 10px;
+  }
+  .learn {
+    text-align: right;
+  }
+}
