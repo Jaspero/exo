@@ -9,3 +9,5 @@ To build the scully app run `npm run build:app` this in turn runs a few commands
 - `npm --prefix app run build:scully` - runs the scully build
 - `cleanup` - removes any old scully build from the public folder
 - `copy:app` - moves the entire build back to the public folder
+
+## Running Scully locally
