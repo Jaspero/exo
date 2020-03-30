@@ -1,0 +1,139 @@
+.main {
+  background: url("../../assets/images/home/home-main.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.main:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .3;
+}
+
+.custom-bg {
+  background-image: url("../../assets/images/home/home-6.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.lounge {
+  background-image: url("../../assets/images/home/home-11.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.nails {
+  background-image: url("../../assets/images/home/home-12.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+.full-bg {
+  background-image: url("../../assets/images/home/home-7.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.lights {
+  background-image: url("../../assets/images/home/home-8.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+
+
+.main-wrapper {
+  height: 90%;
+}
+
+.line {
+  height: 2px;
+  width: 300px;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+}
+
+.events {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+}
+
+.bg-wrapper {
+  background: transparent;
+  min-width: 200px;
+}
+
+.bg-wrapper:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  opacity: .4;
+}
+
+
+
+
+
+/* Mobile styles
+ *============================================================================*/
+
+@media (max-width: 600px) {
+
+  .exo-headline {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .bg-wrapper {
+    min-width: 100%;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .main {
+    height: 500px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .full-bg, .lights {
+    height: 370px;
+  }
+  .welcome {
+    padding: 15px;
+  }
+  .img-wrapper {
+    text-align: center;
+    margin-top: 20px;
+  }
+  img {
+    width: 100%;
+  }
+  .wrapper {
+    width: 100%;
+  }
+}

@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import "scss/00-setup/theme";
+@import "scss/00-setup/angular-overrides";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "scss/01-generic/generic";
+@import "scss/01-generic/global";
+@import "scss/01-generic/resets";
+@import "scss/03-utilities/grid";
+@import "scss/03-utilities/utilities";
+@import "scss/breakpoints";
+
+
+
+
+
+
+.shadow {
+  box-shadow: -23px 27px 0px 4px rgba(236,236,236,1);
+}

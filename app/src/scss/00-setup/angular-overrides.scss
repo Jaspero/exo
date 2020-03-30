@@ -1,0 +1,121 @@
+/* Overriding material inputs
+ *============================================================================*/
+
+.mat-form-field { width: 100%; }
+
+.mat-tab-label, .mat-tab-link { font-weight: bold; }
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick { color: var(--primary-theme); }
+
+.mat-form-field.mat-focused .mat-form-field-label { color: var(--primary-theme); }
+
+.mat-form-field-label { width: 100%; }
+
+
+
+/* Overriding mat-tabs
+ *============================================================================*/
+
+.mat-tab-labels { background-color: transparent; }
+
+.mat-tab-label-content { color: black;  }
+
+.mat-tab-header, .mat-tab-nav-bar { border-bottom: none; }
+
+.mat-tab-header { width: 100%!important; }
+
+.mat-tab-body-wrapper { width: 100%; }
+
+.mat-tab-group.mat-primary .mat-ink-bar { background-color: #868686; }
+
+
+
+/* Overriding mat-buttons
+ *============================================================================*/
+
+.mat-button, .mat-flat-button, .mat-icon-button, .mat-stroked-button {
+  height: 40px;
+  font-family: "Asap", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+
+/* Form field
+ *============================================================================*/
+
+.mat-form-field {
+  font-size: 16px;
+}
+
+// 'mat-form-field-has-hint' custom class for extra white space after hint
+.mat-form-field-has-hint {
+  margin-bottom: 1.25em;
+}
+
+// 'mat-form-field-no-hint' custom class for no white space
+.mat-form-field-no-hint > .mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+// 'mat-form-field-small' custom class for smaller form fields
+.mat-form-field.mat-form-field-small .mat-form-field-infix {
+  width: 90px;
+}
+
+// 'mat-form-field-large' custom class for larger form fields
+.mat-form-field.mat-form-field-large .mat-form-field-infix {
+  width: 240px;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: var(--primary-theme);
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: var(--primary-theme);
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: var(--primary-theme);
+}
+
+.mat-form-field-amount .mat-form-field-outline-start {
+  width: 35% !important;
+}
+
+.mat-form-field-amount .mat-form-field-outline-gap {
+  width: 30% !important;
+}
+
+.mat-form-field-amount .mat-form-field-outline-end {
+  width: 35% !important;
+}
+
+.mat-form-field-amount .mat-form-field-infix {
+  text-align: center;
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: rgba(0,0,0,.87);
+}
+
+
+
+/* Toggle slide
+ *============================================================================*/
+
+.mat-slide-toggle {
+  &.mat-checked {
+    .mat-slide-toggle-bar  { background: #00cdbf; }
+    .mat-slide-toggle-thumb { background: var(--primary-theme); }
+  }
+}
+
+
+.mat-dialog-content {
+  display: flex!important;
+  flex-wrap: wrap;
+  justify-content: center;
+}
