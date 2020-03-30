@@ -26,7 +26,7 @@ jobs:
           npm --prefix app run lint
   build:
     if: contains(github.ref, 'master')
-    name: Deploy
+    name: Build
     needs: lint
     runs-on: ubuntu-latest
     strategy:

@@ -2,7 +2,7 @@ name: Deploy Public Site
 on:
   push:
     paths:
-      - 'public/**/*'
+      - 'public/*'
       - '.github/workflows/public-ci.workflow.yml'
 jobs:
   deploy:
