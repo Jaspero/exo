@@ -9,11 +9,9 @@ declare var ng: any;
   styleUrls: ['./blog.component.scss'],
   preserveWhitespaces: true,
   encapsulation: ViewEncapsulation.Emulated
-
 })
 export class BlogComponent implements OnInit {
   ngOnInit() {}
 
-  constructor(private router: Router, private route: ActivatedRoute) {
-  }
+  constructor(private router: Router, private route: ActivatedRoute) {}
 }

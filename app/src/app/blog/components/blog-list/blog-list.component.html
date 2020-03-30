@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let route of blogs$ | async">
+    <a [routerLink]="route.route">{{ route.title || route.route}}</a>
+  </li>
+</ul>
