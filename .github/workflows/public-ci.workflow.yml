@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'public/*'
+      - 'public/admin/**/*'
       - '.github/workflows/public-ci.workflow.yml'
 jobs:
   deploy:

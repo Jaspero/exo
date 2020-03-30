@@ -39,3 +39,9 @@ collections:
           - { label: 'Title', name: 'title', widget: 'hidden', default: 'home' }
           - { label: 'Layout', name: 'title', widget: 'hidden', default: 'home' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+          - label: 'Showcase Gallery'
+            name: 'galleryImages'
+            widget: 'list'
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Image, name: image, widget: image}
