@@ -1,6 +1,6 @@
 
+<exo-header></exo-header>
 <section class="main relative">
-  <exo-header></exo-header>
 <div class="main-wrapper flex fw-wrap jc-start ai-end p-x-xl p-s-0">
     <div class="col-6 col-s-12 z-index m-l-l m-s-0">
       <h1 class="c-light ta-left exo-headline">Quite Simply, <br> EXtraOrdinary</h1>
@@ -35,7 +35,7 @@
     </div>
   </div>
 </section>
-<section class="explore m-y-l">
+<section class="m-y-l">
   <div class="grid">
     <div class="col-12 custom-bg"></div>
   </div>
@@ -86,9 +86,9 @@
 </section>
 <div class="flex w-full">
   <div class="col-4 events flex jc-center ai-end" *ngFor="let background of links.backgrounds" [ngStyle]="{'background-image': 'url('+ background.background +')'}">
-    <div class="bg-wrapper relative ta-center p-a-s flex fd-col ai-center m-b-m">
+    <div class="bg-wrapper relative  p-a-s flex fd-col ai-center m-b-m">
       <h1 class="c-light z-index">{{background.name}}</h1>
-      <a href="" class="z-index">
+      <a href="/blog" class="z-index">
         <img src="assets/icons/right.svg" alt="link" class="z-index m-t-m">
       </a>
     </div>
