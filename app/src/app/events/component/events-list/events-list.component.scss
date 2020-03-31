@@ -28,3 +28,39 @@
   color: #707070;
 }
 
+.box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #000000;
+}
+
+.cocktail {
+  background: url("../../../../assets/images/events/march-events-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cocktail-center {
+  background: url("../../../../assets/images/events/march-events.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cocktail-dj {
+  background: url("../../../../assets/images/events/march-events-2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.closed {
+  background: #ECECEC;
+  color: #959595;
+}
+
+.done {
+  color: #07B500;
+}
+
