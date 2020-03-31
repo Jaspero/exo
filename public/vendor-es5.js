@@ -71891,7 +71891,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      *
      * ```
      *
-     * The following example registers another DOM event handler that listens for key-press events.
+     * The following example registers another DOM event handler that listens for key-news events.
      * ``` ts
      * import { HostListener, Component } from "\@angular/core";
      *
@@ -86173,7 +86173,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       'pinchcancel': true,
       'pinchin': true,
       'pinchout': true,
-      // press
+      // news
       'press': true,
       'pressup': true,
       // rotate

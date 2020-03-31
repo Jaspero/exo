@@ -5,18 +5,18 @@ import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 
 @Component({
-  selector: 'exo-press-list',
-  templateUrl: './press-list.component.html',
-  styleUrls: ['./press-list.component.scss']
+  selector: 'exo-news-list',
+  templateUrl: './news-list.component.html',
+  styleUrls: ['./news-list.component.scss']
 })
-export class PressListComponent implements OnInit {
+export class NewsListComponent implements OnInit {
   constructor(public scully: ScullyRoutesService) {}
 
   blogs$: Observable<ScullyRoute[]>;
 
   ngOnInit() {
     this.blogs$ = this.scully.available$.pipe(
-      map(items => items.filter(it => it.route.includes('/press/')))
+      map(items => items.filter(it => it.route.includes('/news/')))
     );
   }
 }

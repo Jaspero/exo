@@ -1,20 +1,20 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {PressListComponent} from './component/press-list/press-list.component';
-import {PressComponent} from './component/press/press.component';
+import {NewsListComponent} from './news-list/news-list.component';
+import {NewsComponent} from './news/news.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: PressListComponent
+    component: NewsListComponent
   },
   {
     path: ':id',
-    component: PressComponent
+    component: NewsComponent
   },
   {
     path: '**',
-    component: PressComponent
+    component: NewsComponent
   }
 ];
 
@@ -22,4 +22,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PressRoutingModule {}
+export class NewsRoutingModule {}
