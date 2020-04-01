@@ -49,4 +49,9 @@
     </div>
   </div>
 </section>
+<ul>
+  <li *ngFor="let route of news$ | async">
+    <a [routerLink]="route.route">{{ route.title || route.route}}</a>
+  </li>
+</ul>
 <exo-footer></exo-footer>

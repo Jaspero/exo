@@ -12,10 +12,10 @@ import {map} from 'rxjs/operators';
 export class NewsListComponent implements OnInit {
   constructor(public scully: ScullyRoutesService) {}
 
-  blogs$: Observable<ScullyRoute[]>;
+  news$: Observable<ScullyRoute[]>;
 
   ngOnInit() {
-    this.blogs$ = this.scully.available$.pipe(
+    this.news$ = this.scully.available$.pipe(
       map(items => items.filter(it => it.route.includes('/news/')))
     );
   }
