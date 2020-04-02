@@ -738,7 +738,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "a", 8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Shop");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "shop");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -802,7 +802,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "a", 20);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "Shop");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "shop");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
