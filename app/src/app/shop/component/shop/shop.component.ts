@@ -11,7 +11,41 @@ declare var ng: any;
   encapsulation: ViewEncapsulation.Emulated
 })
 export class ShopComponent implements OnInit {
-  ngOnInit() {}
 
   constructor(private router: Router, private route: ActivatedRoute) {}
+
+  product = [
+    {
+      detail: 'Length: 74cm'
+    },
+    {
+      detail: 'Regular fit'
+    },
+    {
+      detail: 'Notched lapels'
+    },
+    {
+      detail: 'Twin button front fastening'
+    },
+    {
+      detail: 'Front patch pockets; chest pocket'
+    },
+    {
+      detail: 'Internal pockets'
+    },
+    {
+      detail: 'Centre-back vent'
+    },
+    {
+      detail: 'Please refer to the garment for care instructions'
+    },
+    {
+      detail: 'Length: 74cm'
+    },
+    {
+      detail: 'Material: Outer: 50% Linen & 50% Polyamide; Body Lining: 100% Cotton; Lining: 100% Acetate'
+    },
+  ];
+
+  ngOnInit() {}
 }

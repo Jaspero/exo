@@ -46,17 +46,8 @@
     <p class="m-y-s">Coupling a blended linen construction with tailored style, the River Island HR Jasper Blazer will imprint a touch of dapper charm into your after-dark wardrobe. Our model is wearing a size medium blazer, and usually takes a size medium/38L shirt. He is 6’2 1/2” (189cm) tall with a 38” (96 cm) chest and a 31” (78 cm) waist.</p>
   </div>
   <div class="col-12">
-    <ul type="square">
-      <li>Length 74cm</li>
-      <li>Regular fit</li>
-      <li>Notched lapels</li>
-      <li>Twin button front fastening </li>
-      <li>Front patch pockets; chest pocket</li>
-      <li>Internal pockets</li>
-      <li>Centre-back vent</li>
-      <li>Please refer to the garment for care instructions.</li>
-      <li>Length: 74cm</li>
-      <li>Material: Outer: 50% Linen & 50% Polyamide; Body Lining: 100% Cotton; Lining: 100% Acetate</li>
+    <ul type="square" *ngFor="let item of product">
+      <li>{{item.detail}}</li>
     </ul>
   </div>
 </div>
