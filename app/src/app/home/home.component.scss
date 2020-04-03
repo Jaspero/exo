@@ -46,6 +46,7 @@
   background-size: cover;
   height: 100vh;
 }
+
 .lights {
   background-image: url("../../assets/images/home/home-8.png");
   background-position: center;
@@ -53,8 +54,6 @@
   background-size: cover;
   height: 100vh;
 }
-
-
 
 .main-wrapper {
   height: 100%;
@@ -117,15 +116,15 @@
   .main {
     height: 500px;
   }
+
   h1 {
     font-size: 30px;
   }
+
   .full-bg, .lights {
     height: 370px;
   }
-  .welcome {
-    padding: 15px;
-  }
+
   .img-wrapper {
     text-align: center;
     margin-top: 20px;

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {BlogComponent} from '../blog/components/blog/blog.component';
 import {NewsComponent} from '../news/component/news/news.component';
-import {EventsComponent} from "../events/component/events/events.component";
+import {EventsComponent} from '../events/component/events/events.component';
 
 @Component({
   selector: 'exo-home',
