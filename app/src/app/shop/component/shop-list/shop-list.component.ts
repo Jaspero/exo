@@ -3,6 +3,9 @@ import {ScullyRoutesService} from '@scullyio/ng-lib';
 import {ScullyRoute} from '@scullyio/ng-lib/lib/route-service/scully-routes.service';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
+import {EventsComponent} from "../../../events/component/events/events.component";
+import {BlogComponent} from "../../../blog/components/blog/blog.component";
+import {NewsComponent} from "../../../news/component/news/news.component";
 
 @Component({
   selector: 'exo-shop-list',
@@ -11,6 +14,26 @@ import {map} from 'rxjs/operators';
 })
 export class ShopListComponent implements OnInit {
   constructor(public scully: ScullyRoutesService) {}
+
+  products = {
+    backgrounds: [
+      {
+        background: 'assets/images/shop/shop-soap.png',
+      },
+      {
+        background: 'assets/images/shop/shop-spray.png',
+      },
+      {
+        background: 'assets/images/shop/shop-candles.png',
+      },
+      {
+        background: 'assets/images/shop/shop-products.png',
+      },
+      {
+        background: 'assets/images/shop/shop-cards.png',
+      }
+    ]
+  };
 
   blogs$: Observable<ScullyRoute[]>;
 

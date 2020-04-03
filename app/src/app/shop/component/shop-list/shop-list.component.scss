@@ -1,7 +1,3 @@
-.header {
-  top: 0;
-}
-
 .main {
   background: url("../../../../assets/images/shop/shop-main.png");
   background-position: center;
@@ -20,49 +16,13 @@
   opacity: .3;
 }
 
-.main-wrapper {
-  height: 100%;
-}
-
-
 .product-wrapper {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   height: 400px;
 }
 
-.soap {
-  background: url("../../../../assets/images/shop/shop-soap.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.spray {
-  background: url("../../../../assets/images/shop/shop-spray.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.candles {
-  background: url("../../../../assets/images/shop/shop-candles.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.products {
-  background: url("../../../../assets/images/shop/shop-products.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.cards {
-  background: url("../../../../assets/images/shop/shop-cards.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 
 .soap-product {
