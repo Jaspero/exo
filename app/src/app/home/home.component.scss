@@ -39,6 +39,17 @@
   height: 500px;
 }
 
+.nails:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .3;
+}
+
 .full-bg {
   background-image: url("../../assets/images/home/home-7.png");
   background-position: center;
