@@ -21,13 +21,13 @@ const routes: Routes = [
   },
   {
     path: 'shop',
-    loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule)
+    loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule),
+    data: {animation: 'About'}
   },
   {
     path: 'lounge',
     loadChildren: () =>
-      import('./lounge/lounge.module').then(m => m.LoungeModule),
-    data: {animation: 'About'}
+      import('./lounge/lounge.module').then(m => m.LoungeModule)
   },
   {
     path: 'nail',

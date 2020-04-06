@@ -19,6 +19,10 @@ export class ShopListComponent implements OnInit {
     backgrounds: [
       {
         background: 'assets/images/shop/shop-soap.png',
+        galleryImg: [
+          'assets/images/shop/soap-product.png',
+          'assets/images/shop/dispencer.png',
+        ]
       },
       {
         background: 'assets/images/shop/shop-spray.png',

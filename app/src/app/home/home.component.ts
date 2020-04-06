@@ -3,6 +3,7 @@ import {BlogComponent} from '../blog/components/blog/blog.component';
 import {NewsComponent} from '../news/component/news/news.component';
 import {EventsComponent} from '../events/component/events/events.component';
 
+
 @Component({
   selector: 'exo-home',
   templateUrl: './home.component.html',
@@ -33,6 +34,8 @@ export class HomeComponent implements OnInit {
       }
     ]
   };
+  animate: any;
 
   ngOnInit(): void {}
+
 }

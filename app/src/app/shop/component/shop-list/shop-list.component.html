@@ -21,58 +21,13 @@
     <div class="col-6 m-y-m relative" *ngFor="let background of products.backgrounds">
       <div class="product-wrapper" [ngStyle]="{'background-image': 'url('+ background.background +')'}">
         <div class="img-wrapper flex jc-center ai-end">
-          <img src="assets/images/shop/soap-product.png" alt="" class="soap-product">
-          <img src="assets/images/shop/dispencer.png" alt="" class="soap-product">
+          <img src="{{background.galleryImg}}" alt="" class="soap-product">
         </div>
       </div>
       <h3 class="m-t-xl">Soap and Lotion</h3>
       <p class="m-y-m">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>
       <button class="btn-primary">View Products</button>
     </div>
-<!--    <div class="col-6 m-y-m relative">-->
-<!--      <div class="product-wrapper spray">-->
-<!--        <div class="img-wrapper flex jc-center ai-end">-->
-<!--          <img src="assets/images/shop/creme.png" alt="" class="spray-product m-x-s">-->
-<!--          <img src="assets/images/shop/dispencer.png" alt="" class="spray-product m-x-s">-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <h3 class="m-t-xl">Spray and Mist</h3>-->
-<!--      <p class="m-y-m">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>-->
-<!--      <button class="btn-primary">View Products</button>-->
-<!--    </div>-->
-<!--    <div class="col-6 m-y-m relative">-->
-<!--      <div class="product-wrapper candles">-->
-<!--        <div class="img-wrapper flex jc-center ai-end">-->
-<!--          <img src="assets/images/shop/jar.png" alt="" class="candles-product">-->
-<!--          <img src="assets/images/shop/dispencer.png" alt="" class="candles-product">-->
-<!--          <img src="assets/images/shop/white-jar.png" alt="" class="candles-product">-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <h3 class="m-t-xl">Candles</h3>-->
-<!--      <p class="m-y-m">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>-->
-<!--      <button class="btn-primary">View Products</button>-->
-<!--    </div>-->
-<!--    <div class="col-6 m-y-m relative">-->
-<!--      <div class="product-wrapper products">-->
-<!--        <div class="img-wrapper flex jc-center ai-end">-->
-<!--          <img src="assets/images/shop/package.png" alt="" class="candles-product">-->
-<!--          <img src="assets/images/shop/package.png" alt="" class="candles-product">-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <h3 class="m-t-xl">CBD Products</h3>-->
-<!--      <p class="m-y-m">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>-->
-<!--      <button class="btn-primary">View Products</button>-->
-<!--    </div>-->
-<!--    <div class="col-6 m-y-m relative">-->
-<!--      <div class="product-wrapper cards">-->
-<!--        <div class="img-wrapper flex jc-center ai-end">-->
-<!--          <img src="assets/images/shop/cards.png" alt="" class="candles-product" style="height: 230px">-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <h3 class="m-t-xl">CBD Products</h3>-->
-<!--      <p class="m-y-m">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>-->
-<!--      <button class="btn-primary">View Products</button>-->
-<!--    </div>-->
   </div>
 </section>
 <exo-footer></exo-footer>

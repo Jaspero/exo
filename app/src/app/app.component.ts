@@ -1,15 +1,22 @@
 import {Component, HostBinding, OnInit} from '@angular/core';
-import {NavigationEnd, NavigationStart, Router} from '@angular/router';
+import {NavigationEnd, NavigationStart, Router, RouterOutlet} from '@angular/router';
+import {slideInAnimation} from './animations';
 
 @Component({
   selector: 'exo-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [slideInAnimation],
 })
 export class AppComponent implements OnInit {
   constructor(
     private router: Router
   ) {}
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData[`animation`];
+  }
 
   @HostBinding('class')
   state: string;
@@ -18,9 +25,13 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe(value => {
 
       if (value instanceof NavigationStart) {
-        this.state = 'loading';
+        setTimeout(() => {
+          this.state = 'loading';
+        }, 300);
       } else if (value instanceof NavigationEnd) {
-        this.state = 'loaded';
+        setTimeout(() => {
+          this.state = 'loaded';
+        }, 1200);
       }
     });
   }
