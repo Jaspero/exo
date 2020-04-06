@@ -11,7 +11,7 @@ import {
 
 export const slideInAnimation =
   trigger('routeAnimations', [
-    transition('Home <=> About', [
+    transition('* <=> *', [
       query(':enter, :leave ',
         style({ position: 'absolute', height: '100%', width: '100%', opacity: '0'}),
         { optional: true }),
