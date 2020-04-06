@@ -1,0 +1,133 @@
+
+.main {
+  background: url("../../../../assets/images/events/events-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.main:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .3;
+}
+
+.bg-full {
+  background: url("../../../../assets/images/events/events-bg-full.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+
+.events-party {
+  background: url("../../../../assets/images/events/events-party.png");
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+
+.custom-bg-r{
+  background-image: url("../../../../assets/icons/custom-bg.svg");
+  background-size: calc(((100vw - 900px) / 2) + 900px - 100px) auto;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+
+.custom-bg-l{
+  background-image: url("../../../../assets/icons/custom-bg.svg");
+  background-size: calc(((100vw - 900px) / 2) + 900px - 100px) auto;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+
+.bachelorette {
+  background: url("../../../../assets/images/events/events-bachelorette.png");
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.corporate {
+  background: url("../../../../assets/images/events/events-corporate.png");
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.day-out {
+  background: url("../../../../assets/images/events/events-dayout.png");
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.bg-container {
+  height: 700px;
+}
+
+.card-right {
+  position: absolute;
+  width: 500px;
+  top: 10%;
+  right: -15%;
+}
+
+.card-left {
+  position: absolute;
+  width: 500px;
+  top: 10%;
+  left: -15%;
+}
+
+.exo-events {
+  background-image: url("../../../../assets/images/events/exo-events.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.wrapper {
+  background: transparent;
+  height: 300px;
+  width: 40%;
+}
+
+.wrapper:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: .3;
+}
+
+
+@media (max-width: 900px){
+  .custom-bg-r {
+    background-size: calc(100vw - 100px) auto;
+  }
+}
