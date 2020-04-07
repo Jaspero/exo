@@ -26,7 +26,6 @@
 }
 
 .events-party {
-  background: url("../../../../assets/images/events/events-party.png");
   width: 100%;
   max-width: 900px;
   height: 500px;
@@ -58,29 +57,6 @@
   width: 100%;
 }
 
-.bachelorette {
-  background: url("../../../../assets/images/events/events-bachelorette.png");
-  width: 100%;
-  max-width: 900px;
-  height: 500px;
-  margin: 0 auto;
-}
-
-.corporate {
-  background: url("../../../../assets/images/events/events-corporate.png");
-  width: 100%;
-  max-width: 900px;
-  height: 500px;
-  margin: 0 auto;
-}
-
-.day-out {
-  background: url("../../../../assets/images/events/events-dayout.png");
-  width: 100%;
-  max-width: 900px;
-  height: 500px;
-  margin: 0 auto;
-}
 
 .bg-container {
   height: 700px;
@@ -130,4 +106,12 @@
   .custom-bg-r {
     background-size: calc(100vw - 100px) auto;
   }
+}
+
+.even {
+  background-position: left;
+}
+
+.left {
+  left: -15%;
 }

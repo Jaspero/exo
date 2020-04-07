@@ -12,6 +12,34 @@ import {map} from 'rxjs/operators';
 export class EventsListComponent implements OnInit {
   constructor(public scully: ScullyRoutesService) {}
 
+  events = {
+    event: [
+      {
+        bgImage: 'assets/images/events/events-party.png',
+        title: 'Private party',
+        eventDesc: 'EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a ' +
+          'unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar',
+      },
+      {
+        bgImage: 'assets/images/events/events-bachelorette.png',
+        title: 'Bachelorette party',
+        eventDesc: 'EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a ' +
+          'unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar',
+      },
+      {
+        bgImage: 'assets/images/events/events-corporate.png',
+        title: 'Corporate party',
+        eventDesc: 'EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a ' +
+          'unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar',
+      },
+      {
+        bgImage: 'assets/images/events/events-dayout.png',
+        title: 'Girls Day Out',
+        eventDesc: 'EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a ' +
+          'unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar',
+      },
+    ]
+  };
 
   blogs$: Observable<ScullyRoute[]>;
 

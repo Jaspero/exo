@@ -27,45 +27,12 @@
   </div>
 </section>
 <section class="m-y-l bg-full"></section>
-<section class="relative bg-container m-y-l">
-  <div class="custom-bg-r">
-    <div class="events-party relative">
-      <div class="card-right bg-light p-a-l">
-        <h3>Private party</h3>
-        <p class="m-y-m">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar</p>
-        <button class="btn-primary">Book Now</button>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="relative bg-container m-y-xl">
-  <div class="custom-bg-l">
-    <div class="bachelorette relative">
-      <div class="card-left bg-light p-a-l">
-        <h3>Bachelorette Party’s</h3>
-        <p class="m-y-m">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar</p>
-        <button class="btn-primary">Book Now</button>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="relative bg-container m-y-xl">
-  <div class="custom-bg-r">
-    <div class="corporate relative">
-      <div class="card-right bg-light p-a-l">
-        <h3>Corporate Events</h3>
-        <p class="m-y-m">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar</p>
-        <button class="btn-primary">Book Now</button>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="relative bg-container m-y-xl">
-  <div class="custom-bg-l">
-    <div class="day-out relative">
-      <div class="card-left bg-light p-a-l">
-        <h3>Girls Day Out</h3>
-        <p class="m-y-m">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar</p>
+<section class="relative flex bg-container m-y-l" *ngFor="let event of events.event; odd as odd">
+  <div [class.even]="odd" class="custom-bg-r">
+    <div class="events-party relative" [ngStyle]="{'background-image': 'url('+ event.bgImage +')'}">
+      <div [class.left]="odd"  class="card-right bg-light p-a-l">
+        <h3>{{event.title}}</h3>
+        <p class="m-y-m">{{event.eventDesc}}</p>
         <button class="btn-primary">Book Now</button>
       </div>
     </div>
