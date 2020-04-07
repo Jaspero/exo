@@ -16,52 +16,20 @@
   </div>
 </div>
 <section class="m-y-l">
-  <div class="grid jc-between ai-center b-b p-y-m">
-    <div class="col-5 col-s-6 col-xs-12 ta-left">
-      <img src="assets/images/blog/blog-lounge.png" >
-    </div>
-    <div class="col-4 col-s-6 col-xs-12 c-dark ta-left">
-      <h1>Exo Menu <br>Lounge</h1>
-      <div class="flex ai-center jc-between w-full m-t-s">
-        <span class="category">Date: 16.03. 2020</span>
-        <span class="category">Category: Blah blaaah</span>
+  <div class="grid jc-between ai-center b-b p-y-m" *ngFor="let blog of blogs.blog; even as even" [class.even]="even">
+      <div class="col-4 col-s-6 col-xs-12 c-dark ta-left">
+        <h1>{{blog.title}}</h1>
+        <div class="flex ai-center jc-between w-full m-t-s">
+          <span class="category">{{blog.date}}</span>
+          <span class="category">{{blog.category}}</span>
+        </div>
+        <p class="m-t-s">{{blog.shortDescription}}</p>
+        <button class="btn-primary m-t-l">Read More</button>
       </div>
-      <p class="m-t-s">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>
-      <button class="btn-primary m-t-l">Read More</button>
-    </div>
-  </div>
-</section>
-<section class="m-y-l">
-  <div class="grid jc-between ai-center b-b p-y-m">
-    <div class="col-4 col-s-6 col-xs-12 c-dark ta-left">
-      <h1>Exo Menu <br>Lounge</h1>
-      <div class="flex ai-center jc-between w-full m-t-s">
-        <span class="category">Date: 16.03. 2020</span>
-        <span class="category">Category: Blah blaaah</span>
+      <div class="col-4 col-s-6 col-xs-12 img">
+        <img src="{{blog.blogImg}}">
       </div>
-      <p class="m-t-s">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>
-      <button class="btn-primary m-t-l">Read More</button>
     </div>
-    <div class="col-5 col-s-6 col-xs-12 ta-right">
-      <img src="assets/images/blog/blog-exo-lounge.png" >
-    </div>
-  </div>
-</section>
-<section class="m-y-l">
-  <div class="grid jc-between ai-center">
-    <div class="col-5 col-s-6 col-xs-12 ta-left">
-      <img src="assets/images/blog/blog-menu.png" >
-    </div>
-    <div class="col-4 col-s-6 col-xs-12 c-dark">
-      <h1>Exo Menu <br>Lounge</h1>
-      <div class="flex ai-center jc-between w-full m-t-s">
-        <span class="category">Date: 16.03. 2020</span>
-        <span class="category">Category: Blah blaaah</span>
-      </div>
-      <p class="m-t-s">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>
-      <button class="btn-primary m-t-l">Read More</button>
-    </div>
-  </div>
 </section>
 <ul>
   <li *ngFor="let route of blogs$ | async">

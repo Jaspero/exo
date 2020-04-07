@@ -12,6 +12,7 @@ import {map} from 'rxjs/operators';
 export class EventsListComponent implements OnInit {
   constructor(public scully: ScullyRoutesService) {}
 
+
   blogs$: Observable<ScullyRoute[]>;
 
   ngOnInit() {

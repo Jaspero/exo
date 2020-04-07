@@ -13,7 +13,7 @@ import {map} from 'rxjs/operators';
 export class ShopListComponent implements OnInit {
   constructor(public scully: ScullyRoutesService) {}
 
-  noProduct: false;
+
 
   products = {
     backgrounds: [
