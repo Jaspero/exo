@@ -21,7 +21,10 @@
     <div class="col-6 m-y-m relative" *ngFor="let background of products.backgrounds">
       <div class="product-wrapper" [ngStyle]="{'background-image': 'url('+ background.background +')'}">
         <div class="img-wrapper flex jc-center ai-end">
-          <img src="{{background.galleryImg}}" alt="" class="soap-product">
+            <img src="{{product.featProduct}}" alt="" class="soap-product" *ngFor="let product of background.galleryImg">
+<!--          <ng-template #hasProduct>-->
+<!--            <img src="{{background.galleryImg}}" alt="" class="soap-product">-->
+<!--          </ng-template>-->
         </div>
       </div>
       <h3 class="m-t-xl">Soap and Lotion</h3>
