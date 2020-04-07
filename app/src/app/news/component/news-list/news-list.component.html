@@ -16,37 +16,22 @@
   </div>
 </div>
 <section class="m-y-l">
-  <div class="grid jc-between ai-center b-b p-y-m">
+  <div class="grid jc-between ai-center b-b p-y-m" *ngFor="let news of news.news">
     <div class="col-5 col-s-6 col-xs-12 ta-left">
-      <img src="assets/images/news/news-exo.png" >
+      <img src="{{news.newsImg}}">
     </div>
     <div class="col-4 col-s-6 col-xs-12 c-dark">
-      <h1>Exo Menu <br>Lounge</h1>
+      <h1>{{news.title}}</h1>
       <div class="flex ai-center jc-between w-full m-t-s">
-        <span class="category">Date: 16.03. 2020</span>
-        <span class="category">Category: Blah blaaah</span>
+        <span class="category">{{news.date}}</span>
+        <span class="category">Category:{{news.category}}</span>
       </div>
-      <p class="m-t-s">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>
+      <p class="m-t-s">{{news.newsDescription}}</p>
       <button class="btn-primary m-t-l">Read More</button>
     </div>
   </div>
 </section>
-<section class="m-y-l">
-  <div class="grid jc-between ai-center b-b p-b-m">
-    <div class="col-5 col-s-6 col-xs-12 ta-left">
-      <img src="assets/images/news/news-lounge.png" >
-    </div>
-    <div class="col-4 col-s-6 col-xs-12 c-dark">
-      <h1>Exo Menu <br>Lounge</h1>
-      <div class="flex ai-center jc-between w-full m-t-s">
-        <span class="category">Date: 16.03. 2020</span>
-        <span class="category">Category: Blah blaaah</span>
-      </div>
-      <p class="m-t-s">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>
-      <button class="btn-primary m-t-l">Read More</button>
-    </div>
-  </div>
-</section>
+
 <ul>
   <li *ngFor="let route of news$ | async">
     <a [routerLink]="route.route">{{ route.title || route.route}}</a>
