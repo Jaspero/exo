@@ -19,7 +19,8 @@ const routes: Routes = [
   },
   {
     path: 'events',
-    loadChildren: () => import('./events/events.module').then(m => m.EventsModule),
+    loadChildren: () =>
+      import('./events/events.module').then(m => m.EventsModule),
     data: {animation: '*'}
   },
   {
@@ -29,12 +30,14 @@ const routes: Routes = [
   },
   {
     path: 'lounge',
-    loadChildren: () => import('./lounge/lounge.module').then(m => m.LoungeModule),
+    loadChildren: () =>
+      import('./lounge/lounge.module').then(m => m.LoungeModule),
     data: {animation: '*'}
   },
   {
     path: 'nail',
-    loadChildren: () => import('./nail-bar/nail-bar.module').then(m => m.NailBarModule),
+    loadChildren: () =>
+      import('./nail-bar/nail-bar.module').then(m => m.NailBarModule),
     data: {animation: '*'}
   },
   {
@@ -45,7 +48,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'disabled'
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
