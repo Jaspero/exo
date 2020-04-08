@@ -117,9 +117,9 @@ collections:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "content", name: "content", widget: "markdown" }
               - label: "Block Image L"
-                  name: "blockImageR"
-                  widget: "object"
-                  fields:
-                    - { label: "Title", name: "title", widget: "string" }
-                    - { label: "Image", name: "image", widget: "image" }
-                    - { label: "content", name: "content", widget: "markdown" }
+                name: "blockImageR"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "content", name: "content", widget: "markdown" }
