@@ -114,7 +114,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](7, _c0, "url(" + event_r10.thumbnail + ")"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](7, _c0, "url(" + event_r10.image + ")"));
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
@@ -159,7 +159,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(EventsListComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          this.events$ = this.scully.available$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (items) {
+          this.events$ = this.scully.available$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["tap"])(function (item) {
+            return console.log(item);
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (items) {
             return items.filter(function (it) {
               return it.route.includes('/events/');
             });

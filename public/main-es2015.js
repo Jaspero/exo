@@ -88,22 +88,18 @@ const routes = [
     {
         path: 'events',
         loadChildren: () => Promise.all(/*! import() | events-events-module */[__webpack_require__.e("default~events-events-module~home-home-module"), __webpack_require__.e("events-events-module")]).then(__webpack_require__.bind(null, /*! ./events/events.module */ "./src/app/events/events.module.ts")).then(m => m.EventsModule),
-        data: { animation: '*' }
     },
     {
         path: 'shop',
         loadChildren: () => __webpack_require__.e(/*! import() | shop-shop-module */ "shop-shop-module").then(__webpack_require__.bind(null, /*! ./shop/shop.module */ "./src/app/shop/shop.module.ts")).then(m => m.ShopModule),
-        data: { animation: '*' }
     },
     {
         path: 'lounge',
         loadChildren: () => __webpack_require__.e(/*! import() | lounge-lounge-module */ "lounge-lounge-module").then(__webpack_require__.bind(null, /*! ./lounge/lounge.module */ "./src/app/lounge/lounge.module.ts")).then(m => m.LoungeModule),
-        data: { animation: '*' }
     },
     {
         path: 'nail',
         loadChildren: () => __webpack_require__.e(/*! import() | nail-bar-nail-bar-module */ "nail-bar-nail-bar-module").then(__webpack_require__.bind(null, /*! ./nail-bar/nail-bar.module */ "./src/app/nail-bar/nail-bar.module.ts")).then(m => m.NailBarModule),
-        data: { animation: '*' }
     },
     {
         path: 'contact',

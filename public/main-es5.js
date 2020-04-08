@@ -168,9 +168,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/events/events.module.ts")).then(function (m) {
           return m.EventsModule;
         });
-      },
-      data: {
-        animation: '*'
       }
     }, {
       path: 'shop',
@@ -182,9 +179,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/shop/shop.module.ts")).then(function (m) {
           return m.ShopModule;
         });
-      },
-      data: {
-        animation: '*'
       }
     }, {
       path: 'lounge',
@@ -196,9 +190,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/lounge/lounge.module.ts")).then(function (m) {
           return m.LoungeModule;
         });
-      },
-      data: {
-        animation: '*'
       }
     }, {
       path: 'nail',
@@ -210,9 +201,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/nail-bar/nail-bar.module.ts")).then(function (m) {
           return m.NailBarModule;
         });
-      },
-      data: {
-        animation: '*'
       }
     }, {
       path: 'contact',
