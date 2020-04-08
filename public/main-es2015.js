@@ -72,12 +72,12 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: '',
-        loadChildren: () => Promise.all(/*! import() | home-home-module */[__webpack_require__.e("default~blog-blog-module~home-home-module"), __webpack_require__.e("default~events-events-module~home-home-module"), __webpack_require__.e("default~home-home-module~news-news-module"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomeModule),
+        loadChildren: () => Promise.all(/*! import() | home-home-module */[__webpack_require__.e("default~events-events-module~home-home-module"), __webpack_require__.e("default~home-home-module~news-news-module"), __webpack_require__.e("common"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomeModule),
         data: { animation: '+' }
     },
     {
         path: 'blog',
-        loadChildren: () => Promise.all(/*! import() | blog-blog-module */[__webpack_require__.e("default~blog-blog-module~home-home-module"), __webpack_require__.e("blog-blog-module")]).then(__webpack_require__.bind(null, /*! ./blog/blog.module */ "./src/app/blog/blog.module.ts")).then(m => m.BlogModule),
+        loadChildren: () => Promise.all(/*! import() | blog-blog-module */[__webpack_require__.e("common"), __webpack_require__.e("blog-blog-module")]).then(__webpack_require__.bind(null, /*! ./blog/blog.module */ "./src/app/blog/blog.module.ts")).then(m => m.BlogModule),
         data: { animation: '*' }
     },
     {
