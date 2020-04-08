@@ -30,6 +30,63 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
 
+  - name: 'product'
+    label: 'Product'
+    folder: 'public/collections/shop'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Price', name: 'price', widget: 'string' }
+      - {label: "Description", name: "description", widget: "markdown"}
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+      - label: 'Showcase Gallery'
+          name: 'galleryImages'
+          widget: 'list'
+          fields:
+            - {label: Title, name: title, widget: string}
+            - {label: Image, name: image, widget: image}
+      - {label: "ProductDescription", name: "productdescription", widget: "markdown"}
+      - {label: "AdditionalInfo", name: "additionalinfo", widget: "markdown"}
+
+
+  - name: 'events'
+    label: 'Events'
+    folder: 'public/collections/events'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {label: "Description", name: "description", widget: "markdown"}
+      - label: "Featured Image"
+          name: "thumbnail"
+          widget: "image"
+
+
+  - name: 'news'
+    label: 'News'
+    folder: 'public/collections/news'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'markdown' }
+      - label: "Featured Image"
+          name: "thumbnail"
+          widget: "image"
+      - { label: 'Description', name: 'description', widget: 'markdown' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+
   - name: 'pages'
     label: 'Pages'
     editor:

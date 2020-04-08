@@ -1,14 +1,12 @@
 <exo-header></exo-header>
 <section class="main relative">
-  <div class="main-wrapper flex fw-wrap jc-start ai-end p-x-xl p-s-0">
-    <div class="col-6 col-s-12 z-index m-l-l m-s-0">
-      <h1 class="c-light ta-left exo-headline">Quite Simply, <br> EXtraOrdinary</h1>
+  <div class="grid h-full jc-start ai-end c-light">
+    <div class="col-6 col-s-12 z-index">
+      <h1 class="ta-left exo-headline">Quite Simply, <br> EXtraOrdinary</h1>
     </div>
-    <div class="col-12 flex  jc-between ai-center c-light z-index">
-      <div class="col-6 m-l-m m-s-0">
+    <div class="col-12 ta-left z-index">
         <h4>A journey of the senses</h4>
         <p>Scroll down</p>
-      </div>
     </div>
   </div>
 </section>
@@ -17,22 +15,20 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 </div>
-<section class="m-y-l"  *ngFor="let route of blogs$ | async">
-  <div class="grid jc-between ai-center b-b p-y-m">
-    <div class="col-7 col-s-6 col-xs-12 ta-left">
-      <img src="assets/images/blog/blog-lounge.png" >
-    </div>
-    <div class="col-5 col-s-6 col-xs-12 c-dark flex fd-col jc-center ai-start p-a-l welcome">
-      <h1>{{route.title}}</h1>
-      <div class="flex ai-center jc-between w-full">
-        <span class="category">Date: {{route.date | date}}</span>
-<!--        <span class="category">Category: Blah blaaah</span>-->
+<section class="m-y-l">
+  <div class="grid jc-between ai-center b-b p-y-m" *ngFor="let blog of blogs.blog; even as even" [class.even]="even">
+      <div class="col-4 col-s-6 col-xs-12 c-dark ta-left">
+        <h1>{{blog.title}}</h1>
+        <div class="flex ai-center jc-between w-full m-t-s">
+          <span class="category">{{blog.date}}</span>
+          <span class="category">Category: {{blog.category}}</span>
+        </div>
+        <p class="m-t-s">{{blog.shortDescription}}</p>
+        <button class="btn-primary m-t-l">Read More</button>
       </div>
-      <p class="m-t-s">
-        {{route.description}}
-      </p>
-      <button class="btn-primary m-t-l" [routerLink]="route.route">Read More</button>
+      <div class="col-5 col-s-6 col-xs-12 ta-right" [class.text-align]="even" >
+        <img src="{{blog.blogImg}}">
+      </div>
     </div>
-  </div>
 </section>
 <exo-footer></exo-footer>

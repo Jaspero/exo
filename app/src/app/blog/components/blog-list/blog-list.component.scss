@@ -20,12 +20,20 @@
   opacity: .3;
 }
 
-.main-wrapper {
-  height: 100%;
-}
 
 .category {
   color: #707070;
 }
+
+.even {
+  flex-direction: row-reverse;
+}
+
+.text-align {
+  text-align: left;
+}
+
+
+
 
 
