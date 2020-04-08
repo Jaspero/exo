@@ -46,11 +46,11 @@ collections:
         name: "thumbnail"
         widget: "image"
       - label: "Showcase Gallery"
-          name: "galleryImages"
-          widget: "list"
-          fields:
-            - {label: Title, name: title, widget: string}
-            - {label: Image, name: image, widget: image}
+        name: "galleryImages"
+        widget: "list"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
       - {label: "ProductDescription", name: "productdescription", widget: "markdown"}
       - {label: "AdditionalInfo", name: "additionalinfo", widget: "markdown"}
 
@@ -64,10 +64,10 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - {label: "Description", name: "description", widget: "markdown"}
+      - { label: "Description", name: "description", widget: "markdown" }
       - label: "Featured Image"
-          name: "thumbnail"
-          widget: "image"
+        name: "thumbnail"
+        widget: "image"
 
 
   - name: "news"
@@ -83,8 +83,8 @@ collections:
       - { label: "Subtitle", name: "subtitle", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
       - label: "Featured Image"
-          name: "thumbnail"
-          widget: "image"
+        name: "thumbnail"
+        widget: "image"
       - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
 
