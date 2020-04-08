@@ -96,12 +96,30 @@ collections:
         name: "home"
         file: "public/collections/pages/home.md"
         fields:
-          - { label: "Title", name: "title", widget: "hidden", default: "home" }
-          - { label: "Layout", name: "title", widget: "hidden", default: "home" }
-          - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Showcase Gallery"
-            name: "galleryImages"
-            widget: "list"
+          - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
+          - { label: "Showcase Background", name: "showcaseBackground", widget: "string", allow_multiple: false }
+          - label: "Meta"
+            name: "meta"
+            widget: "object"
             fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Image, name: image, widget: image}
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Keywords", name: "keywords", widget: "string" }
+          - label: "Blocks"
+            name: "blocks"
+            widget: "list"
+            types:
+              - label: "Block Image R"
+                name: "blockImageR"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "content", name: "content", widget: "markdown" }
+              - label: "Block Image L"
+                  name: "blockImageR"
+                  widget: "object"
+                  fields:
+                    - { label: "Title", name: "title", widget: "string" }
+                    - { label: "Image", name: "image", widget: "image" }
+                    - { label: "content", name: "content", widget: "markdown" }
