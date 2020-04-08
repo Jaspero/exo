@@ -1,1 +1,1 @@
-[{"route":"/"},{"route":"/blog"},{"route":"/blog/2020-03-16-blog","title":"Example","description":"blog description","publish":false,"date":"2020-03-17T22:30:19.792Z","sourceFile":"2020-03-16-blog.md"},{"route":"/lounge"},{"route":"/nail"},{"route":"/contact"}]
+[{"route":"/events"},{"route":"/blog"},{"route":"/news"},{"route":"/"},{"route":"/blog/2020-03-16-blog","title":"Example","description":"blog description","publish":false,"date":"2020-03-17T22:30:19.792Z","sourceFile":"2020-03-16-blog.md"},{"route":"/shop"},{"route":"/lounge"},{"route":"/nail"},{"route":"/contact"}]
