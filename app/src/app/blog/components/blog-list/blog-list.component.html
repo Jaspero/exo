@@ -23,11 +23,11 @@
           <span class="category">{{blog.date}}</span>
           <span class="category">Category: {{blog.category}}</span>
         </div>
-        <p class="m-t-s">{{blog.shortDescription}}</p>
-        <button class="btn-primary m-t-l">Read More</button>
+        <p class="m-t-s">{{blog.description}}</p>
+        <a class="btn-primary m-t-l"  [routerLink]="blog.route">Read More</a>
       </div>
-      <div class="col-5 col-s-6 col-xs-12 ta-right" [class.text-align]="even" >
-        <img src="{{blog.blogImg}}">
+      <div class="col-5 col-s-6 col-xs-12 ta-right" [class.text-align]="even">
+        <img [src]="blog.image" [attr.alt]="blog.alt || ''">
       </div>
     </div>
 </section>

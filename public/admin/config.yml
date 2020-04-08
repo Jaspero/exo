@@ -13,40 +13,41 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'public/collections/blog'
+  - name: "blog"
+    label: "Blog"
+    folder: "public/collections/blog"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - label: "Featured Image"
-        name: "thumbnail"
-        widget: "image"
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Image alternative description", name: "alt", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
 
-  - name: 'products'
-    label: 'Products'
-    folder: 'public/collections/shop'
+  - name: "products"
+    label: "Products"
+    folder: "public/collections/shop"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Price', name: 'price', widget: 'string' }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
       - {label: "Description", name: "description", widget: "markdown"}
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"
-      - label: 'Showcase Gallery'
-          name: 'galleryImages'
-          widget: 'list'
+      - label: "Showcase Gallery"
+          name: "galleryImages"
+          widget: "list"
           fields:
             - {label: Title, name: title, widget: string}
             - {label: Image, name: image, widget: image}
@@ -54,54 +55,54 @@ collections:
       - {label: "AdditionalInfo", name: "additionalinfo", widget: "markdown"}
 
 
-  - name: 'events'
-    label: 'Events'
-    folder: 'public/collections/events'
+  - name: "events"
+    label: "Events"
+    folder: "public/collections/events"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: "Title", name: "title", widget: "string" }
       - {label: "Description", name: "description", widget: "markdown"}
       - label: "Featured Image"
           name: "thumbnail"
           widget: "image"
 
 
-  - name: 'news'
-    label: 'News'
-    folder: 'public/collections/news'
+  - name: "news"
+    label: "News"
+    folder: "public/collections/news"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'markdown' }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
       - label: "Featured Image"
           name: "thumbnail"
           widget: "image"
-      - { label: 'Description', name: 'description', widget: 'markdown' }
-      - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
 
-  - name: 'pages'
-    label: 'Pages'
+  - name: "pages"
+    label: "Pages"
     editor:
       preview: false
     files:
-      - label: 'Home'
-        name: 'home'
-        file: 'public/collections/pages/home.md'
+      - label: "Home"
+        name: "home"
+        file: "public/collections/pages/home.md"
         fields:
-          - { label: 'Title', name: 'title', widget: 'hidden', default: 'home' }
-          - { label: 'Layout', name: 'title', widget: 'hidden', default: 'home' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-          - label: 'Showcase Gallery'
-            name: 'galleryImages'
-            widget: 'list'
+          - { label: "Title", name: "title", widget: "hidden", default: "home" }
+          - { label: "Layout", name: "title", widget: "hidden", default: "home" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Showcase Gallery"
+            name: "galleryImages"
+            widget: "list"
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Image, name: image, widget: image}
