@@ -11,3 +11,7 @@ To build the scully app run `npm run build:app` this in turn runs a few commands
 - `copy:app` - moves the entire build back to the public folder
 
 ## Running Scully locally
+
+- Run `npm run build`
+- Copy collections from `public/collections` in to `dist/collections`
+- Run `npm run scully`
