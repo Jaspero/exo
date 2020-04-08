@@ -16,7 +16,7 @@
   </div>
 </div>
 <section class="m-y-l">
-  <div class="grid jc-between ai-center b-b p-y-m" *ngFor="let blog of blogs.blog; even as even" [class.even]="even">
+  <div class="grid jc-between ai-center b-b p-y-m" *ngFor="let blog of blogs$ | async; even as even" [class.even]="even">
       <div class="col-4 col-s-6 col-xs-12 c-dark ta-left">
         <h1>{{blog.title}}</h1>
         <div class="flex ai-center jc-between w-full m-t-s">

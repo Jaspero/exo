@@ -12,8 +12,6 @@ import {map, tap} from 'rxjs/operators';
 export class BlogListComponent implements OnInit {
   constructor(public scully: ScullyRoutesService) {}
 
-  isOdd: false;
-
   blogs = {
     blog: [
       {
