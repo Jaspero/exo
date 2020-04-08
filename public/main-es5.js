@@ -126,9 +126,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/home/home.module.ts")).then(function (m) {
           return m.HomeModule;
         });
-      },
-      data: {
-        animation: '+'
       }
     }, {
       path: 'blog',
@@ -140,9 +137,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/blog/blog.module.ts")).then(function (m) {
           return m.BlogModule;
         });
-      },
-      data: {
-        animation: '*'
       }
     }, {
       path: 'news',
@@ -154,9 +148,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         "./src/app/news/news.module.ts")).then(function (m) {
           return m.NewsModule;
         });
-      },
-      data: {
-        animation: '*'
       }
     }, {
       path: 'events',

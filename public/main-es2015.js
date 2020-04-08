@@ -72,34 +72,31 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: '',
-        loadChildren: () => Promise.all(/*! import() | home-home-module */[__webpack_require__.e("default~events-events-module~home-home-module"), __webpack_require__.e("default~home-home-module~news-news-module"), __webpack_require__.e("common"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomeModule),
-        data: { animation: '+' }
+        loadChildren: () => Promise.all(/*! import() | home-home-module */[__webpack_require__.e("default~events-events-module~home-home-module"), __webpack_require__.e("default~home-home-module~news-news-module"), __webpack_require__.e("common"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomeModule)
     },
     {
         path: 'blog',
-        loadChildren: () => Promise.all(/*! import() | blog-blog-module */[__webpack_require__.e("common"), __webpack_require__.e("blog-blog-module")]).then(__webpack_require__.bind(null, /*! ./blog/blog.module */ "./src/app/blog/blog.module.ts")).then(m => m.BlogModule),
-        data: { animation: '*' }
+        loadChildren: () => Promise.all(/*! import() | blog-blog-module */[__webpack_require__.e("common"), __webpack_require__.e("blog-blog-module")]).then(__webpack_require__.bind(null, /*! ./blog/blog.module */ "./src/app/blog/blog.module.ts")).then(m => m.BlogModule)
     },
     {
         path: 'news',
-        loadChildren: () => Promise.all(/*! import() | news-news-module */[__webpack_require__.e("default~home-home-module~news-news-module"), __webpack_require__.e("news-news-module")]).then(__webpack_require__.bind(null, /*! ./news/news.module */ "./src/app/news/news.module.ts")).then(m => m.NewsModule),
-        data: { animation: '*' }
+        loadChildren: () => Promise.all(/*! import() | news-news-module */[__webpack_require__.e("default~home-home-module~news-news-module"), __webpack_require__.e("news-news-module")]).then(__webpack_require__.bind(null, /*! ./news/news.module */ "./src/app/news/news.module.ts")).then(m => m.NewsModule)
     },
     {
         path: 'events',
-        loadChildren: () => Promise.all(/*! import() | events-events-module */[__webpack_require__.e("default~events-events-module~home-home-module"), __webpack_require__.e("events-events-module")]).then(__webpack_require__.bind(null, /*! ./events/events.module */ "./src/app/events/events.module.ts")).then(m => m.EventsModule),
+        loadChildren: () => Promise.all(/*! import() | events-events-module */[__webpack_require__.e("default~events-events-module~home-home-module"), __webpack_require__.e("events-events-module")]).then(__webpack_require__.bind(null, /*! ./events/events.module */ "./src/app/events/events.module.ts")).then(m => m.EventsModule)
     },
     {
         path: 'shop',
-        loadChildren: () => __webpack_require__.e(/*! import() | shop-shop-module */ "shop-shop-module").then(__webpack_require__.bind(null, /*! ./shop/shop.module */ "./src/app/shop/shop.module.ts")).then(m => m.ShopModule),
+        loadChildren: () => __webpack_require__.e(/*! import() | shop-shop-module */ "shop-shop-module").then(__webpack_require__.bind(null, /*! ./shop/shop.module */ "./src/app/shop/shop.module.ts")).then(m => m.ShopModule)
     },
     {
         path: 'lounge',
-        loadChildren: () => __webpack_require__.e(/*! import() | lounge-lounge-module */ "lounge-lounge-module").then(__webpack_require__.bind(null, /*! ./lounge/lounge.module */ "./src/app/lounge/lounge.module.ts")).then(m => m.LoungeModule),
+        loadChildren: () => __webpack_require__.e(/*! import() | lounge-lounge-module */ "lounge-lounge-module").then(__webpack_require__.bind(null, /*! ./lounge/lounge.module */ "./src/app/lounge/lounge.module.ts")).then(m => m.LoungeModule)
     },
     {
         path: 'nail',
-        loadChildren: () => __webpack_require__.e(/*! import() | nail-bar-nail-bar-module */ "nail-bar-nail-bar-module").then(__webpack_require__.bind(null, /*! ./nail-bar/nail-bar.module */ "./src/app/nail-bar/nail-bar.module.ts")).then(m => m.NailBarModule),
+        loadChildren: () => __webpack_require__.e(/*! import() | nail-bar-nail-bar-module */ "nail-bar-nail-bar-module").then(__webpack_require__.bind(null, /*! ./nail-bar/nail-bar.module */ "./src/app/nail-bar/nail-bar.module.ts")).then(m => m.NailBarModule)
     },
     {
         path: 'contact',
