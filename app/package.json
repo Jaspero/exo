@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "e2e": "ng e2e",
-    "scully": "scully",
+    "scully": "scully --scanRoutes",
     "scully:serve": "scully serve"
   },
   "private": true,
