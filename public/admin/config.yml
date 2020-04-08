@@ -12,6 +12,27 @@ media_folder: "public/uploads"
 # The src attribute for uploaded media will begin with /uploads
 public_folder: "/uploads"
 
+# Reusable blocks for all of the pages
+- &BLOCKS
+  label: "Blocks"
+  name: "blocks"
+  widget: "list"
+  types:
+    - label: "Block Image R"
+      name: "blockImageR"
+      widget: "object"
+      fields:
+        - { label: "Title", name: "title", widget: "string", required: false }
+        - { label: "Image", name: "image", widget: "image", required: false }
+        - { label: "content", name: "content", widget: "markdown", required: false }
+    - label: "Block Image L"
+      name: "blockImageR"
+      widget: "object"
+      fields:
+        - { label: "Title", name: "title", widget: "string", required: false }
+        - { label: "Image", name: "image", widget: "image", required: false }
+        - { label: "content", name: "content", widget: "markdown", required: false }
+
 collections:
   - name: "blog"
     label: "Blog"
@@ -97,29 +118,12 @@ collections:
         file: "public/collections/pages/home.md"
         fields:
           - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
-          - { label: "Showcase Background", name: "showcaseBackground", widget: "string", allow_multiple: false }
+          - { label: "Showcase Background", name: "showcaseBackground", widget: "file", allow_multiple: false }
           - label: "Meta"
             name: "meta"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Keywords", name: "keywords", widget: "string" }
-          - label: "Blocks"
-            name: "blocks"
-            widget: "list"
-            types:
-              - label: "Block Image R"
-                name: "blockImageR"
-                widget: "object"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Image", name: "image", widget: "image" }
-                  - { label: "content", name: "content", widget: "markdown" }
-              - label: "Block Image L"
-                name: "blockImageR"
-                widget: "object"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Image", name: "image", widget: "image" }
-                  - { label: "content", name: "content", widget: "markdown" }
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Keywords", name: "keywords", widget: "string", required: false }
+          - << : *BLOCKS
