@@ -49,10 +49,9 @@ collections:
         name: "galleryImages"
         widget: "list"
         fields:
-          - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
-      - {label: "ProductDescription", name: "productdescription", widget: "markdown"}
-      - {label: "AdditionalInfo", name: "additionalinfo", widget: "markdown"}
+      - {label: "Product Description", name: "product description", widget: "markdown"}
+      - {label: "Additional Info", name: "additional info", widget: "markdown"}
 
 
   - name: "events"
