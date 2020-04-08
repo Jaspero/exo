@@ -30,8 +30,8 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
 
-  - name: 'product'
-    label: 'Product'
+  - name: 'products'
+    label: 'Products'
     folder: 'public/collections/shop'
     create: true
     slug: '{{slug}}'
