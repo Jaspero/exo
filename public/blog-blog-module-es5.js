@@ -398,7 +398,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["exo-blog-list"]],
       decls: 21,
       vars: 3,
-      consts: [[1, "main", "relative"], [1, "grid", "h-full", "jc-start", "ai-end", "c-light"], [1, "col-6", "col-s-12", "z-index"], [1, "ta-left", "exo-headline"], [1, "col-12", "ta-left", "z-index"], [1, "grid", "m-y-l"], [1, "col-6", "col-s-12", "ta-center"], [1, "m-y-l"], ["class", "grid jc-between ai-center b-b p-y-m", 3, "even", 4, "ngFor", "ngForOf"], [1, "grid", "jc-between", "ai-center", "b-b", "p-y-m"], [1, "col-4", "col-s-6", "col-xs-12", "c-dark", "ta-left"], [1, "flex", "ai-center", "jc-between", "w-full", "m-t-s"], [1, "category"], [1, "m-t-s"], [1, "btn-primary", "m-t-l", 3, "routerLink"], [1, "col-5", "col-s-6", "col-xs-12", "ta-right"], [3, "src"]],
+      consts: [[1, "main", "relative"], [1, "grid", "h-full", "jc-start", "ai-end", "c-light"], [1, "col-6", "col-s-12", "z-index"], [1, "ta-left", "exo-headline"], [1, "col-12", "ta-left", "z-index"], [1, "grid", "m-y-l"], [1, "col-6", "col-s-12", "ta-center"], [1, "m-y-l"], ["class", "grid jc-between ai-center b-b p-y-m", 3, "even", 4, "ngFor", "ngForOf"], [1, "grid", "jc-between", "ai-center", "b-b", "p-y-m"], [1, "col-4", "col-s-6", "col-xs-12", "c-dark", "ta-justify"], [1, "flex", "ai-center", "jc-between", "w-full", "m-t-s"], [1, "category"], [1, "m-t-s", "m-b-l"], [1, "btn-primary", 3, "routerLink"], [1, "col-5", "col-s-6", "col-xs-12", "ta-right"], [3, "src"]],
       template: function BlogListComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "exo-header");

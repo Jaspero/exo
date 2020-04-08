@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"contact-us-contact-us-module":"contact-us-contact-us-module","default~blog-blog-module~home-home-module":"default~blog-blog-module~home-home-module","blog-blog-module":"blog-blog-module","default~events-events-module~home-home-module":"default~events-events-module~home-home-module","default~home-home-module~news-news-module":"default~home-home-module~news-news-module","home-home-module":"home-home-module","events-events-module":"events-events-module","news-news-module":"news-news-module","lounge-lounge-module":"lounge-lounge-module","nail-bar-nail-bar-module":"nail-bar-nail-bar-module","shop-shop-module":"shop-shop-module"}[chunkId]||chunkId) + "-es2015.js"
+/******/ 		return __webpack_require__.p + "" + ({"common":"common","blog-blog-module":"blog-blog-module","contact-us-contact-us-module":"contact-us-contact-us-module","default~events-events-module~home-home-module":"default~events-events-module~home-home-module","default~home-home-module~news-news-module":"default~home-home-module~news-news-module","home-home-module":"home-home-module","events-events-module":"events-events-module","news-news-module":"news-news-module","lounge-lounge-module":"lounge-lounge-module","nail-bar-nail-bar-module":"nail-bar-nail-bar-module","shop-shop-module":"shop-shop-module"}[chunkId]||chunkId) + "-es2015.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
