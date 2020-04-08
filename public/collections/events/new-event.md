@@ -8,4 +8,5 @@ description: >-
   organic products and furnishing an enjoyable atmosphere that appeals to the
   senses.
 thumbnail: /uploads/events-lounge.png
+image: /uploads/events-lounge.png
 ---
