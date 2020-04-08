@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ScullyRoutesService} from '@scullyio/ng-lib';
 import {ScullyRoute} from '@scullyio/ng-lib/lib/route-service/scully-routes.service';
 import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
+import {map, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'exo-events-list',
@@ -49,6 +49,7 @@ export class EventsListComponent implements OnInit {
 
   ngOnInit() {
     this.events$ = this.scully.available$.pipe(
+      tap(item => console.log(item)),
       map(items => items.filter(it => it.route.includes('/events/')))
     );
   }

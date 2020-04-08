@@ -29,7 +29,7 @@
 <section class="m-y-l bg-full"></section>
 <section class="relative flex bg-container m-y-l" *ngFor="let event of events$ | async; odd as odd">
   <div [class.even]="odd" class="custom-bg-r">
-    <div class="events-party relative" [ngStyle]="{'background-image': 'url('+ event.thumbnail +')'}">
+    <div class="events-party relative" [ngStyle]="{'background-image': 'url('+ event.image +')'}">
       <div [class.left]="odd"  class="card-right bg-light p-a-l">
         <h3>{{event.title}}</h3>
         <p class="m-y-m">{{event.description}}</p>

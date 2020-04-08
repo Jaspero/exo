@@ -21,24 +21,20 @@ const routes: Routes = [
     path: 'events',
     loadChildren: () =>
       import('./events/events.module').then(m => m.EventsModule),
-    data: {animation: '*'}
   },
   {
     path: 'shop',
     loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule),
-    data: {animation: '*'}
   },
   {
     path: 'lounge',
     loadChildren: () =>
       import('./lounge/lounge.module').then(m => m.LoungeModule),
-    data: {animation: '*'}
   },
   {
     path: 'nail',
     loadChildren: () =>
       import('./nail-bar/nail-bar.module').then(m => m.NailBarModule),
-    data: {animation: '*'}
   },
   {
     path: 'contact',

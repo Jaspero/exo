@@ -7,7 +7,13 @@ exports.config = {
       type: 'contentFolder',
       id: {
         folder: "./dist/collections/blog"
-      }
+      },
+    },
+    '/events/:id': {
+      type: 'contentFolder',
+      id: {
+        folder: "./dist/collections/events"
+      },
     },
   }
 };
