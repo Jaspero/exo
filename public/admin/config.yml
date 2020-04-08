@@ -33,6 +33,17 @@ blocks: &blocks
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
 
+pageDefault: &pd
+  - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
+  - { label: "Showcase Background", name: "showcaseBackground", widget: "file", allow_multiple: false }
+  - label: "Meta"
+    name: "meta"
+    widget: "object"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Keywords", name: "keywords", widget: "string", required: false }
+
 collections:
   - name: "blog"
     label: "Blog"
@@ -117,13 +128,17 @@ collections:
         name: "home"
         file: "public/collections/pages/home.md"
         fields:
-          - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
-          - { label: "Showcase Background", name: "showcaseBackground", widget: "file", allow_multiple: false }
-          - label: "Meta"
-            name: "meta"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string", required: false }
-              - { label: "Description", name: "description", widget: "text", required: false }
-              - { label: "Keywords", name: "keywords", widget: "string", required: false }
+          - << : *pd
+          - << : *blocks
+      - label: "Nail Bar"
+        name: "nail"
+        file: "public/collections/pages/nail.md"
+        fields:
+          - << : *pd
+          - << : *blocks
+      - label: "Lounge"
+        name: "lounge"
+        file: "public/collections/pages/lounge.md"
+        fields:
+          - << : *pd
           - << : *blocks
