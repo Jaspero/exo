@@ -33,7 +33,7 @@ blocks: &blocks
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
 
-pageDefault: &pd
+pageDefault: &pageDefault
   - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
   - { label: "Showcase Background", name: "showcaseBackground", widget: "file", allow_multiple: false }
   - label: "Meta"
@@ -128,17 +128,17 @@ collections:
         name: "home"
         file: "public/collections/pages/home.md"
         fields:
-          - << : *pd
+          << : *pageDefault
           - << : *blocks
       - label: "Nail Bar"
         name: "nail"
         file: "public/collections/pages/nail.md"
         fields:
-          - << : *pd
+          << : *pageDefault
           - << : *blocks
       - label: "Lounge"
         name: "lounge"
         file: "public/collections/pages/lounge.md"
         fields:
-          - << : *pd
+          << : *pageDefault
           - << : *blocks

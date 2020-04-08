@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
+import {ScullyRoutesService} from '@scullyio/ng-lib';
 import {BlogComponent} from '../blog/components/blog/blog.component';
-import {NewsComponent} from '../news/component/news/news.component';
 import {EventsComponent} from '../events/component/events/events.component';
+import {NewsComponent} from '../news/component/news/news.component';
 
 @Component({
   selector: 'exo-home',
@@ -9,7 +10,9 @@ import {EventsComponent} from '../events/component/events/events.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private scully: ScullyRoutesService
+  ) {}
 
   links = {
     backgrounds: [
@@ -35,5 +38,12 @@ export class HomeComponent implements OnInit {
   };
   animate: any;
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.scully.available$.subscribe(value => {
+      console.log('all', value)
+    });
+    this.scully.getCurrent().subscribe(value => {
+      console.log('value', value);
+    })
+  }
 }
