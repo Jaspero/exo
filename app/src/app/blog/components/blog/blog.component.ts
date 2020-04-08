@@ -20,6 +20,6 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
     this.scully.getCurrent().subscribe(value => {
       this.item = value;
-    })
+    });
   }
 }

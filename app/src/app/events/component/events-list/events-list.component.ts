@@ -45,10 +45,10 @@ export class EventsListComponent implements OnInit {
     ]
   };
 
-  blogs$: Observable<ScullyRoute[]>;
+  events$: Observable<ScullyRoute[]>;
 
   ngOnInit() {
-    this.blogs$ = this.scully.available$.pipe(
+    this.events$ = this.scully.available$.pipe(
       map(items => items.filter(it => it.route.includes('/events/')))
     );
   }
