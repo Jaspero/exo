@@ -15,6 +15,12 @@ exports.config = {
         folder: './dist/collections/events'
       },
     },
+    '/shop/:id': {
+      type: 'contentFolder',
+      id: {
+        folder: './dist/collections/shop'
+      },
+    },
     '/pages/:id': {
       type: 'contentFolder',
       id: {
