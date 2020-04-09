@@ -33,17 +33,25 @@ blocks: &blocks
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
 
-pageDefault: &pageDefault
-  - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
-  - { label: "Showcase Background", name: "showcaseBackground", widget: "file", allow_multiple: false }
-  - label: "Meta"
-    name: "meta"
-    widget: "object"
-    fields:
-      - { label: "Title", name: "title", widget: "string", required: false }
-      - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Keywords", name: "keywords", widget: "string", required: false }
-  - << : *blocks
+meta: &meta
+  label: "Meta"
+  name: "meta"
+  widget: "object"
+  fields:
+    - { label: "Title", name: "title", widget: "string", required: false }
+    - { label: "Description", name: "description", widget: "text", required: false }
+    - { label: "Keywords", name: "keywords", widget: "string", required: false }
+
+showcaseTitle: &showcaseTitle
+  label: "Showcase Title"
+  name: "showcaseTitle"
+  widget: "string"
+
+showcaseBg: &showcaseBg
+  label: "Showcase Background"
+  name: "showcaseBackground"
+  widget: "file"
+  allow_multiple: false
 
 collections:
   - name: "blog"
@@ -129,14 +137,23 @@ collections:
         name: "home"
         file: "public/collections/pages/home.md"
         fields:
-          - *pageDefault
+          - << : *showcaseTitle
+          - << : *showcaseBg
+          - << : *meta
+          - << : *blocks
       - label: "Nail Bar"
         name: "nail"
         file: "public/collections/pages/nail.md"
         fields:
-          - *pageDefault
+          - << : *showcaseTitle
+          - << : *showcaseBg
+          - << : *meta
+          - << : *blocks
       - label: "Lounge"
         name: "lounge"
         file: "public/collections/pages/lounge.md"
         fields:
-          - *pageDefault
+          - << : *showcaseTitle
+          - << : *showcaseBg
+          - << : *meta
+          - << : *blocks
