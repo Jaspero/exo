@@ -127,9 +127,15 @@ collections:
       - label: "Home"
         name: "home"
         file: "public/collections/pages/home.md"
+        fields:
+          - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
       - label: "Nail Bar"
         name: "nail"
         file: "public/collections/pages/nail.md"
+        fields:
+          - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
       - label: "Lounge"
         name: "lounge"
         file: "public/collections/pages/lounge.md"
+        fields:
+          - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
