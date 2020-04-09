@@ -81,8 +81,8 @@ collections:
         widget: "list"
         fields:
           - {label: Image, name: image, widget: image}
-      - {label: "Product Description", name: "product description", widget: "markdown"}
-      - {label: "Additional Info", name: "additional info", widget: "markdown"}
+      - {label: "Product Description", name: "productDescription", widget: "markdown"}
+      - {label: "Additional Info", name: "additionalInfo", widget: "markdown"}
       - { label: "Price", name: "price", widget: "string" }
 
   - name: "events"
