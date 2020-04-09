@@ -21,6 +21,12 @@ exports.config = {
         folder: './dist/collections/shop'
       },
     },
+    '/news/:id': {
+      type: 'contentFolder',
+      id: {
+        folder: './dist/collections/news'
+      },
+    },
     '/pages/:id': {
       type: 'contentFolder',
       id: {

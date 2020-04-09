@@ -16,9 +16,9 @@
   </div>
 </div>
 <section class="m-y-l">
-  <div class="grid jc-between ai-center b-b p-y-m" *ngFor="let news of news.news">
+  <div class="grid jc-between ai-center b-b p-y-m" *ngFor="let news of news$ | async;">
     <div class="col-5 col-s-6 col-xs-12 ta-left">
-      <img src="{{news.newsImg}}">
+      <img src="{{news.image}}">
     </div>
     <div class="col-4 col-s-6 col-xs-12 c-dark">
       <h1>{{news.title}}</h1>
@@ -26,15 +26,9 @@
         <span class="category">{{news.date}}</span>
         <span class="category">Category:{{news.category}}</span>
       </div>
-      <p class="m-t-s">{{news.newsDescription}}</p>
-      <button class="btn-primary m-t-l">Read More</button>
+      <p class="m-t-s">{{news.description}}</p>
+      <a class="btn-primary m-t-l" [routerLink]="news.route">Read More</a>
     </div>
   </div>
 </section>
-
-<ul>
-  <li *ngFor="let route of news$ | async">
-    <a [routerLink]="route.route">{{ route.title || route.route}}</a>
-  </li>
-</ul>
 <exo-footer></exo-footer>
