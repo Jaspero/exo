@@ -127,15 +127,9 @@ collections:
       - label: "Home"
         name: "home"
         file: "public/collections/pages/home.md"
-        fields:
-          - << : *blocks
       - label: "Nail Bar"
         name: "nail"
         file: "public/collections/pages/nail.md"
-        fields:
-          - << : *blocks
       - label: "Lounge"
         name: "lounge"
         file: "public/collections/pages/lounge.md"
-        fields:
-          - << : *blocks
