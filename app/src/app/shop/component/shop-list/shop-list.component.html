@@ -19,9 +19,9 @@
 <section class="m-y-l">
   <div class="grid jc-start">
     <div class="col-6 m-y-m relative" *ngFor="let product of product$">
-      <div class="product-wrapper" [ngStyle]="{'background-image': 'url('+ product.background +')'}">
+      <div class="product-wrapper" [ngStyle]="{'background-image': 'url('+ product.image +')'}">
         <div class="img-wrapper flex jc-center ai-end">
-            <img src="{{product.featProduct}}" alt="" class="soap-product" *ngFor="let product of product.galleryImg">
+            <img src="{{product.image}}" alt="" class="soap-product" *ngFor="let image of product$.galleryImages">
         </div>
       </div>
       <h3 class="m-t-xl">{{product.title}}</h3>

@@ -71,8 +71,6 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - {label: "Description", name: "description", widget: "markdown"}
       - label: "Featured Image"
         name: "image"
         widget: "image"
@@ -81,6 +79,8 @@ collections:
         widget: "list"
         fields:
           - {label: Image, name: image, widget: image}
+      - { label: "Title", name: "title", widget: "string" }
+      - {label: "Description", name: "description", widget: "markdown"}
       - {label: "Product Description", name: "productDescription", widget: "markdown"}
       - {label: "Additional Info", name: "additionalInfo", widget: "markdown"}
       - { label: "Price", name: "price", widget: "string" }
