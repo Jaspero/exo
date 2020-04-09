@@ -129,7 +129,7 @@ collections:
         name: "home"
         file: "public/collections/pages/home.md"
         fields:
-          << : *pageDefault
+          - << : *pageDefault
       - label: "Nail Bar"
         name: "nail"
         file: "public/collections/pages/nail.md"
@@ -139,4 +139,4 @@ collections:
         name: "lounge"
         file: "public/collections/pages/lounge.md"
         fields:
-          << : *pageDefault
+          - << : *pageDefault
