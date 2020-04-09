@@ -13,48 +13,36 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 # Reusable blocks for all of the pages
-blocks:
-  &blocks
-  - label: "Blocks"
-    name: "blocks"
-    widget: "list"
-    types:
-      - label: "Block Image R"
-        name: "blockImageR"
-        widget: "object"
-        fields:
-          - { label: "Title", name: "title", widget: "string", required: false }
-          - { label: "Image", name: "image", widget: "image", required: false }
-          - { label: "content", name: "content", widget: "markdown", required: false }
-      - label: "Block Image L"
-        name: "blockImageR"
-        widget: "object"
-        fields:
-          - { label: "Title", name: "title", widget: "string", required: false }
-          - { label: "Image", name: "image", widget: "image", required: false }
-          - { label: "content", name: "content", widget: "markdown", required: false }
+blocks: &blocks
+  label: "Blocks"
+  name: "blocks"
+  widget: "list"
+  types:
+    - label: "Block Image R"
+      name: "blockImageR"
+      widget: "object"
+      fields:
+        - { label: "Title", name: "title", widget: "string", required: false }
+        - { label: "Image", name: "image", widget: "image", required: false }
+        - { label: "content", name: "content", widget: "markdown", required: false }
+    - label: "Block Image L"
+      name: "blockImageR"
+      widget: "object"
+      fields:
+        - { label: "Title", name: "title", widget: "string", required: false }
+        - { label: "Image", name: "image", widget: "image", required: false }
+        - { label: "content", name: "content", widget: "markdown", required: false }
 
-meta: &meta
-  label: "Meta"
-  name: "meta"
-  widget: "object"
-  fields:
-    - { label: "Title", name: "title", widget: "string", required: false }
-    - { label: "Description", name: "description", widget: "text", required: false }
-    - { label: "Keywords", name: "keywords", widget: "string", required: false }
-
-showcaseTitle:
-  &showcaseTitle
-  - label: "Showcase Title"
-    name: "showcaseTitle"
-    widget: "string"
-
-showcaseBg:
-  &showcaseBg
-  - label: "Showcase Background"
-    name: "showcaseBackground"
-    widget: "file"
-    allow_multiple: false
+pageDefault: &pageDefault
+  - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
+  - { label: "Showcase Background", name: "showcaseBackground", widget: "file", allow_multiple: false }
+  - label: "Meta"
+    name: "meta"
+    widget: "object"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Keywords", name: "keywords", widget: "string", required: false }
 
 collections:
   - name: "blog"
@@ -140,23 +128,14 @@ collections:
         name: "home"
         file: "public/collections/pages/home.md"
         fields:
-          - << : *showcaseTitle
-          - << : *showcaseBg
-          - << : *meta
           - << : *blocks
       - label: "Nail Bar"
         name: "nail"
         file: "public/collections/pages/nail.md"
         fields:
-          - << : *showcaseTitle
-          - << : *showcaseBg
-          - << : *meta
           - << : *blocks
       - label: "Lounge"
         name: "lounge"
         file: "public/collections/pages/lounge.md"
         fields:
-          - << : *showcaseTitle
-          - << : *showcaseBg
-          - << : *meta
           - << : *blocks
