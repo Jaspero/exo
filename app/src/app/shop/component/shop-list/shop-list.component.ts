@@ -13,13 +13,12 @@ export class ShopListComponent implements OnInit {
   constructor(public scully: ScullyRoutesService) {}
 
 
-
   product$: Observable<ScullyRoute[]>;
 
   ngOnInit() {
     this.product$ = this.scully.available$.pipe(
       tap(item => console.log(item)),
-      map(items => items.filter(it => it.route.includes('/product/')))
+      map(items => items.filter(it => it.route.includes('/shop/')))
     );
   }
 }
