@@ -33,7 +33,7 @@
       <div [class.left]="odd"  class="card-right bg-light p-a-l">
         <h3>{{event.title}}</h3>
         <p class="m-y-m">{{event.description}}</p>
-        <button class="btn-primary">Book Now</button>
+        <a class="btn-primary m-t-l" [routerLink]="event.route">Read More</a>
       </div>
     </div>
   </div>
