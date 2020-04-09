@@ -128,12 +128,15 @@ collections:
       - label: "Home"
         name: "home"
         file: "public/collections/pages/home.md"
-        fields: *pageDefault
+        fields:
+          *pageDefault
       - label: "Nail Bar"
         name: "nail"
         file: "public/collections/pages/nail.md"
-        fields: *pageDefault
+        fields:
+          *pageDefault
       - label: "Lounge"
         name: "lounge"
         file: "public/collections/pages/lounge.md"
-        fields: *pageDefault
+        fields:
+          *pageDefault
