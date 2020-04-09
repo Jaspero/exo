@@ -18,14 +18,14 @@
 </div>
 <section class="m-y-l">
   <div class="grid jc-start">
-    <div class="col-6 m-y-m relative" *ngFor="let background of products.backgrounds">
-      <div class="product-wrapper" [ngStyle]="{'background-image': 'url('+ background.background +')'}">
+    <div class="col-6 m-y-m relative" *ngFor="let product of product$">
+      <div class="product-wrapper" [ngStyle]="{'background-image': 'url('+ product.background +')'}">
         <div class="img-wrapper flex jc-center ai-end">
-            <img src="{{product.featProduct}}" alt="" class="soap-product" *ngFor="let product of background.galleryImg">
+            <img src="{{product.featProduct}}" alt="" class="soap-product" *ngFor="let product of product.galleryImg">
         </div>
       </div>
-      <h3 class="m-t-xl">Soap and Lotion</h3>
-      <p class="m-y-m">EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.</p>
+      <h3 class="m-t-xl">{{product.title}}</h3>
+      <p class="m-y-m">{{product.description}}</p>
       <button class="btn-primary">View Products</button>
     </div>
   </div>

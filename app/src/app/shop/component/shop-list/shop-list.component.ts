@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ScullyRoutesService} from '@scullyio/ng-lib';
 import {ScullyRoute} from '@scullyio/ng-lib/lib/route-service/scully-routes.service';
 import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
+import {map, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'exo-shop-list',
@@ -16,6 +16,11 @@ export class ShopListComponent implements OnInit {
     backgrounds: [
       {
         background: 'assets/images/shop/shop-soap.png',
+        title: 'Soap and Lotion',
+        description: 'EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, ' +
+          'a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar ' +
+          'dedicated to consistently providing high customer satisfaction by rendering excellent service, quality org' +
+          'anic products and furnishing an enjoyable atmosphere that appeals to the senses.',
         galleryImg: [
           {
             featProduct: 'assets/images/shop/soap-product.png'
@@ -27,6 +32,11 @@ export class ShopListComponent implements OnInit {
       },
       {
         background: 'assets/images/shop/shop-spray.png',
+        title: 'Spray and Mist',
+        description: 'EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, ' +
+          'a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar ' +
+          'dedicated to consistently providing high customer satisfaction by rendering excellent service, quality org' +
+          'anic products and furnishing an enjoyable atmosphere that appeals to the senses.',
         galleryImg: [
           {
             featProduct: 'assets/images/shop/creme.png'
@@ -38,6 +48,11 @@ export class ShopListComponent implements OnInit {
       },
       {
         background: 'assets/images/shop/shop-candles.png',
+        title: 'Candles',
+        description: 'EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, ' +
+          'a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar ' +
+          'dedicated to consistently providing high customer satisfaction by rendering excellent service, quality org' +
+          'anic products and furnishing an enjoyable atmosphere that appeals to the senses.',
         galleryImg: [
           {
             featProduct: 'assets/images/shop/jar.png'
@@ -52,6 +67,11 @@ export class ShopListComponent implements OnInit {
       },
       {
         background: 'assets/images/shop/shop-products.png',
+        title: 'CBD Products',
+        description: 'EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, ' +
+          'a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar ' +
+          'dedicated to consistently providing high customer satisfaction by rendering excellent service, quality org' +
+          'anic products and furnishing an enjoyable atmosphere that appeals to the senses.',
         galleryImg: [
           {
             featProduct: 'assets/images/shop/package.png'
@@ -63,6 +83,11 @@ export class ShopListComponent implements OnInit {
       },
       {
         background: 'assets/images/shop/shop-cards.png',
+        title: 'Cards',
+        description: 'EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, ' +
+          'a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar ' +
+          'dedicated to consistently providing high customer satisfaction by rendering excellent service, quality org' +
+          'anic products and furnishing an enjoyable atmosphere that appeals to the senses.',
         galleryImg: [
           {
             featProduct: 'assets/images/shop/cards.png'
@@ -72,11 +97,12 @@ export class ShopListComponent implements OnInit {
     ]
   };
 
-  blogs$: Observable<ScullyRoute[]>;
+  product$: Observable<ScullyRoute[]>;
 
   ngOnInit() {
-    this.blogs$ = this.scully.available$.pipe(
-      map(items => items.filter(it => it.route.includes('/shop/')))
+    this.product$ = this.scully.available$.pipe(
+      tap(item => console.log(item)),
+      map(items => items.filter(it => it.route.includes('/product/')))
     );
   }
 }
