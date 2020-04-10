@@ -14,10 +14,12 @@ productDescription: This is a product descripiton including list trying it out
 additionalInfo: |-
   * item 1
 
-    item 2 
+    item 2
 
     item 3
 
     item 4
+
+    item 5
 price: 99.00$
 ---
