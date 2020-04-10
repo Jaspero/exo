@@ -12,14 +12,12 @@ description: EXO Industries is a brand of lifestyle services. The company
   appeals to the senses.
 productDescription: This is a product descripiton including list trying it out
 additionalInfo: |-
-  Length 74cm   
+  * item 1
 
-  Regular Fit
+    item 2 
 
-  Notched lapels
+    item 3
 
-  Twin button front fastening
-
-  and so on
+    item 4
 price: 99.00$
 ---
