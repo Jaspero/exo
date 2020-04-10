@@ -9,6 +9,9 @@ import {
   state
 } from '@angular/animations';
 
+
+
+
 export const slideInAnimation = trigger('routeAnimations', [
   transition('* <=> *', [
     query(
@@ -35,3 +38,5 @@ export const slideInAnimation = trigger('routeAnimations', [
     ])
   ])
 ]);
+
+

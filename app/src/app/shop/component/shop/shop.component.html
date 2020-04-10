@@ -1,39 +1,26 @@
 <exo-header></exo-header>
 <section class="main relative">
-  <div class="main-wrapper flex fw-wrap jc-start ai-end p-x-xl p-s-0 relative">
+  <div class="grid h-full ai-center">
     <div class="col-6 col-s-12 z-index m-l-l m-s-0">
-      <h1 class="c-light ta-left exo-headline">Quite Simply, <br> EXtraOrdinary</h1>
-    </div>
-    <div class="col-12 ta-left c-light z-index">
-        <h4>A journey of the senses</h4>
-        <p>Scroll down</p>
+      <h1 class="c-light ta-center exo-headline">{{item?.title}}</h1>
     </div>
   </div>
 </section>
 <div class="grid jc-between m-y-xl">
   <div class="col-4">
     <div class="img-wrapper ta-center b-a">
-      <img src="assets/images/shop/shop-single-product.png" alt="">
+      <img [src]="item?.image" alt="">
     </div>
     <div class="flex ai-center jc-between w-full m-t-s">
-      <div class="product-wrapper ta-center  b-a">
-        <img src="assets/images/shop/product-small.png" alt="" class="product">
-      </div>
-      <div class="product-wrapper ta-center  b-a">
-        <img src="assets/images/shop/product-small.png" alt="" class="product">
-      </div>
-      <div class="product-wrapper ta-center  b-a">
-        <img src="assets/images/shop/product-small.png" alt="" class="product">
-      </div>
-      <div class="product-wrapper ta-center  b-a">
-        <img src="assets/images/shop/product-small.png" alt="" class="product">
-      </div>
+      <div class="product-wrapper ta-center  b-a" *ngFor="let image of item?.galleryImages">
+      <img [src]="image.image"  alt="" class="product">
+    </div>
     </div>
   </div>
   <div class="col-6">
     <h4 class="title">Soap & Lotion</h4>
-    <p class="price b-b m-y-m p-b-s"><b>$110.00</b></p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p class="price b-b m-y-m p-b-s"><b>{{item?.price}}</b></p>
+    <p>{{item?.description}}</p>
     <button class="btn-primary m-t-m">Add to Cart</button>
   </div>
 </div>
@@ -43,11 +30,11 @@
   <h4 class="m-x-s">ADDITIONAL INFORMATION</h4>
 </div>
   <div class="col-12">
-    <p class="m-y-s">Coupling a blended linen construction with tailored style, the River Island HR Jasper Blazer will imprint a touch of dapper charm into your after-dark wardrobe. Our model is wearing a size medium blazer, and usually takes a size medium/38L shirt. He is 6’2 1/2” (189cm) tall with a 38” (96 cm) chest and a 31” (78 cm) waist.</p>
+    <p class="m-y-s">{{item?.productDescription}}</p>
   </div>
   <div class="col-12">
-    <ul type="square" *ngFor="let item of product">
-      <li>{{item.detail}}</li>
+    <ul type="square">
+      <li>{{item?.additionalInfo}}</li>
     </ul>
   </div>
 </div>

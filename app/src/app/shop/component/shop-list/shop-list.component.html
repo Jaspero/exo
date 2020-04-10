@@ -20,9 +20,6 @@
   <div class="grid jc-start">
     <div class="col-6 m-y-m relative" *ngFor="let product of product$ | async;">
       <div class="product-wrapper" [ngStyle]="{'background-image': 'url('+ product.image +')'}">
-        <div class="img-wrapper flex jc-center ai-end">
-          <img src="{{product.image}}" alt="" class="soap-product">
-        </div>
       </div>
       <h3 class="m-t-xl">{{product.title}}</h3>
       <p class="m-t-s m-b-l">{{product.description}}</p>

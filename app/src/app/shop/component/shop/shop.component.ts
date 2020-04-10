@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute, Router, ROUTES} from '@angular/router';
+import {ScullyRoutesService} from '@scullyio/ng-lib';
 
 declare var ng: any;
 
@@ -11,7 +12,7 @@ declare var ng: any;
   encapsulation: ViewEncapsulation.Emulated
 })
 export class ShopComponent implements OnInit {
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private scully: ScullyRoutesService) {}
 
   product = [
     {
@@ -46,6 +47,17 @@ export class ShopComponent implements OnInit {
         'Material: Outer: 50% Linen & 50% Polyamide; Body Lining: 100% Cotton; Lining: 100% Acetate'
     }
   ];
+  item: any;
 
-  ngOnInit() {}
+  classActive = false;
+
+  toggleClass() {
+    this.classActive = !this.classActive;
+  }
+
+  ngOnInit() {
+    this.scully.getCurrent().subscribe(value => {
+      this.item = value;
+    });
+  }
 }
