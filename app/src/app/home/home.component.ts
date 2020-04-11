@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 import {ScullyRoutesService} from '@scullyio/ng-lib';
 import {BlogComponent} from '../blog/components/blog/blog.component';
 import {EventsComponent} from '../events/component/events/events.component';
@@ -11,7 +12,8 @@ import {NewsComponent} from '../news/component/news/news.component';
 })
 export class HomeComponent implements OnInit {
   constructor(
-    private scully: ScullyRoutesService
+    private scully: ScullyRoutesService,
+    private activatedRoute: ActivatedRoute
   ) {}
 
   links = {
@@ -36,9 +38,13 @@ export class HomeComponent implements OnInit {
       }
     ]
   };
-  animate: any;
+
+  page: any;
 
   ngOnInit() {
+
+    this.page = this.activatedRoute.snapshot.data.page;
+
     this.scully.available$.subscribe(value => {
       console.log('all', value)
     });

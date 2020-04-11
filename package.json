@@ -10,7 +10,8 @@
     "cleanup": "del-cli \"public/**\" \"!public\" \"!public/admin\" \"!public/collections\" \"!public/uploads\"",
     "copy:collections": "cp -r public/collections app/dist/",
     "copy:app": "cp -r app/dist/static/* public/",
-    "build:app": "npm --prefix app run build && npm run copy:collections && npm --prefix app run build:scully && npm run cleanup && npm run copy:app"
+    "build:app": "npm --prefix app run build && npm run copy:collections && npm --prefix app run build:scully && npm run cleanup && npm run copy:app",
+    "collection:listen": "http-server -p 3000 -c-1 public"
   },
   "repository": {
     "type": "git",
@@ -49,10 +50,11 @@
     ]
   },
   "devDependencies": {
-    "del-cli": "^3.0.0",
-    "firebase-tools": "^7.16.1",
-    "husky": "4.2.3",
-    "lint-staged": "10.0.8",
-    "prettier": "1.19.1"
+    "del-cli": "3.0.0",
+    "firebase-tools": "8.0.2",
+    "http-server": "0.12.1",
+    "husky": "4.2.5",
+    "lint-staged": "10.1.3",
+    "prettier": "2.0.4"
   }
 }

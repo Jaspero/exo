@@ -37,6 +37,16 @@ const routes: Routes = [
     path: 'contact',
     loadChildren: () =>
       import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+  },
+  {
+    path: '404',
+    loadChildren: () =>
+      import('./not-found/not-found.module').then(m => m.NotFoundModule)
+  },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('./not-found/not-found.module').then(m => m.NotFoundModule)
   }
 ];
 

@@ -18,15 +18,15 @@ blocks: &blocks
   name: "blocks"
   widget: "list"
   types:
-    - label: "Block Image R"
-      name: "blockImageR"
+    - label: "Image R"
+      name: "imageR"
       widget: "object"
       fields:
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
-    - label: "Block Image L"
-      name: "blockImageR"
+    - label: "Image L"
+      name: "imageL"
       widget: "object"
       fields:
         - { label: "Title", name: "title", widget: "string", required: false }
@@ -43,6 +43,7 @@ pageDefault: &pageDefault
       - { label: "Title", name: "title", widget: "string", required: false }
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Keywords", name: "keywords", widget: "string", required: false }
+  - <<: *blocks
 
 collections:
   - name: "blog"
@@ -61,7 +62,6 @@ collections:
       - { label: "Category", name: "category", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-
 
   - name: "products"
     label: "Products"
@@ -99,7 +99,6 @@ collections:
         name: "image"
         widget: "image"
 
-
   - name: "news"
     label: "News"
     folder: "public/collections/news"
@@ -116,24 +115,21 @@ collections:
         name: "image"
         widget: "image"
 
-
   - name: "pages"
     label: "Pages"
+    extension: "json"
     editor:
       preview: false
     files:
       - label: "Home"
         name: "home"
         file: "public/collections/pages/home.md"
-        fields:
-          - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
+        fields: *pageDefault
       - label: "Nail Bar"
         name: "nail"
         file: "public/collections/pages/nail.md"
-        fields:
-          - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
+        fields: *pageDefault
       - label: "Lounge"
         name: "lounge"
         file: "public/collections/pages/lounge.md"
-        fields:
-          - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
+        fields: *pageDefault

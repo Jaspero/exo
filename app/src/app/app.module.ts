@@ -1,10 +1,11 @@
-import {BrowserModule} from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ScullyLibModule} from '@scullyio/ng-lib';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {ScullyLibModule} from '@scullyio/ng-lib';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {SharedModule} from './shared.module';
+import {BASE_TITLE} from './shared/resolvers/meta.resolver';
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,10 +13,15 @@ import {SharedModule} from './shared.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ScullyLibModule,
-    SharedModule
+    HttpClientModule,
+    ScullyLibModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: BASE_TITLE,
+      useValue: '| Exo'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
