@@ -117,8 +117,8 @@ collections:
 
   - name: "pages"
     label: "Pages"
-    extension: json
-    format: json
+    extension: "json"
+    format: "json"
     editor:
       preview: false
     files:
