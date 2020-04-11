@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 import {ScullyRoutesService} from '@scullyio/ng-lib';
 import {ScullyRoute} from '@scullyio/ng-lib/lib/route-service/scully-routes.service';
 import {Observable} from 'rxjs';
-import {map, tap} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'exo-events-list',
@@ -10,15 +11,17 @@ import {map, tap} from 'rxjs/operators';
   styleUrls: ['./events-list.component.scss']
 })
 export class EventsListComponent implements OnInit {
-  constructor(public scully: ScullyRoutesService) {}
-
-
+  constructor(
+    public scully: ScullyRoutesService,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   events$: Observable<ScullyRoute[]>;
+  page: any;
 
   ngOnInit() {
+    this.page = this.activatedRoute.snapshot.data.page;
     this.events$ = this.scully.available$.pipe(
-      tap(item => console.log(item)),
       map(items => items.filter(it => it.route.includes('/events/')))
     );
   }

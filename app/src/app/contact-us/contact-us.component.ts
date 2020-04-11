@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'exo-contact-us',
@@ -6,7 +7,10 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private activatedRoute: ActivatedRoute
+  ) {}
+
   exo = {
     services: [
       {
@@ -51,5 +55,9 @@ export class ContactUsComponent implements OnInit {
     ]
   };
 
-  ngOnInit(): void {}
+  page: any;
+
+  ngOnInit() {
+    this.page = this.activatedRoute.snapshot.data.page;
+  }
 }

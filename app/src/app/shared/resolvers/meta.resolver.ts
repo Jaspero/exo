@@ -19,10 +19,11 @@ export class MetaResolver implements Resolve<any> {
   ) {}
 
   resolve(route: ActivatedRouteSnapshot) {
+    console.log(123);
     return this.scully.getCurrent()
       .pipe(
         tap(a => {
-          console.log(a)
+          console.log(a);
         })
       );
     // const valuesToSet = {...(route.data.meta || {})};

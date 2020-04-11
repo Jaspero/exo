@@ -26,7 +26,7 @@ export class BlockRendererComponent implements OnInit {
       if (BLOCKS_MAP[block.type]) {
         const componentFactory = this.componentFactoryResolver.resolveComponentFactory(BLOCKS_MAP[block.type]);
         const componentRef = this.vcr.createComponent(componentFactory);
-        (<any>componentRef.instance).data = block;
+        (componentRef.instance as any).data = block;
       }
     }
   }

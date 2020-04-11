@@ -1,5 +1,4 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ActivatedRoute, Router, ROUTES} from '@angular/router';
 import {ScullyRoutesService} from '@scullyio/ng-lib';
 
 declare var ng: any;
@@ -48,10 +47,7 @@ export class ShopComponent implements OnInit {
     }
   ];
   item: any;
-
   viewMode = 'tab1';
-
-
 
   ngOnInit() {
     this.scully.getCurrent().subscribe(value => {

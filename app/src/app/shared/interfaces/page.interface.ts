@@ -5,6 +5,6 @@ export interface Page {
     title?: string;
     description?: string;
     keywords?: string;
-  },
+  };
   blocks?: any[];
 }

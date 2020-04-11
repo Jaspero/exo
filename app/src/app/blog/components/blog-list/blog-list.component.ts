@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 import {ScullyRoutesService} from '@scullyio/ng-lib';
 import {ScullyRoute} from '@scullyio/ng-lib/lib/route-service/scully-routes.service';
 import {Observable} from 'rxjs';
-import {map, tap} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'exo-blog-list',
@@ -10,14 +11,17 @@ import {map, tap} from 'rxjs/operators';
   styleUrls: ['./blog-list.component.scss']
 })
 export class BlogListComponent implements OnInit {
-  constructor(public scully: ScullyRoutesService) {}
+  constructor(
+    public scully: ScullyRoutesService,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
-
+  page: any;
   blogs$: Observable<ScullyRoute[]>;
 
   ngOnInit() {
+    this.page = this.activatedRoute.snapshot.data.page;
     this.blogs$ = this.scully.available$.pipe(
-      tap(it => console.log(it)),
       map(items => items.filter(it => it.route.includes('/blog/')))
     );
   }

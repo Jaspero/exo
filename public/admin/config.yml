@@ -33,21 +33,29 @@ blocks: &blocks
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
 
+meta: &meta
+  label: "Meta"
+  name: "meta"
+  widget: "object"
+  fields:
+    - { label: "Title", name: "title", widget: "string", required: false }
+    - { label: "Description", name: "description", widget: "text", required: false }
+    - { label: "Keywords", name: "keywords", widget: "string", required: false }
+
 pageDefault: &pageDefault
   - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
   - { label: "Showcase Background", name: "showcaseBackground", widget: "file", allow_multiple: false }
-  - label: "Meta"
-    name: "meta"
-    widget: "object"
-    fields:
-      - { label: "Title", name: "title", widget: "string", required: false }
-      - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Keywords", name: "keywords", widget: "string", required: false }
+  - <<: *meta
   - <<: *blocks
+
+pageLight: &pageLight
+  - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
+  - { label: "Showcase Background", name: "showcaseBackground", widget: "file", allow_multiple: false }
+  - <<: *meta
 
 collections:
   - name: "blog"
-    label: "Blog"
+    label: "Posts"
     folder: "public/collections/blog"
     create: true
     slug: "{{slug}}"
@@ -80,10 +88,11 @@ collections:
         fields:
           - {label: Image, name: image, widget: image}
       - { label: "Title", name: "title", widget: "string" }
-      - {label: "Description", name: "description", widget: "markdown"}
-      - {label: "Product Description", name: "productDescription", widget: "markdown"}
-      - {label: "Additional Info", name: "additionalInfo", widget: "markdown"}
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Product Description", name: "productDescription", widget: "markdown" }
+      - { label: "Additional Info", name: "additionalInfo", widget: "markdown" }
       - { label: "Price", name: "price", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "events"
     label: "Events"
@@ -98,6 +107,7 @@ collections:
       - label: "Featured Image"
         name: "image"
         widget: "image"
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "news"
     label: "News"
@@ -114,6 +124,7 @@ collections:
       - label: "Featured Image"
         name: "image"
         widget: "image"
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages"
     label: "Pages"
@@ -134,3 +145,23 @@ collections:
         name: "lounge"
         file: "public/collections/pages/lounge.json"
         fields: *pageDefault
+      - label: "Contact"
+        name: "contact"
+        file: "public/collections/pages/contact.json"
+        fields: *pageLight
+      - label: "Blog"
+        name: "blog"
+        file: "public/collections/pages/blog.json"
+        fields: *pageLight
+      - label: "Events"
+        name: "events"
+        file: "public/collections/pages/events.json"
+        fields: *pageLight
+      - label: "News"
+        name: "news"
+        file: "public/collections/pages/news.json"
+        fields: *pageLight
+      - label: "Shop"
+        name: "shop"
+        file: "public/collections/pages/shop.json"
+        fields: *pageLight
