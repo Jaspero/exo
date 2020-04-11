@@ -124,13 +124,13 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        file: "public/collections/pages/home.md"
+        file: "public/collections/pages/home.json"
         fields: *pageDefault
       - label: "Nail Bar"
         name: "nail"
-        file: "public/collections/pages/nail.md"
+        file: "public/collections/pages/nail.json"
         fields: *pageDefault
       - label: "Lounge"
         name: "lounge"
-        file: "public/collections/pages/lounge.md"
+        file: "public/collections/pages/lounge.json"
         fields: *pageDefault
