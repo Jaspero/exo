@@ -43,11 +43,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./not-found/not-found.module').then(m => m.NotFoundModule)
   },
-  {
-    path: '**',
-    loadChildren: () =>
-      import('./not-found/not-found.module').then(m => m.NotFoundModule)
-  }
+  // TODO:
+  // Windows machines break when they try to pull a folder named '**'
+  // {
+  //   path: '**',
+  //   loadChildren: () =>
+  //     import('./not-found/not-found.module').then(m => m.NotFoundModule)
+  // }
 ];
 
 @NgModule({
