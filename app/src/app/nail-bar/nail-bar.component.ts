@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ScullyRoutesService} from '@scullyio/ng-lib';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'exo-nail-bar',
@@ -8,15 +8,12 @@ import {ScullyRoutesService} from '@scullyio/ng-lib';
 })
 export class NailBarComponent implements OnInit {
   constructor(
-    private scully: ScullyRoutesService
+    private activatedRoute: ActivatedRoute
   ) {}
 
+  page: any;
+
   ngOnInit() {
-    this.scully.available$.subscribe(value => {
-      console.log('all', value)
-    });
-    this.scully.getCurrent().subscribe(value => {
-      console.log('value', value);
-    })
+    this.page = this.activatedRoute.snapshot.data;
   }
 }
