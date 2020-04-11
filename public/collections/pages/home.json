@@ -1,5 +1,17 @@
 {
   "meta": {
-    "title": "test"
-  }
+    "title": "test",
+    "description": "example description",
+    "keywords": "example keyword1,example keyword2"
+  },
+  "blocks": [
+    {
+      "type": "imageR",
+      "title": "Example R Block",
+      "image": "/uploads/blog-lounge.png",
+      "content": "This is an example"
+    }
+  ],
+  "showcaseTitle": "Title of the showcase",
+  "showcaseBackground": "/uploads/blog-exo-lounge.png"
 }
