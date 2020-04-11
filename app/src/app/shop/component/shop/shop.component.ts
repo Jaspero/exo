@@ -49,11 +49,9 @@ export class ShopComponent implements OnInit {
   ];
   item: any;
 
-  classActive = false;
+  viewMode = 'tab1';
 
-  toggleClass() {
-    this.classActive = !this.classActive;
-  }
+
 
   ngOnInit() {
     this.scully.getCurrent().subscribe(value => {
