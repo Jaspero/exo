@@ -32,7 +32,7 @@ blocks: &blocks
       fields:
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
-        fields:
+          fields:
           - { label: "Text Image", name: "txtImage", widget: "image", required: false }
           - { label: "content", name: "content", widget: "markdown", required: false }
 
