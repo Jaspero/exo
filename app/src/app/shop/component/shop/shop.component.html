@@ -29,7 +29,7 @@
   <h4 [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode = 'tab1'" class="tab-header">PRODUCT DESCRIPTION</h4>
   <h4 [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode = 'tab2'" class="m-x-s tab-header">ADDITIONAL INFORMATION</h4>
 </div>
-  <div class="tab-container" [ngSwitch]="viewMode">
+  <div class="tab-container w-full" [ngSwitch]="viewMode">
     <div class="col-12 tab-content" *ngSwitchCase="'tab1'">
       <p class="m-y-s">{{item?.productDescription}}</p>
       <h1>tab 1</h1>
