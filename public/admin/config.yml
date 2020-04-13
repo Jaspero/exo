@@ -50,12 +50,12 @@ blocks: &blocks
         - { label: "content", name: "content", widget: "markdown", required: false }
 
     - label: "Image Shadow R"
-        name: "imageShadowR"
-        widget: "object"
-        fields:
-          - { label: "Title", name: "title", widget: "string", required: false }
-          - { label: "Image", name: "image", widget: "image", required: false }
-          - { label: "content", name: "content", widget: "markdown", required: false }
+      name: "imageShadowR"
+      widget: "object"
+      fields:
+        - { label: "Title", name: "title", widget: "string", required: false }
+        - { label: "Image", name: "image", widget: "image", required: false }
+        - { label: "content", name: "content", widget: "markdown", required: false }
 
 
 meta: &meta
