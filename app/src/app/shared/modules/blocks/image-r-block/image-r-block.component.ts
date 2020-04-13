@@ -9,4 +9,5 @@ export class ImageRBlockComponent {
   constructor() {}
 
   data: any;
+  noImg: boolean;
 }
