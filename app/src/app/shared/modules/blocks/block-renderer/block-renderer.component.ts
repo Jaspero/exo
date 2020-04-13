@@ -10,12 +10,14 @@ import {ImageLBlockComponent} from '../image-l-block/image-l-block.component';
 import {ImageLargeBlockComponent} from '../image-large-block/image-large-block.component';
 import {ImageRBlockComponent} from '../image-r-block/image-r-block.component';
 import {TextImgBlockComponent} from '../text-img-block/text-img-block.component';
+import {ImgShadowRBlockComponent} from '../img-shadow-r-block/img-shadow-r-block.component';
 
 const BLOCKS_MAP: {[key: string]: any} = {
   [Block.ImageR]: ImageRBlockComponent,
   [Block.ImageL]: ImageLBlockComponent,
   [Block.ImageLarge]: ImageLargeBlockComponent,
-  [Block.TextImgBlock]: TextImgBlockComponent
+  [Block.TextImgBlock]: TextImgBlockComponent,
+  [Block.ImgShadowR]: ImgShadowRBlockComponent
 };
 
 @Component({

@@ -13,10 +13,9 @@ import {ImgShadowRBlockComponent} from './img-shadow-r-block/img-shadow-r-block.
     ImageLBlockComponent,
     ImageLargeBlockComponent,
     TextImgBlockComponent,
+    ImgShadowRBlockComponent,
 
-    BlockRendererComponent,
-
-    ImgShadowRBlockComponent
+    BlockRendererComponent
   ],
   exports: [BlockRendererComponent],
   imports: [CommonModule]
