@@ -10,6 +10,12 @@
       "title": "Example R Block",
       "image": "/uploads/blog-lounge.png",
       "content": "This is an example"
+    },
+    {
+      "type": "imageL",
+      "title": "This is image L ",
+      "image": "/uploads/dispencer.png",
+      "content": "This is an example"
     }
   ],
   "showcaseTitle": "Title of the showcase",
