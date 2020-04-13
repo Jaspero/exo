@@ -12,9 +12,12 @@ const routes: Routes = [
   {
     path: ':id',
     component: BlogComponent,
-    // resolve: {
-    //   meta: MetaResolver
-    // }
+    data: {
+      collection: 'blog'
+    },
+    resolve: {
+      meta: MetaResolver
+    }
   },
   {
     path: '**',

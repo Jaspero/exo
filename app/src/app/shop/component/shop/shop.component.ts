@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ScullyRoutesService} from '@scullyio/ng-lib';
+import {ActivatedRoute} from '@angular/router';
 
 declare var ng: any;
 
@@ -11,7 +11,7 @@ declare var ng: any;
   encapsulation: ViewEncapsulation.Emulated
 })
 export class ShopComponent implements OnInit {
-  constructor(private scully: ScullyRoutesService) {}
+  constructor(private route: ActivatedRoute) {}
 
   product = [
     {
@@ -50,8 +50,6 @@ export class ShopComponent implements OnInit {
   viewMode = 'tab1';
 
   ngOnInit() {
-    this.scully.getCurrent().subscribe(value => {
-      this.item = value;
-    });
+    this.item = this.route.snapshot.data.meta;
   }
 }

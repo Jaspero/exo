@@ -1,8 +1,8 @@
 import {Inject, Injectable, InjectionToken} from '@angular/core';
 import {Meta, Title} from '@angular/platform-browser';
-import {ActivatedRouteSnapshot, Resolve} from '@angular/router';
+import {ActivatedRouteSnapshot, Resolve, Router} from '@angular/router';
 import {ScullyRoutesService} from '@scullyio/ng-lib';
-import {tap} from 'rxjs/operators';
+import {map, take} from 'rxjs/operators';
 
 export const BASE_TITLE = new InjectionToken('BASE_TITLE');
 
@@ -15,39 +15,47 @@ export class MetaResolver implements Resolve<any> {
     private meta: Meta,
     @Inject(BASE_TITLE)
     private baseTitle: string,
-    private scully: ScullyRoutesService
+    private scully: ScullyRoutesService,
+    private router: Router
   ) {}
 
   resolve(route: ActivatedRouteSnapshot) {
-    console.log(123);
-    return this.scully.getCurrent()
+    const {collection} = route.data;
+    const {id} = route.params;
+
+    return this.scully.available$
       .pipe(
-        tap(a => {
-          console.log(a);
+        take(1),
+        map(routes => {
+          const page: any = routes.find(route => route.route === `/${collection}/${id}`);
+
+          if (!page) {
+            this.router.navigate(['/404'])
+          }
+
+          const valuesToSet = {...(page.meta || {})};
+          this.title.setTitle(
+            valuesToSet.title
+              ? `${valuesToSet.title} | ${this.baseTitle}`
+              : this.baseTitle
+          );
+
+          /**
+           * To prevent iterating over the title and adding it as meta
+           */
+          delete valuesToSet.title;
+
+          /**
+           * Written like this instead of Object.entries to support older browsers
+           */
+          for (const name in valuesToSet) {
+            if (valuesToSet.hasOwnProperty(name)) {
+              this.meta.updateTag({name, content: valuesToSet[name]});
+            }
+          }
+
+          return page;
         })
       );
-    // const valuesToSet = {...(route.data.meta || {})};
-    //
-    // const {id} = route.data;
-    //
-    // this.title.setTitle(
-    //   valuesToSet.title
-    //     ? `${valuesToSet.title} | ${this.baseTitle}`
-    //     : this.baseTitle
-    // );
-    //
-    // /**
-    //  * To prevent iterating over the title and adding it as meta
-    //  */
-    // delete valuesToSet.title;
-    //
-    // /**
-    //  * Written like this instead of Object.entries to support older browsers
-    //  */
-    // for (const name in valuesToSet) {
-    //   if (valuesToSet.hasOwnProperty(name)) {
-    //     this.meta.updateTag({name, content: valuesToSet[name]});
-    //   }
-    // }
   }
 }

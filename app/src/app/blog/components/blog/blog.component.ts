@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ScullyRoutesService} from '@scullyio/ng-lib';
+import {ActivatedRoute} from '@angular/router';
 
 declare var ng: any;
 
@@ -12,14 +12,12 @@ declare var ng: any;
 })
 export class BlogComponent implements OnInit {
   constructor(
-    private scully: ScullyRoutesService
+    private activatedRoute: ActivatedRoute
   ) {}
 
   item: any;
 
   ngOnInit() {
-    this.scully.getCurrent().subscribe(value => {
-      this.item = value;
-    });
+    this.item = this.activatedRoute.snapshot.data.meta;
   }
 }
