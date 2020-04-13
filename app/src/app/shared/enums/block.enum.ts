@@ -3,5 +3,6 @@ export enum Block {
   ImageL = 'imageL',
   ImageLarge = 'imageLarge',
   TextImgBlock = 'textImgBlock',
-  ImgShadowR = 'imageShadowR'
+  ImgShadowR = 'imageShadowR',
+  ImageFull = 'imageFull'
 }

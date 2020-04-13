@@ -57,6 +57,12 @@ blocks: &blocks
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
 
+    - label: "Image Full"
+      name: "imageFull"
+      widget: "object"
+      fields:
+        - { label: "Image", name: "image", widget: "image", required: false }
+
 
 meta: &meta
   label: "Meta"

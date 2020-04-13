@@ -5,8 +5,6 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './img-shadow-r-block.component.html',
   styleUrls: ['./img-shadow-r-block.component.scss']
 })
-export class ImgShadowRBlockComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class ImgShadowRBlockComponent {
+  data: any;
 }
