@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./image-r-block.component.scss']
 })
 export class ImageRBlockComponent {
-  constructor() { }
+  constructor() {}
 
   data: any;
 }

@@ -1,4 +1,5 @@
 export enum Block {
   ImageR = 'imageR',
-  ImageL = 'imageL'
+  ImageL = 'imageL',
+  ImageLarge = 'imageLarge'
 }

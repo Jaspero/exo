@@ -32,6 +32,11 @@ blocks: &blocks
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
+    - label: "Image Large"
+      name: "imageLarge"
+      widget: "object"
+      fields:
+        - { label: "Image", name: "image", widget: "image", required: false }
 
 meta: &meta
   label: "Meta"
