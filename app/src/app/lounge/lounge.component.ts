@@ -14,6 +14,6 @@ export class LoungeComponent implements OnInit {
   page: any;
 
   ngOnInit() {
-    this.page = this.activatedRoute.snapshot.data;
+    this.page = this.activatedRoute.snapshot.data.page;
   }
 }
