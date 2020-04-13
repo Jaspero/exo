@@ -41,7 +41,7 @@ blocks: &blocks
         - { label: "Image", name: "image", widget: "image", required: false }
 
     - label: "Image L with text"
-      name: "imageL"
+      name: "imageTxtL"
       widget: "object"
       fields:
         - { label: "Title", name: "title", widget: "string", required: false }
