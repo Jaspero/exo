@@ -25,6 +25,7 @@ blocks: &blocks
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
+        - { label: "Below Image", name: "belowImg", widget: "image", required: false }
 
     - label: "Image L"
       name: "imageL"
@@ -33,6 +34,7 @@ blocks: &blocks
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
+        - { label: "Below Image", name: "belowImg", widget: "image", required: false }
 
     - label: "Image Large"
       name: "imageLarge"
@@ -40,15 +42,6 @@ blocks: &blocks
       fields:
         - { label: "Image", name: "image", widget: "image", required: false }
 
-    - label: "Image L with text"
-      name: "imageTxtL"
-      widget: "object"
-      fields:
-        - { label: "Title", name: "title", widget: "string", required: false }
-        - { label: "Image", name: "image", widget: "image", required: false }
-          fields:
-            - { label: "Image Text", name: "imageTxt", widget: "image", required: false }
-            - { label: "Text Image", name: "txtImage", widget: "markdown", required: false }
 
 
 meta: &meta
