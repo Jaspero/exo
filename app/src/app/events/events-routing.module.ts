@@ -19,6 +19,9 @@ const routes: Routes = [
   {
     path: ':id',
     component: EventsComponent,
+    data: {
+      collection: 'events'
+    },
     resolve: {
       meta: MetaResolver
     }

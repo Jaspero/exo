@@ -11,6 +11,9 @@ EXO Industries is a brand of lifestyle services. The company currently consists 
 ## Technologies we used
 
 The app fits in the [JAM](https://jamstack.org/) stack. The SSG we used is [Scully](https://github.com/scullyio/scully) on top of Angular.
+The CMS is a very simple implementation of the [Netlify CMS](https://www.netlifycms.org/). We also use [Github Actions](https://help.github.com/en/actions) for CI/CD.
+
+Both the website and the CMS are hosted on [Firebase](https://firebase.google.com/).
 
 ## Why is this open source 
 

@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 declare var ng: any;
 
@@ -11,7 +11,11 @@ declare var ng: any;
   encapsulation: ViewEncapsulation.Emulated
 })
 export class NewsComponent implements OnInit {
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  item: any;
+
+  ngOnInit() {
+    this.item = this.route.snapshot.data.meta;
+  }
 }
