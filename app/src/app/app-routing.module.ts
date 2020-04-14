@@ -4,35 +4,29 @@ import {Routes, RouterModule} from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
-    data: {animation: '*'}
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
     path: 'blog',
-    loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule),
-    data: {animation: '*'}
+    loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
   },
   {
     path: 'news',
-    loadChildren: () => import('./news/news.module').then(m => m.NewsModule),
-    data: {animation: '*'}
+    loadChildren: () => import('./news/news.module').then(m => m.NewsModule)
   },
   {
     path: 'events',
     loadChildren: () =>
-      import('./events/events.module').then(m => m.EventsModule),
-    data: {animation: '*'}
+      import('./events/events.module').then(m => m.EventsModule)
   },
   {
     path: 'shop',
-    loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule),
-    data: {animation: '*'}
+    loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule)
   },
   {
     path: 'lounge',
     loadChildren: () =>
-      import('./lounge/lounge.module').then(m => m.LoungeModule),
-    data: {animation: '*'}
+      import('./lounge/lounge.module').then(m => m.LoungeModule)
   },
   {
     path: 'nail',

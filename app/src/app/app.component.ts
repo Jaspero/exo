@@ -5,13 +5,11 @@ import {
   Router,
   RouterOutlet
 } from '@angular/router';
-import {slideInAnimation} from './animations';
 
 @Component({
   selector: 'exo-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  animations: [slideInAnimation]
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   constructor(private router: Router) {}
@@ -19,23 +17,15 @@ export class AppComponent implements OnInit {
   @HostBinding('class')
   state: string;
 
-  prepareRoute(outlet: RouterOutlet) {
-    return (
-      outlet &&
-      outlet.activatedRouteData &&
-      outlet.activatedRouteData[`animation`]
-    );
-  }
-
   ngOnInit() {
     this.router.events.subscribe(value => {
       if (value instanceof NavigationStart) {
-        setTimeout(() => {
-          this.state = 'loading';
-        }, 500);
+        this.state = 'loading';
       } else if (value instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+
+        /* Delay adding 'loaded' class by 1000ms */
         setTimeout(() => {
-          window.scrollTo(0, 0);
           this.state = 'loaded';
         }, 1000);
       }
