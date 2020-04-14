@@ -68,7 +68,7 @@ blocks: &blocks
       widget: "object"
       fields:
         - { label: "Image", name: "image", widget: "image", required: false }
-        - { label: "Title", name: "title", widget: "string", required: false }
+        - { label: "Title", name: "title", widget: "markdown", required: false }
 
     - label: "Text Block"
       name: "textBlock"
