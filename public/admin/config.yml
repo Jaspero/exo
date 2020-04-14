@@ -68,13 +68,13 @@ blocks: &blocks
       widget: "object"
       fields:
         - { label: "Image", name: "image", widget: "image", required: false }
-        - { label: "Title", name: "title", widget: "markdown", required: false }
+        - { label: "Title", name: "title", widget: "string", required: false }
 
     - label: "Text Block"
       name: "textBlock"
       widget: "object"
       fields:
-        - { label: "Title", name: "title", widget: "markdown", required: false }
+        - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
 
 meta: &meta
