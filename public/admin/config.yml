@@ -63,6 +63,11 @@ blocks: &blocks
       fields:
         - { label: "Image", name: "image", widget: "image", required: false }
 
+    - label: "Image Full Button"
+      name: "imageFullButton"
+      widget: "object"
+      fields:
+        - { label: "Image", name: "image", widget: "image", required: false }
 
 meta: &meta
   label: "Meta"

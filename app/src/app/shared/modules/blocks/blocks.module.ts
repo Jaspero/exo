@@ -7,6 +7,7 @@ import {ImageRBlockComponent} from './image-r-block/image-r-block.component';
 import {TextImgBlockComponent} from './text-img-block/text-img-block.component';
 import {ImgShadowRBlockComponent} from './img-shadow-r-block/img-shadow-r-block.component';
 import {ImageFullComponent} from './image-full/image-full.component';
+import {ImageFullButtonBlockComponent} from './image-full-button-block/image-full-button-block.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +16,10 @@ import {ImageFullComponent} from './image-full/image-full.component';
     ImageLargeBlockComponent,
     TextImgBlockComponent,
     ImgShadowRBlockComponent,
+    ImageFullComponent,
+    ImageFullButtonBlockComponent,
 
-    BlockRendererComponent,
-
-    ImageFullComponent
+    BlockRendererComponent
   ],
   exports: [BlockRendererComponent],
   imports: [CommonModule]
