@@ -14,6 +14,7 @@ import {ImgShadowRBlockComponent} from '../img-shadow-r-block/img-shadow-r-block
 import {ImageFullComponent} from '../image-full/image-full.component';
 import {ImageFullButtonBlockComponent} from '../image-full-button-block/image-full-button-block.component';
 import {TextBlockComponent} from '../text-block/text-block.component';
+import {EventImageBlockComponent} from '../event-image-block/event-image-block.component';
 
 const BLOCKS_MAP: {[key: string]: any} = {
   [Block.ImageR]: ImageRBlockComponent,
@@ -23,7 +24,8 @@ const BLOCKS_MAP: {[key: string]: any} = {
   [Block.ImgShadowR]: ImgShadowRBlockComponent,
   [Block.ImageFull]: ImageFullComponent,
   [Block.ImageFullButton]: ImageFullButtonBlockComponent,
-  [Block.TextBlock]: TextBlockComponent
+  [Block.TextBlock]: TextBlockComponent,
+  [Block.EventImageBlock]: EventImageBlockComponent
 };
 
 @Component({
