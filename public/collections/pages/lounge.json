@@ -29,7 +29,11 @@
     },
     {
       "type": "imageFullButton",
-      "image": "/uploads/lounge.png"
+      "image": "/uploads/lounge.png",
+      "title": "EXO Lounge"
+    },
+    {
+      "type": "textBlock"
     }
   ]
 }
