@@ -5,8 +5,6 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './text-block.component.html',
   styleUrls: ['./text-block.component.scss']
 })
-export class TextBlockComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class TextBlockComponent {
+  data: any;
 }

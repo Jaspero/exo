@@ -1,6 +1,6 @@
 <section class="exo-lounge m-t-l flex jc-center ai-center" [ngStyle]="{'background-image': 'url('+ data.image +')'}">
   <div class="col-6 wrapper relative c-light z-index ta-center flex fd-col ai-center jc-center">
-    <h1 class="z-index m-y-m">Exo Lounge</h1>
+    <div class="m-y-s z-index" [innerHTML]="data.title"></div>
     <a routerLink="/contact" routerLinkActive="active" class="btn-secondary z-index">Contact us</a>
   </div>
 </section>
