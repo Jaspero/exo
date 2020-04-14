@@ -1,5 +1,10 @@
 import {Component, HostBinding, OnInit} from '@angular/core';
-import {NavigationEnd, NavigationStart, Router} from '@angular/router';
+import {
+  NavigationEnd,
+  NavigationStart,
+  Router,
+  RouterOutlet
+} from '@angular/router';
 import {slideInAnimation} from './animations';
 
 @Component({
@@ -14,17 +19,25 @@ export class AppComponent implements OnInit {
   @HostBinding('class')
   state: string;
 
+  prepareRoute(outlet: RouterOutlet) {
+    return (
+      outlet &&
+      outlet.activatedRouteData &&
+      outlet.activatedRouteData[`animation`]
+    );
+  }
+
   ngOnInit() {
     this.router.events.subscribe(value => {
       if (value instanceof NavigationStart) {
         setTimeout(() => {
           this.state = 'loading';
-        }, 300);
+        }, 500);
       } else if (value instanceof NavigationEnd) {
         setTimeout(() => {
           window.scrollTo(0, 0);
           this.state = 'loaded';
-        }, 1200);
+        }, 1000);
       }
     });
   }

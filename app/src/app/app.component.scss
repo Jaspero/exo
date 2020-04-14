@@ -8,19 +8,22 @@
   width: 100%;
   height: 100%;
   background: black;
-  transition: .7s ease-in-out;
+  pointer-events: none;
 }
 
 :host.loading:before {
   top: 0;
 }
 :host.loaded:before {
-  position: unset;
-  z-index: -1;
+  animation: curtain 1.4s 1 forwards;
+  top: 0;
 }
 
-///deep/ router-outlet ~ * {
-//  position: absolute;
-//  width: 100%;
-//  height: 100%;
-//}
+@keyframes curtain {
+  0%   {opacity: 1}
+  50%  {opacity: 0}
+  100% {top: 100%}
+}
+
+
+
