@@ -5,8 +5,6 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './image-full-button-block.component.html',
   styleUrls: ['./image-full-button-block.component.scss']
 })
-export class ImageFullButtonBlockComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class ImageFullButtonBlockComponent {
+  data: any;
 }
