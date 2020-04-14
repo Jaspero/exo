@@ -63,6 +63,12 @@
   min-width: 150px;
 }
 
+.btn-primary:hover {
+  background: black;
+  color: white;
+  transition: .3s;
+}
+
 .btn-secondary {
   cursor: pointer;
   outline: none;
