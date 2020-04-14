@@ -79,3 +79,9 @@
   color: white;
   min-width: 150px;
 }
+
+.btn-secondary:hover {
+  background: white;
+  color: black;
+  transition: .3s;
+}
