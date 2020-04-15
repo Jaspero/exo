@@ -5,8 +5,6 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './image-r-button.component.html',
   styleUrls: ['./image-r-button.component.scss']
 })
-export class ImageRButtonComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class ImageRButtonComponent {
+  data: any;
 }

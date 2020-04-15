@@ -1,1 +1,14 @@
-<p>image-r-button works!</p>
+<section class="exo-patio m-y-l">
+  <div class="grid jc-around">
+    <div class="col-4 col-s-12 ta-left">
+      <h1 class="m-t-l">{{data.title}}</h1>
+      <div class="m-y-l no-padding"  [innerHTML]="data.content">
+      </div>
+      <button class="btn-primary">Contact us</button>
+      <img [src]="data.belowImg" alt="" class="m-t-l w-full">
+    </div>
+    <div class="col-5 col-s-12 ta-right">
+      <img [src]="data.image" alt="">
+    </div>
+  </div>
+</section>
