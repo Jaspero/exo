@@ -35,5 +35,6 @@
     }
   ],
   "showcaseTitle": "Title of the showcase",
-  "showcaseBackground": "/uploads/blog-exo-lounge.png"
+  "showcaseBackground": "/uploads/blog-exo-lounge.png",
+  "showcaseSubTitle": "Scroll down"
 }
