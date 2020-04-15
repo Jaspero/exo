@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {DelayResolver} from '../shared/resolvers/delay.resolver';
 import {MetaResolver} from '../shared/resolvers/meta.resolver';
 import {PageResolver} from '../shared/resolvers/page.resolver';
 import {EventsListComponent} from './component/events-list/events-list.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
       collection: 'events'
     },
     resolve: {
-      meta: MetaResolver
+      meta: MetaResolver,
+      delay: DelayResolver
     }
   },
   {

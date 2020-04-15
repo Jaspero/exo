@@ -1,16 +1,20 @@
-import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
-import {HeaderComponent} from './shared/components/header/header.component';
 import {FooterComponent} from './shared/components/footer/footer.component';
-import {StopPropagationModule} from '@jaspero/ng-helpers';
+import {HeaderComponent} from './shared/components/header/header.component';
+import {IntroComponent} from './shared/components/intro/intro.component';
 
-const IMPORTS = [CommonModule, StopPropagationModule];
-const COMPONENTS = [HeaderComponent, FooterComponent];
+const IMPORTS = [CommonModule, RouterModule];
+const COMPONENTS = [
+  HeaderComponent,
+  FooterComponent,
+  IntroComponent
+];
 
 @NgModule({
   declarations: [...COMPONENTS],
-  imports: [...IMPORTS, RouterModule],
+  imports: [...IMPORTS],
   exports: [...IMPORTS, ...COMPONENTS]
 })
 export class SharedModule {}

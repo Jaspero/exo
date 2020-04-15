@@ -4,3 +4,10 @@
   background-size: cover;
   height: 700px;
 }
+
+
+@media (max-width: 600px) {
+  .full-bg {
+    margin: 40px 0;
+  }
+}

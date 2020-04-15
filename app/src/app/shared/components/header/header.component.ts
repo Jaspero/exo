@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {StateService} from '../../services/state/state.service';
 
 @Component({
   selector: 'exo-header',
@@ -7,7 +6,6 @@ import {StateService} from '../../services/state/state.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  constructor(public state: StateService) {}
 
   menu = false;
 

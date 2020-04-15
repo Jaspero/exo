@@ -1,19 +1,21 @@
-import {Inject, Injectable} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
-import {NavigationEnd, NavigationStart, Router} from '@angular/router';
+import {Inject, Injectable} from '@angular/core';
+import {Resolve} from '@angular/router';
+import {of} from 'rxjs';
+import {delay} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StateService {
+export class DelayResolver implements Resolve<null> {
   constructor(
-    @Inject(DOCUMENT) private _document: Document,
+    @Inject(DOCUMENT)
+    private _document: any
+  ) {
+  }
 
-    private router: Router
-  ) {}
-
-  goTo(route: string[]) {
-    const root = this._document.getElementsByTagName('exo-root')[0];
+  resolve() {
+    const root = this._document.querySelector('exo-root');
 
     /* TODO */
     /* These happen when the page is loading */
@@ -28,10 +30,9 @@ export class StateService {
       root.classList.add('loaded');
     }, 1000);
 
-    /* TODO */
-    /* Delay navigate by .9s after the page is loaded */
-    setTimeout(() => {
-      this.router.navigate(route);
-    }, 900);
+    return of(null)
+      .pipe(
+        delay(900)
+      )
   }
 }

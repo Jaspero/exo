@@ -1,17 +1,6 @@
 <exo-header></exo-header>
 
-<section class="main relative">
-  <div class="grid h-full jc-start ai-end">
-    <div class="col-6 col-s-12 z-index">
-      <h1 class="c-light ta-left nail-headline">Quite Simply, <br> EXtraOrdinary</h1>
-    </div>
-    <div class="col-12 flex jc-start c-light z-index">
-      <div class="col-4">
-        <p>Scroll down</p>
-      </div>
-    </div>
-  </div>
-</section>
+<exo-intro [data]="page"></exo-intro>
 
 <exo-block-renderer *ngIf="page.blocks" [blocks]="page.blocks"></exo-block-renderer>
 

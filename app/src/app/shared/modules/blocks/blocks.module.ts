@@ -1,5 +1,6 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 import {BlockRendererComponent} from './block-renderer/block-renderer.component';
 import {ImageLBlockComponent} from './image-l-block/image-l-block.component';
 import {ImageLargeBlockComponent} from './image-large-block/image-large-block.component';
@@ -10,6 +11,8 @@ import {ImageFullComponent} from './image-full/image-full.component';
 import {ImageFullButtonBlockComponent} from './image-full-button-block/image-full-button-block.component';
 import {TextBlockComponent} from './text-block/text-block.component';
 import {EventImageBlockComponent} from './event-image-block/event-image-block.component';
+import {ImageRButtonComponent} from './image-r-button/image-r-button.component';
+import {ImageLButtonComponent} from './image-l-button/image-l-button.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +25,16 @@ import {EventImageBlockComponent} from './event-image-block/event-image-block.co
     ImageFullButtonBlockComponent,
     TextBlockComponent,
     EventImageBlockComponent,
+    ImageRButtonComponent,
 
-    BlockRendererComponent
+    BlockRendererComponent,
+
+    ImageLButtonComponent
   ],
   exports: [BlockRendererComponent],
-  imports: [CommonModule]
+  imports: [
+    CommonModule,
+    RouterModule
+  ]
 })
 export class BlocksModule {}
