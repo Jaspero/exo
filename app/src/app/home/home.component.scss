@@ -25,7 +25,7 @@
 
 .bg-wrapper {
   background: transparent;
-  min-width: 200px;
+  min-width: 80%;
 }
 
 .bg-wrapper:before {
@@ -45,6 +45,20 @@
 
 /* Mobile styles
  *============================================================================*/
+
+@media (max-width: 1100px) {
+  .bg-wrapper {
+    min-height: 250px;
+    min-width: 100%;
+    text-align: center;
+    justify-content: space-between;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+
+
 
 @media (max-width: 600px) {
 
