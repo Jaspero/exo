@@ -1,0 +1,11 @@
+.main {
+  height: 100vh;
+  background: #999999;
+}
+
+.home {
+  color: black;
+  &:hover {
+    color: #40a9f5;
+  }
+}
