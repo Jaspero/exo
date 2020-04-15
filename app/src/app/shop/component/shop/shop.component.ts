@@ -65,9 +65,9 @@ export class ShopComponent implements OnInit, AfterViewInit {
           node: document.getElementById('product-component'),
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
-            'product': {
-              'styles': {
-                'product': {
+            product: {
+              styles: {
+                product: {
                   '@media (min-width: 601px)': {
                     'max-width': 'calc(25% - 20px)',
                     'margin-left': '20px',
@@ -75,33 +75,33 @@ export class ShopComponent implements OnInit, AfterViewInit {
                   }
                 }
               },
-              'contents': {
-                'img': false,
-                'title': false,
-                'price': false
+              contents: {
+                img: false,
+                title: false,
+                price: false
               },
-              'text': {
-                'button': 'Add to cart'
+              text: {
+                button: 'Add to cart'
               }
             },
-            'productSet': {
-              'styles': {
-                'products': {
+            productSet: {
+              styles: {
+                products: {
                   '@media (min-width: 601px)': {
                     'margin-left': '-20px'
                   }
                 }
               }
             },
-            'modalProduct': {
-              'contents': {
-                'img': false,
-                'imgWithCarousel': true,
-                'button': false,
-                'buttonWithQuantity': true
+            modalProduct: {
+              contents: {
+                img: false,
+                imgWithCarousel: true,
+                button: false,
+                buttonWithQuantity: true
               },
-              'styles': {
-                'product': {
+              styles: {
+                product: {
                   '@media (min-width: 601px)': {
                     'max-width': '100%',
                     'margin-left': '0px',
@@ -109,14 +109,14 @@ export class ShopComponent implements OnInit, AfterViewInit {
                   }
                 }
               },
-              'text': {
-                'button': 'Add to cart'
+              text: {
+                button: 'Add to cart'
               }
             },
-            'cart': {
-              'text': {
-                'total': 'Subtotal',
-                'button': 'Checkout'
+            cart: {
+              text: {
+                total: 'Subtotal',
+                button: 'Checkout'
               }
             }
           },
