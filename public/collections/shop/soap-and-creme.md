@@ -3,6 +3,8 @@ image: /uploads/shop-cards.png
 galleryImages:
   - image: /uploads/product-small.png
   - image: /uploads/product-small.png
+  - image: /uploads/product-small.png
+  - image: /uploads/product-small.png
 title: Soap and Creme
 description: EXO Industries is a brand of lifestyle services. The company
   currently consists of EXO Lounge, a unique cocktail lounge that serves
