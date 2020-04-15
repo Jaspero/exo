@@ -11,8 +11,8 @@
     <div class="img-wrapper ta-center b-a">
       <img [src]="item?.image" alt="">
     </div>
-    <div class="flex ai-center jc-start w-full m-t-s">
-      <div class="col-3 ta-center no-padding" *ngFor="let image of item?.galleryImages">
+    <div class="flex ai-center jc-between w-full m-t-s">
+      <div class="ta-center " *ngFor="let image of item?.galleryImages">
         <img [src]="image.image"  alt="" class="product b-a">
       </div>
     </div>

@@ -7,5 +7,6 @@ export enum Block {
   ImageFull = 'imageFull',
   ImageFullButton = 'imageFullButton',
   TextBlock = 'textBlock',
-  EventImageBlock = 'eventImageBlock'
+  EventImageBlock = 'eventImageBlock',
+  ImageRightButton = 'imageRightButton'
 }
