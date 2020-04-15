@@ -1,4 +1,4 @@
-<section class="main relative" [style.background.url]="data.showcaseBackground">
+<section class="main relative" [ngStyle]="bg">
   <div class="h-full grid jc-start ai-end c-light">
     <div class="col-6 col-s-12 z-index" *ngIf="data.showcaseTitle">
       <h1 class="exo-headline">{{data.showcaseTitle}}</h1>

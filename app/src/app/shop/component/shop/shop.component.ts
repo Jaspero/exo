@@ -16,9 +16,16 @@ export class ShopComponent implements OnInit, AfterViewInit {
 
   item: any;
   viewMode = 'tab1';
+  activeImage: string;
+
+  get bg() {
+    return {'background-image': `url(${this.item.displayImage})`}
+  }
 
   ngOnInit() {
     this.item = this.route.snapshot.data.meta;
+    // TODO: Add placeholder image
+    this.activeImage = this.item.galleryImages[0] ? this.item.galleryImages[0].image : '';
   }
 
   ngAfterViewInit() {

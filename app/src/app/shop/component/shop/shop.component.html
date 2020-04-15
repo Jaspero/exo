@@ -1,44 +1,41 @@
 <exo-header></exo-header>
-<section class="main relative">
+<section class="main relative" [ngStyle]="bg">
   <div class="grid h-full ai-center">
     <div class="col-6 col-s-12 z-index m-l-l m-s-0">
-      <h1 class="c-light ta-center exo-headline">{{item?.title}}</h1>
+      <h1 class="c-light ta-center exo-headline">{{item.title}}</h1>
     </div>
   </div>
 </section>
 <div class="grid jc-between m-y-xl">
   <div class="col-4">
     <div class="img-wrapper ta-center b-a">
-      <img [src]="item?.image" alt="">
+      <img [src]="activeImage" alt="Product Image">
     </div>
     <div class="flex ai-center jc-between w-full m-t-s">
-      <div class="ta-center " *ngFor="let image of item?.galleryImages">
-        <img [src]="image.image"  alt="" class="product b-a">
+      <div class="ta-center" *ngFor="let image of item.galleryImages" (click)="activeImage = image.image">
+        <img [src]="image.image" alt="Product image gallery item" class="product b-a">
       </div>
     </div>
   </div>
   <div class="col-6">
-    <h4 class="title">Soap & Lotion</h4>
-    <p class="price b-b m-y-m p-b-s"><b>{{item?.price}}</b></p>
+    <h4 class="title">{{item.title}}</h4>
+    <p class="price b-b m-y-m p-b-s"><b>{{item.price}}</b></p>
     <scully-content></scully-content>
     <button id="product-component" class="btn-primary m-t-m">Add to Cart</button>
   </div>
 </div>
 <div class="grid m-y-l">
-<div class="col-12 flex b-b">
-  <h4 [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode = 'tab1'" class="tab-header">PRODUCT DESCRIPTION</h4>
-  <h4 [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode = 'tab2'" class="m-x-s tab-header">ADDITIONAL INFORMATION</h4>
-</div>
+  <div class="col-12 flex b-b">
+    <h4 [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode = 'tab1'" class="tab-header">PRODUCT DESCRIPTION</h4>
+    <h4 [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode = 'tab2'" class="m-x-s tab-header">ADDITIONAL INFORMATION</h4>
+  </div>
   <div class="tab-container w-full" [ngSwitch]="viewMode">
     <div class="col-12 tab-content" *ngSwitchCase="'tab1'">
-      <p class="m-y-s">{{item?.productDescription}}</p>
-      <h1>tab 1</h1>
+      <div class="m-y-s" [innerHTML]="item.productDescription | MTH"></div>
     </div>
-    <div class="col-12 tab-content"  *ngSwitchCase="'tab2'">
-        <p class="m-y-s">{{item?.additionalInfo}}</p>
-      <h1>Tab 2</h1>
+    <div class="col-12 tab-content" *ngSwitchCase="'tab2'">
+      <div class="m-y-s" [innerHTML]="item.additionalInfo | MTH"></div>
     </div>
   </div>
 </div>
 <exo-footer></exo-footer>
-

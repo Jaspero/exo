@@ -28,6 +28,7 @@
     "@scullyio/init": "0.0.23",
     "@scullyio/ng-lib": "0.0.22",
     "@scullyio/scully": "0.0.86",
+    "marked": "^0.8.2",
     "rxjs": "6.5.5",
     "tslib": "1.11.1",
     "zone.js": "0.10.3"
@@ -42,6 +43,7 @@
     "@notiz/scully-plugin-lazy-images": "0.1.0",
     "@types/jasmine": "3.5.0",
     "@types/jasminewd2": "2.0.3",
+    "@types/marked": "^0.7.4",
     "@types/node": "12.11.1",
     "codelyzer": "5.1.2",
     "jasmine-core": "3.5.0",

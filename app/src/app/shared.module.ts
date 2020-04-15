@@ -5,7 +5,11 @@ import {FooterComponent} from './shared/components/footer/footer.component';
 import {HeaderComponent} from './shared/components/header/header.component';
 import {IntroComponent} from './shared/components/intro/intro.component';
 
-const IMPORTS = [CommonModule, RouterModule];
+const IMPORTS = [
+  CommonModule,
+  RouterModule,
+];
+
 const COMPONENTS = [
   HeaderComponent,
   FooterComponent,
