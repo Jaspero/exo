@@ -69,6 +69,9 @@ blocks: &blocks
       fields:
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "Title", name: "title", widget: "string", required: false }
+        - { label: "Link", name: "link", widget: "string", required: false }
+        - { label: "Link", name: "link", widget: "string", required: false }
+        - { label: "Button Title", name: "buttonTitle", widget: "string", required: false }
 
     - label: "Text Block"
       name: "textBlock"
@@ -113,7 +116,8 @@ meta: &meta
     - { label: "Keywords", name: "keywords", widget: "string", required: false }
 
 pageDefault: &pageDefault
-  - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
+  - { label: "Showcase Title", name: "showcaseTitle", widget: "string", required: false }
+  - { label: "Showcase Subtitle", name: "showcaseSubTitle", widget: "string", required: false }
   - { label: "Showcase Background", name: "showcaseBackground", widget: "file", allow_multiple: false }
   - <<: *meta
   - <<: *blocks
@@ -163,6 +167,7 @@ collections:
       - { label: "Additional Info", name: "additionalInfo", widget: "markdown" }
       - { label: "Price", name: "price", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Shopify Product ID", name: "productId", widget: "text" }
 
   - name: "events"
     label: "Events"

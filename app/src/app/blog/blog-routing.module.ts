@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {DelayResolver} from '../shared/resolvers/delay.resolver';
 import {MetaResolver} from '../shared/resolvers/meta.resolver';
 import {BlogListComponent} from './components/blog-list/blog-list.component';
 import {BlogComponent} from './components/blog/blog.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
       collection: 'blog'
     },
     resolve: {
-      meta: MetaResolver
+      meta: MetaResolver,
+      delay: DelayResolver
     }
   },
   {

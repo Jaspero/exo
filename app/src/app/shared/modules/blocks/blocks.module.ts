@@ -1,5 +1,6 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 import {BlockRendererComponent} from './block-renderer/block-renderer.component';
 import {ImageLBlockComponent} from './image-l-block/image-l-block.component';
 import {ImageLargeBlockComponent} from './image-large-block/image-large-block.component';
@@ -31,6 +32,9 @@ import {ImageLButtonComponent} from './image-l-button/image-l-button.component';
     ImageLButtonComponent
   ],
   exports: [BlockRendererComponent],
-  imports: [CommonModule]
+  imports: [
+    CommonModule,
+    RouterModule
+  ]
 })
 export class BlocksModule {}
