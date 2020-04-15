@@ -1,0 +1,16 @@
+<exo-header></exo-header>
+<exo-intro [data]="page.showcase || {}"></exo-intro>
+
+<div *ngFor="let category of page.categories">
+  <h1>{{category.title}}</h1>
+  <h2 *ngIf="category.subTitle">{{category.subTitle}}</h2>
+  <span *ngIf="category.price">{{category.price}}</span>
+
+  <div *ngFor="let item of category.items">
+    <h3>{{item.title}}</h3>
+    <h4 *ngIf="item.subTitle">{{item.subTitle}}</h4>
+    <span *ngIf="item.price">{{item.price}}</span>
+  </div>
+</div>
+
+<exo-footer></exo-footer>

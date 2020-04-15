@@ -1,8 +1,5 @@
 <exo-header></exo-header>
-
-<exo-intro [data]="page"></exo-intro>
-
+<exo-intro [data]="page.showcase || {}"></exo-intro>
 <exo-block-renderer *ngIf="page.blocks" [blocks]="page.blocks"></exo-block-renderer>
-
 <exo-footer></exo-footer>
 

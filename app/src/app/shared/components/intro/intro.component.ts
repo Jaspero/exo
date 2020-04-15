@@ -10,15 +10,15 @@ export class IntroComponent implements OnInit {
   constructor() { }
 
   get bg() {
-    return {'background-image': `url(${this.data.showcaseBackground})`}
+    return {'background-image': `url(${this.data.background})`}
   }
 
   @Input()
   data: {
-    showcaseTitle: string;
-    showcaseSubTitle?: string;
-    showcaseBackground: string;
-  };
+    title?: string;
+    subTitle?: string;
+    background?: string;
+  } = {};
 
   ngOnInit() {
   }

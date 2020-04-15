@@ -1,11 +1,11 @@
 <section class="main relative" [ngStyle]="bg">
   <div class="h-full grid jc-start ai-end c-light">
-    <div class="col-6 col-s-12 z-index" *ngIf="data.showcaseTitle">
-      <h1 class="exo-headline">{{data.showcaseTitle}}</h1>
+    <div class="col-6 col-s-12 z-index" *ngIf="data.title">
+      <h1 class="exo-headline">{{data.title}}</h1>
     </div>
-    <div class="col-12 flex  jc-between ai-center z-index" *ngIf="data.showcaseSubTitle">
+    <div class="col-12 flex  jc-between ai-center z-index" *ngIf="data.subTitle">
       <div class="col-6">
-        <h4>{{data.showcaseSubTitle}}</h4>
+        <h4>{{data.subTitle}}</h4>
       </div>
     </div>
   </div>

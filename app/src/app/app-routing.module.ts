@@ -48,9 +48,25 @@ const routes: Routes = [
     }
   },
   {
+    path: 'lounge-menu',
+    loadChildren: () =>
+      import('./lounge-menu/lounge-menu.module').then(m => m.LoungeMenuModule),
+    resolve: {
+      delay: DelayResolver
+    }
+  },
+  {
     path: 'nail',
     loadChildren: () =>
       import('./nail-bar/nail-bar.module').then(m => m.NailBarModule),
+    resolve: {
+      delay: DelayResolver
+    }
+  },
+  {
+    path: 'nail-bar-menu',
+    loadChildren: () =>
+      import('./nail-bar-menu/nail-bar-menu.module').then(m => m.NailBarMenuModule),
     resolve: {
       delay: DelayResolver
     }

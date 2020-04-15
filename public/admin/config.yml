@@ -115,32 +115,41 @@ meta: &meta
     - { label: "Description", name: "description", widget: "text", required: false }
     - { label: "Keywords", name: "keywords", widget: "string", required: false }
 
+showcase: &showcase
+  label: "Showcase"
+  name: "showcase"
+  widget: "object"
+  fields:
+    - { label: "Title", name: "title", widget: "string", required: false }
+    - { label: "Subtitle", name: "subTitle", widget: "string", required: false }
+    - { label: "Background", name: "background", widget: "file", allow_multiple: false }
+
+itemMenu: &itemMenu
+  label: "Categories"
+  name: "categories"
+  widget: "list"
+  fields:
+    - { label: "Title", name: "title", widget: "string" }
+    - { label: "Subtitle", name: "subTitle", widget: "string", required: false }
+    - { label: "Price", name: "price", widget: "string", required: false }
+    - label: "Items"
+      name: "items"
+      widget: "list"
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Subtitle", name: "subTitle", widget: "string", required: false }
+        - { label: "Price", name: "price", widget: "string", required: false }
+
 pageDefault: &pageDefault
-  - { label: "Showcase Title", name: "showcaseTitle", widget: "string", required: false }
-  - { label: "Showcase Subtitle", name: "showcaseSubTitle", widget: "string", required: false }
-  - { label: "Showcase Background", name: "showcaseBackground", widget: "file", allow_multiple: false }
+  - <<: *showcase
   - <<: *meta
   - <<: *blocks
 
 pageLight: &pageLight
-  - { label: "Showcase Title", name: "showcaseTitle", widget: "string" }
-  - { label: "Showcase Background", name: "showcaseBackground", widget: "file", allow_multiple: false }
+  - <<: *showcase
   - <<: *meta
 
 collections:
-  - name: "menuItem"
-    label: "Menu"
-    folder: "public/collections/menu"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Category", name: "category", widget: "text" }
-      - { label: "Title", name: "title", widget: "text" }
-      - { label: "Subtitle", name: "subTitle", widget: "text", required: false }
-      - { label: "Price", name: "price", widget: "text", required: false }
-
   - name: "blog"
     label: "Posts"
     folder: "public/collections/blog"
@@ -184,7 +193,7 @@ collections:
       - { label: "Product Description", name: "productDescription", widget: "markdown" }
       - { label: "Additional Info", name: "additionalInfo", widget: "markdown" }
       - { label: "Price", name: "price", widget: "string" }
-      - { label: "Shopify Product ID", name: "productId", widget: "text" }
+      - { label: "Shopify Product ID", name: "productId", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "events"
@@ -258,3 +267,17 @@ collections:
         name: "shop"
         file: "public/collections/pages/shop.json"
         fields: *pageLight
+      - name: "loungeMenu"
+        label: "Lounge Menu"
+        file: "public/collections/pages/lounge-menu.json"
+        fields:
+          - <<: *showcase
+          - <<: *meta
+          - <<: *itemMenu
+      - name: "nailBarMenu"
+        label: "Nail Bar Menu"
+        file: "public/collections/pages/nail-bar-menu.json"
+        fields:
+          - <<: *showcase
+          - <<: *meta
+          - <<: *itemMenu
