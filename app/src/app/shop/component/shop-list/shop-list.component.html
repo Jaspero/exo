@@ -21,7 +21,7 @@
     <div class="col-6 m-y-m relative" *ngFor="let product of product$ | async;">
       <div class="product-wrapper" [ngStyle]="{'background-image': 'url('+ product.image +')'}">
       </div>
-      <h3 class="m-t-xl">{{product.title}}</h3>
+      <h3 class="m-t-l">{{product.title}}</h3>
       <p class="m-t-s m-b-l">{{product.description}}</p>
       <a class="btn-primary" [routerLink]="product.route">Read More</a>
     </div>

@@ -101,13 +101,15 @@
     transform: translateX(0);
   }
   .mobile-link {
+    color: black;
     width: 100%;
     text-align: center;
     border-bottom:1px solid #313131;
   }
 }
+
 @media (max-width: 600px) {
-.header {
-  padding: 0;
-}
+  .header {
+    padding: 0;
+  }
 }

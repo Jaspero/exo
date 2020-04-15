@@ -16,38 +16,6 @@
   opacity: .3;
 }
 
-.lounge {
-  background-image: url("../../assets/images/home/home-11.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-}
-.nails {
-  background-image: url("../../assets/images/home/home-12.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-}
-
-.nails:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  opacity: .3;
-}
-
-.line {
-  height: 2px;
-  width: 300px;
-}
-
-
 .events {
   background-position: center;
   background-repeat: no-repeat;
@@ -86,11 +54,10 @@
   }
 
   .bg-wrapper {
+    text-align: center;
     min-width: 100%;
-  }
-
-  h4 {
-    font-size: 20px;
+    min-height: 176px;
+    justify-content: space-between;
   }
 
   .main {
@@ -101,18 +68,11 @@
     font-size: 30px;
   }
 
-  .full-bg, .lights {
-    height: 370px;
-  }
-
-  .img-wrapper {
-    text-align: center;
-    margin-top: 20px;
-  }
-  img {
-    width: 100%;
-  }
   .wrapper {
     width: 100%;
+  }
+
+  .arrow {
+    height: 30px;
   }
 }
