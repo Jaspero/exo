@@ -3,12 +3,12 @@
     <div class="col-4 col-s-6 col-xs-12 c-dark ta-left">
       <div *ngIf="noImg; else belowImg">
         <h1>{{data.title}}</h1>
-        <div class="m-t-s" [innerHTML]="data.content"></div>
+        <div class="m-t-m" [innerHTML]="data.content"></div>
       </div>
       <ng-template #belowImg>
         <div class="img-wrapper ta-left">
           <h1>{{data.title}}</h1>
-          <div class="m-t-s" [innerHTML]="data.content"></div>
+          <div class="m-t-m" [innerHTML]="data.content"></div>
           <img [src]="data.belowImg" alt="" class="m-t-xxl w-full m-s-0">
         </div>
       </ng-template>
