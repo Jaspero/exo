@@ -5,6 +5,7 @@
   background-size: cover;
   min-height: 100vh;
   color: white;
+  position: relative;
 
   &::before {
     content: '';
@@ -54,8 +55,8 @@
 
 
 @media (max-width: 600px) {
-  .main {
-    height: 500px;
+  .intro {
+    min-height: 500px;
   }
 
   h1 {
