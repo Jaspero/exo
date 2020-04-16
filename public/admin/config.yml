@@ -21,7 +21,6 @@ animation: &animation
     - { label: "Fade In", value: "fade-in" }
     - { label: "Fade In From Top", value: "fade-in-from-top" }
     - { label: "Fade In From Bottom", value: "fade-in-from-bottom" }
-    - { label: "Fade In From Top", value: "fade-in-from-top" }
     - { label: "Fade In From Left", value: "fade-in-from-left" }
     - { label: "Fade In From Right", value: "fade-in-from-right" }
   default: "none"
