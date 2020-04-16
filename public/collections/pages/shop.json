@@ -1,1 +1,7 @@
-{}
+{
+  "showcase": {
+    "title": "Quite Simply, EXtraOrdinary",
+    "subTitle": "Subtitle",
+    "background": "/uploads/shop-main.png"
+  }
+}
