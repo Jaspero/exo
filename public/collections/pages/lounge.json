@@ -35,7 +35,13 @@
     {
       "type": "imageFullButton",
       "image": "/uploads/lounge.png",
-      "title": "EXO Lounge"
+      "title": "EXO Lounge",
+      "link": "contact",
+      "buttonTitle": "Contact Us"
     }
-  ]
+  ],
+  "showcase": {
+    "title": "Quite Simply, EXtraOrdinary",
+    "background": "/uploads/home-main.png"
+  }
 }
