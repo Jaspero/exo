@@ -23,7 +23,7 @@ animation: &animation
     - { label: "Fade In From Bottom", value: "fade-in-from-bottom" }
     - { label: "Fade In From Left", value: "fade-in-from-left" }
     - { label: "Fade In From Right", value: "fade-in-from-right" }
-  default: "none"
+  default: ["none"]
 
 # Reusable blocks for all of the pages
 blocks: &blocks
@@ -136,7 +136,7 @@ showcase: &showcase
   name: "showcase"
   widget: "object"
   fields:
-    - { label: "Title", name: "title", widget: "string", required: false }
+    - { label: "Title", name: "title", widget: "text", required: false }
     - { label: "Subtitle", name: "subTitle", widget: "string", required: false }
     - { label: "Background", name: "background", widget: "file", allow_multiple: false }
 
