@@ -1,0 +1,42 @@
+{
+  "showcase": {
+    "title": "Example",
+    "subTitle": "Another example",
+    "background": "/uploads/blog-menu.png"
+  },
+  "meta": {
+    "title": "Examplirio",
+    "description": "sadasd"
+  },
+  "categories": [
+    {
+      "title": "Category One",
+      "subTitle": "This category has a sub title",
+      "price": "$20",
+      "items": [
+        {
+          "title": "An item",
+          "subTitle": "an item with a subtitle",
+          "price": "$20"
+        },
+        {
+          "title": "Item with no sub title",
+          "price": "$10"
+        },
+        {
+          "title": "Item with no price or sub title"
+        }
+      ]
+    },
+    {
+      "title": "Category with no price or title",
+      "items": [
+        {
+          "title": "Some itme",
+          "subTitle": "example",
+          "price": ""
+        }
+      ]
+    }
+  ]
+}
