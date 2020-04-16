@@ -1,12 +1,9 @@
-<section class="main relative" [ngStyle]="bg">
-  <div class="h-full grid jc-start ai-end c-light">
-    <div class="col-6 col-s-12 z-index" *ngIf="data.title">
-      <h1 class="exo-headline">{{data.title}}</h1>
-    </div>
-    <div class="col-12 flex  jc-between ai-center z-index" *ngIf="data.subTitle">
-      <div class="col-6">
-        <h4>{{data.subTitle}}</h4>
-      </div>
+<section class="intro" [ngStyle]="bg">
+  <div class="intro-container">
+    <h1 class="intro-title" *ngIf="data.title">{{data.title}}</h1>
+    <div class="intro-bottom">
+      <span class="intro-bottom-subtitle" *ngIf="data.subTitle">{{data.subTitle}}</span>
+      <span class="intro-bottom-scroll">Scroll down</span>
     </div>
   </div>
 </section>
