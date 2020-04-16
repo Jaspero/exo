@@ -48,7 +48,14 @@
 
     &-scroll {
       font-size: 18px;
-      padding-bottom: 1rem;
+      padding: 0 0 1rem;
+      display: block;
+      outline: 0;
+      border: none;
+      background: none;
+      font-family: inherit;
+      text-align: left;
+      color: white;
     }
   }
 }
