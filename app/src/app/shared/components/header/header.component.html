@@ -1,11 +1,9 @@
 <div class="header c-light">
   <div class="flex jc-between ai-center">
-    <div class="col-4  z-index">
-      <a routerLink="/" routerLinkActive="active">
+      <a routerLink="/" routerLinkActive="" class="z-index">
         <h3>Logo</h3>
       </a>
-    </div>
-    <div class="col-8 flex jc-end z-index m-r-l hide-s">
+    <div class="flex jc-end z-index hide-s">
       <a routerLink="/" routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}" class="link">HOME</a>
       <a routerLink="/lounge" routerLinkActive="active" class="m-x-s link">LOUNGE</a>
       <a routerLink="/nail" routerLinkActive="active" class="m-x-s link">NAIL BAR</a>
@@ -21,7 +19,7 @@
         <span class="line-3"></span>
       </div>
     </div>
-      <div class="col-10 flex fw-wrap jc-center ai-center bg-light c-dark fd-col z-index mobile-links" [class.active]="menu">
+      <div class="flex fw-wrap jc-center ai-center bg-light c-dark fd-col z-index mobile-links" [class.active]="menu">
         <a routerLink="/" routerLinkActive="active-mobile">HOME</a>
         <a routerLink="/lounge" routerLinkActive="active-mobile" class="m-x-s mobile-link">LOUNGE</a>
         <a routerLink="/nail" routerLinkActive="active-mobile" class="m-x-s mobile-link">NAIL BAR</a>
