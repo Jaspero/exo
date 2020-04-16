@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ScullyLibModule} from '@scullyio/ng-lib';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
+import {IntersectionModule} from './shared/modules/intersecting/intersection.module';
 import {BASE_TITLE} from './shared/resolvers/meta.resolver';
 
 @NgModule({
@@ -14,7 +15,8 @@ import {BASE_TITLE} from './shared/resolvers/meta.resolver';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ScullyLibModule
+    ScullyLibModule,
+    IntersectionModule.forRoot()
   ],
   providers: [
     {

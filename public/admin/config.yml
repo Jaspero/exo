@@ -12,6 +12,20 @@ media_folder: "public/uploads"
 # The src attribute for uploaded media will begin with /uploads
 public_folder: "/uploads"
 
+animation: &animation
+  label: "Animation"
+  name: "animation"
+  widget: "select"
+  options:
+    - { label: "None", value: "none" }
+    - { label: "Fade In", value: "fade-in" }
+    - { label: "Fade In From Top", value: "fade-in-from-top" }
+    - { label: "Fade In From Bottom", value: "fade-in-from-bottom" }
+    - { label: "Fade In From Top", value: "fade-in-from-top" }
+    - { label: "Fade In From Left", value: "fade-in-from-left" }
+    - { label: "Fade In From Right", value: "fade-in-from-right" }
+  default: "none"
+
 # Reusable blocks for all of the pages
 blocks: &blocks
   label: "Blocks"
@@ -22,6 +36,7 @@ blocks: &blocks
       name: "imageR"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
