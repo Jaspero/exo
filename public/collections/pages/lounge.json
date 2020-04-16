@@ -36,7 +36,7 @@
       "type": "imageFullButton",
       "image": "/uploads/lounge.png",
       "title": "EXO Lounge",
-      "link": "contact",
+      "link": "/contact",
       "buttonTitle": "Contact Us"
     }
   ],
