@@ -7,9 +7,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent implements OnInit {
-  constructor(
-    private activatedRoute: ActivatedRoute
-  ) {}
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   exo = {
     services: [
@@ -56,7 +54,7 @@ export class ContactUsComponent implements OnInit {
   };
 
   page: any;
-
+  data: any;
   ngOnInit() {
     this.page = this.activatedRoute.snapshot.data.page;
   }
