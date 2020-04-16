@@ -1,6 +1,6 @@
 <section class="p-y-l">
   <div class="grid jc-around ai-center">
-    <div class="col-4 col-s-6 col-xs-12 c-dark ta-left">
+    <div class="col-4 col-s-6 col-xs-12 c-dark ta-left" intersecting data-animation="fade-in-from-left">
       <div *ngIf="noImg; else belowImg">
         <h1>{{data.title}}</h1>
         <div class="m-t-m" [innerHTML]="data.content"></div>
@@ -13,7 +13,7 @@
         </div>
       </ng-template>
     </div>
-    <div class="col-5 col-s-6 col-xs-12 ta-right">
+    <div class="col-5 col-s-6 col-xs-12 ta-right" intersecting data-animation="fade-in-from-bottom">
       <img [src]="data.image">
     </div>
   </div>

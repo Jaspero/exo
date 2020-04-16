@@ -13,6 +13,7 @@ import {TextBlockComponent} from './text-block/text-block.component';
 import {EventImageBlockComponent} from './event-image-block/event-image-block.component';
 import {ImageRButtonComponent} from './image-r-button/image-r-button.component';
 import {ImageLButtonComponent} from './image-l-button/image-l-button.component';
+import {IntersectionModule} from '../intersecting/intersection.module';
 
 @NgModule({
   declarations: [
@@ -32,9 +33,6 @@ import {ImageLButtonComponent} from './image-l-button/image-l-button.component';
     ImageLButtonComponent
   ],
   exports: [BlockRendererComponent],
-  imports: [
-    CommonModule,
-    RouterModule
-  ]
+  imports: [CommonModule, RouterModule, IntersectionModule]
 })
 export class BlocksModule {}
