@@ -70,7 +70,6 @@ blocks: &blocks
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Link", name: "link", widget: "string", required: false }
-        - { label: "Link", name: "link", widget: "string", required: false }
         - { label: "Button Title", name: "buttonTitle", widget: "string", required: false }
 
     - label: "Text Block"
