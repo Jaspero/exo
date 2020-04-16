@@ -62,12 +62,12 @@
   color: black;
   min-width: 150px;
   text-align: center;
+  transition: .3s;
 }
 
 .btn-primary:hover {
   background: black;
   color: white;
-  transition: .3s;
 }
 
 .btn-secondary {
@@ -80,10 +80,10 @@
   background: transparent;
   color: white;
   min-width: 150px;
+  transition: .3s;
 }
 
 .btn-secondary:hover {
   background: white;
   color: black;
-  transition: .3s;
 }
