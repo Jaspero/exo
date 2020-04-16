@@ -7,10 +7,10 @@ import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IntroComponent implements OnInit {
-  constructor() { }
+  constructor() {}
 
   get bg() {
-    return {'background-image': `url(${this.data.background})`}
+    return {'background-image': `url(${this.data.background})`};
   }
 
   @Input()
@@ -20,7 +20,12 @@ export class IntroComponent implements OnInit {
     background?: string;
   } = {};
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
+  scrollDown() {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+  }
 }
