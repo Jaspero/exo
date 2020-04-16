@@ -34,8 +34,14 @@
     {
       "type": "imageFullButton",
       "image": "/uploads/nail-1.png",
-      "title": "EXO Nail Bar"
+      "title": "EXO Nail Bar",
+      "link": "/contact",
+      "buttonTitle": "Contact us"
     }
   ],
-  "showcaseTitle": "Nail Bar"
+  "showcaseTitle": "Nail Bar",
+  "showcase": {
+    "title": "Quite Simply, EXtraOrdinary",
+    "background": "/uploads/nail-main.png"
+  }
 }
