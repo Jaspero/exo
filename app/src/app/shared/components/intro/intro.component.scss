@@ -14,3 +14,15 @@
   background: black;
   opacity: .3;
 }
+
+
+@media (max-width: 600px) {
+  .main {
+    height: 500px;
+  }
+
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
