@@ -36,5 +36,10 @@
   ],
   "showcaseTitle": "Title of the showcase",
   "showcaseBackground": "/uploads/blog-exo-lounge.png",
-  "showcaseSubTitle": "Scroll down"
+  "showcaseSubTitle": "Scroll down",
+  "showcase": {
+    "title": "Quite Simply, EXtraOrdinary",
+    "subTitle": "Subtitle",
+    "background": "/uploads/home-main.png"
+  }
 }
