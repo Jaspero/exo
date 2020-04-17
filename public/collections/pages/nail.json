@@ -21,7 +21,8 @@
     },
     {
       "type": "imageFull",
-      "image": "/uploads/nail-3.png"
+      "image": "/uploads/nail-3.png",
+      "animation": "fade-in-from-bottom"
     },
     {
       "type": "imageLeftButton",
@@ -42,7 +43,8 @@
       "image": "/uploads/nail-1.png",
       "title": "EXO Nail Bar",
       "link": "/contact",
-      "buttonTitle": "Contact us"
+      "buttonTitle": "Contact us",
+      "animation": "fade-in"
     }
   ],
   "showcaseTitle": "Nail Bar",
