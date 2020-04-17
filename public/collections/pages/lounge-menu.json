@@ -10,21 +10,14 @@
   },
   "categories": [
     {
-      "title": "Category One",
-      "subTitle": "This category has a sub title",
-      "price": "$20",
+      "title": "Classic Cocktails",
+      "subTitle": "Add CBD Gummy To Any Cocktail - 2",
+      "price": "",
       "items": [
         {
-          "title": "An item",
-          "subTitle": "an item with a subtitle",
-          "price": "$20"
-        },
-        {
-          "title": "Item with no sub title",
-          "price": "$10"
-        },
-        {
-          "title": "Item with no price or sub title"
+          "title": "Moscow Mule",
+          "subTitle": "Wheatly Vodka, Ginger Beer, Fresh Squeezed Lime",
+          "price": "$8"
         }
       ]
     },
