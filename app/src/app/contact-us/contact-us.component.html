@@ -2,15 +2,15 @@
 <exo-intro [data]="page.showcase || {}"></exo-intro>
 <div class="grid m-y-l">
   <div class="col-7 col-xs-12 ta-center">
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p class="font-tertiary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 </div>
 <section class="contact m-y-l">
   <div class="grid m-y-l">
     <div class="col-12 ta-center">
-      <h1>Contact Us</h1>
+      <h3>Contact Us</h3>
     </div>
-    <div class="col-4 col-xs-12 flex ai-center jc-center">
+    <div class="col-4 col-xs-12 flex ai-center jc-center font-primary">
       <img src="assets/icons/pin.svg" alt="" class="m-r-xs icon m-b-s">
       <p>2 157 Center,<br> Edwardsville IL 62025</p>
     </div>
@@ -26,35 +26,35 @@
       <h1>Get in Touch Directly</h1>
     </div>
     <div class="col-3 col-xs-6 ta-center">
-      <h5>Exo Lounge</h5>
-      <a href="">lounge@visitexo.com</a>
+      <h5 class="contact-title font-primary fw-normal">Exo Lounge</h5>
+      <a href="mailto:lounge@visitexo.com" class="mail">lounge@visitexo.com</a>
     </div>
     <div class="col-3 col-xs-6 ta-center">
-      <h5>EXO Nail Bar</h5>
-      <a href="">nailbar@visitexo.com</a>
+      <h5 class="contact-title font-primary fw-normal">EXO Nail Bar</h5>
+      <a href="mailto:nailbar@visitexo.com" class="mail">nailbar@visitexo.com</a>
     </div>
     <div class="col-3 col-xs-6 ta-center">
-      <h5>Events</h5>
-      <a href="">events@visitexo.com</a>
+      <h5 class="contact-title font-primary fw-normal">Events</h5>
+      <a href="mailto:events@visitexo.com" class="mail">events@visitexo.com</a>
     </div>
     <div class="col-3 col-xs-6 ta-center">
-      <h5>Press</h5>
-      <a href="">marketing@visitexo.com</a>
+      <h5 class="contact-title font-primary fw-normal">Press</h5>
+      <a href="mailto: marketing@visitexo.com" class="mail">marketing@visitexo.com</a>
     </div>
     <div class="col-12 m-y-l ta-center">
-      <h1>Visit Us</h1>
+      <h3>Visit Us</h3>
     </div>
     <div class="col-8 col-s-12 fw-wrap no-padding flex jc-around">
       <div class="col-6 col-xs-12 flex fd-col ai-center fw-wrap" *ngFor="let services of exo.services">
-        <h4 class="m-y-m">{{services.name}}</h4>
+        <p class="m-y-m contact-title fw-normal">{{services.name}}</p>
         <div class="flex jc-between col-8 no-padding" *ngFor="let day of week.days">
-          <p>{{day.day}}</p>
-          <p>{{day.time}}</p>
+          <p class="day">{{day.day}}</p>
+          <p class="day">{{day.time}}</p>
         </div>
       </div>
     </div>
     <div class="col-12 m-y-l ta-center">
-      <h1>Request A Call Back</h1>
+      <h3>Request A Call Back</h3>
     </div>
     <div class="col-10 col-s-12 flex  fw-wrap">
     <div class="col-6 col-xs-12 relative m-y-m">

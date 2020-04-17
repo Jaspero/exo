@@ -1,16 +1,32 @@
 <exo-header></exo-header>
 <exo-intro [data]="page.showcase || {}"></exo-intro>
 
-<div *ngFor="let category of page.categories">
-  <h1>{{category.title}}</h1>
-  <h2 *ngIf="category.subTitle">{{category.subTitle}}</h2>
-  <span *ngIf="category.price">{{category.price}}</span>
-
-  <div *ngFor="let item of category.items">
-    <h3>{{item.title}}</h3>
-    <h4 *ngIf="item.subTitle">{{item.subTitle}}</h4>
-    <span *ngIf="item.price">{{item.price}}</span>
+<section class="main bg-dark c-light">
+  <div class="col-12 ta-center p-y-l">
+    <img src="assets/images/exo.svg" alt="" style="height: 200px">
   </div>
-</div>
+  <div *ngFor="let category of page.categories">
+    <div class="container">
+      <div class="category-wrapper ta-center m-t-l p-b-m b-b">
+        <h1 class="category-title">{{category.title}}</h1>
+        <p class="category-subtitle" *ngIf="category.subTitle">{{category.subTitle}}</p>
+        <span *ngIf="category.price">{{category.price}}</span>
+      </div>
+
+      <div class="item-wrapper">
+        <div *ngFor="let item of category.items">
+          <div class="item-details flex jc-between ai-center b-b p-y-s">
+            <div class="wrapper">
+            <h4 class="item-title">{{item.title}}</h4>
+            <p class="item-subtitle" *ngIf="item.subTitle">{{item.subTitle}}</p>
+            </div>
+            <span class="item-price" *ngIf="item.price">{{item.price}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
 
 <exo-footer></exo-footer>
