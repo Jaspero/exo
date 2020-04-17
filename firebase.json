@@ -7,6 +7,13 @@
   },
   "hosting": {
     "public": "public",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "headers": [{
+      "source": "/@(ngsw-worker.js|ngsw.json)",
+      "headers": [{
+        "key": "Cache-Control",
+        "value": "no-cache"
+      }]
+    }]
   }
 }

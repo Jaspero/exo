@@ -4,6 +4,7 @@ import {RouterModule} from '@angular/router';
 import {FooterComponent} from './shared/components/footer/footer.component';
 import {HeaderComponent} from './shared/components/header/header.component';
 import {IntroComponent} from './shared/components/intro/intro.component';
+import {TextPipe} from './shared/pipes/text.pipe';
 
 const IMPORTS = [
   CommonModule,
@@ -16,9 +17,13 @@ const COMPONENTS = [
   IntroComponent
 ];
 
+const PIPES = [
+  TextPipe
+];
+
 @NgModule({
-  declarations: [...COMPONENTS],
+  declarations: [...COMPONENTS, ...PIPES],
   imports: [...IMPORTS],
-  exports: [...IMPORTS, ...COMPONENTS]
+  exports: [...IMPORTS, ...COMPONENTS, ...PIPES]
 })
 export class SharedModule {}

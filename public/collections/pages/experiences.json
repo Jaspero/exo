@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "test",
+    "description": "example description",
+    "keywords": "example keyword1,example keyword2"
+  },
+  "blocks": [
+    {
+      "type": "imageR",
+      "title": "Welcome to EXO",
+      "image": "/uploads/home-2.png",
+      "content": "EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.",
+      "animation": "fade-in-from-top"
+    },
+    {
+      "type": "imageLarge",
+      "image": "/uploads/home-6.png"
+    },
+    {
+      "type": "imageL",
+      "title": "This is image L ",
+      "image": "/uploads/home.png",
+      "content": "EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.",
+      "belowImg": "/uploads/home-9.png"
+    },
+    {
+      "type": "imageFull",
+      "image": "/uploads/home-8.png"
+    },
+    {
+      "type": "imageR",
+      "title": "Welcome to EXO",
+      "image": "/uploads/home-logo.png",
+      "content": "EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.",
+      "belowImg": "/uploads/home-10.png",
+      "animation": "fade-in-from-bottom"
+    }
+  ],
+  "showcaseTitle": "Title of the showcase",
+  "showcaseBackground": "/uploads/blog-exo-lounge.png",
+  "showcaseSubTitle": "Scroll down",
+  "showcase": {
+    "title": "Quite Simply,\nEXtraOrdinary",
+    "subTitle": "Subtitle",
+    "background": "/uploads/home-main.png"
+  }
+}

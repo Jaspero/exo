@@ -7,6 +7,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {IntersectionModule} from './shared/modules/intersecting/intersection.module';
 import {BASE_TITLE} from './shared/resolvers/meta.resolver';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +18,8 @@ import {BASE_TITLE} from './shared/resolvers/meta.resolver';
     BrowserAnimationsModule,
     HttpClientModule,
     ScullyLibModule,
-    IntersectionModule.forRoot()
+    IntersectionModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     {

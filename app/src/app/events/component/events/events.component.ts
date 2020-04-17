@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 declare var ng: any;
@@ -8,7 +8,8 @@ declare var ng: any;
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.scss'],
   preserveWhitespaces: true,
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.Emulated,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventsComponent implements OnInit {
   constructor(

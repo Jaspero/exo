@@ -1,6 +1,6 @@
 <section class="intro" [ngStyle]="bg">
   <div class="intro-container">
-    <h1 class="intro-title font-tertiary" *ngIf="data.title">{{data.title}}</h1>
+    <h1 class="intro-title font-tertiary" *ngIf="data.title" [innerHTML]="data.title | text"></h1>
     <div class="intro-bottom">
       <span class="intro-bottom-subtitle font-secondary" *ngIf="data.subTitle">{{data.subTitle}}</span>
       <button (click)="scrollDown()" class="intro-bottom-scroll font-primary">Scroll down</button>
