@@ -38,7 +38,7 @@
           "title": "Smoked Manhattan",
           "subTitle": "Smoked Bourbon, Sweet Vermouth, Angostura Bitters, Amarena Cherry",
           "price": "$10",
-          "image": "/uploads/hot-beverage.png"
+          "image": ""
         }
       ]
     },
@@ -67,6 +67,20 @@
         }
       ],
       "subTitle": "By The Glass | By The Bottle"
+    },
+    {
+      "title": "Sweets",
+      "items": [
+        {
+          "title": "Dark Chocolate Cookie Crumble Bark",
+          "price": "$5"
+        },
+        {
+          "title": "Macarons",
+          "price": "$8",
+          "image": "/uploads/hot-beverage.png"
+        }
+      ]
     }
   ]
 }
