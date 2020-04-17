@@ -1,1 +1,114 @@
-{}
+{
+  "showcase": {
+    "title": "Nail-bar-menu",
+    "background": "/uploads/nail-bar-main.png"
+  },
+  "meta": {
+    "title": "Nail-bar-menu"
+  },
+  "categories": [
+    {
+      "title": "Manicure",
+      "subTitle": "All manicure includes trim, shape, cuticle treatment, and polish.",
+      "items": [
+        {
+          "title": "Classic Manicure",
+          "subTitle": "Simple clean up with massage.",
+          "price": "$18"
+        },
+        {
+          "title": "Signature Rose Petal Manicure",
+          "subTitle": "Hand bath of petals, hydrating soak, rose sugar scrub exfoliation, shape, cuticle care, collagen glove, massage, oil, and paint.",
+          "price": "$38"
+        },
+        {
+          "title": "Gel Manicure",
+          "subTitle": "Classic manicure + Gel polish.",
+          "price": "$35"
+        }
+      ]
+    },
+    {
+      "title": "Nail Enhancements",
+      "subTitle": "Our revolutionary take on nail enhancements to create the most elegant and feminine looks.",
+      "items": [
+        {
+          "title": "Nail effects and finishes",
+          "subTitle": "Add that magic to your nails with our finishing touches on all gel services: Chrome, mermaid, glitter dust, fairy pixi, hologram, crystal dust, unicorn, foil, and many more.",
+          "price": "Regular $15"
+        },
+        {
+          "title": "Acrylic full set",
+          "price": "Regular $30+ | Gel $40+",
+          "subTitle": "Add that magic to your nails with our finishing touches on all gel services: Chrome, mermaid, glitter dust, fairy pixi, hologram, crystal dust, unicorn, foil, and many more."
+        },
+        {
+          "title": "Acrylic refill",
+          "price": "Regular $20+ | Gel $30+",
+          "subTitle": "Infill of growth, freshen up, paint. oil."
+        },
+        {
+          "title": "Ombre fullset",
+          "price": "$48 and up",
+          "subTitle": "Please speak to your tech on pricing prices will vary with nail length."
+        },
+        {
+          "title": "Pink and White",
+          "price": "Full $50 / Fill $40"
+        },
+        {
+          "title": "Dip Powder with tip extension",
+          "price": "$40"
+        },
+        {
+          "title": "Dip Powder w/o manicure",
+          "price": "$35"
+        },
+        {
+          "title": "Dip Powder with manicure",
+          "price": "$45"
+        },
+        {
+          "title": "Dip Powder with French",
+          "price": "$40"
+        }
+      ]
+    },
+    {
+      "title": "Gentleman’s package",
+      "price": "$65",
+      "subTitle": "For the man who is always on the go. Our exclusive experience specifically designed for the new age man includes a gentlemen’s manicure, pedicure, and one Whiskey",
+      "items": [
+        {
+          "title": "Manicure",
+          "subTitle": "Your nails are shaped and buffed and cuticles are conditioned and smoothed. This treatment is completed with a relaxing hand massage",
+          "price": ""
+        },
+        {
+          "title": "Pedicure",
+          "subTitle": "In addition to basic foot care manicure, including toenail clipping, nail and cuticle conditioning and callous treatment. You’ll enjoy a massaging foot scrub, paraffin foot therapy and stimulating massage with non-greasy butter cream for relief from the effects of stress. Your nails are buffed to a healthy glow."
+        }
+      ]
+    },
+    {
+      "title": "Kids Services",
+      "subTitle": "(Age 8 and under)",
+      "items": [
+        {
+          "title": "Mini Pedi-Cake",
+          "subTitle": "Fizzy bath bomb foot soak, nail trim, shape, cuticle care, simple clean up, lotion massage.",
+          "price": "Regular $23 / Gel $35"
+        },
+        {
+          "title": "Mini Jell-Ohh",
+          "subTitle": "Colorful, wiggly jelly foot soak + mini pedi-cake",
+          "price": "Regular $35 / Gel $47"
+        },
+        {
+          "title": "Mini Manicure",
+          "price": "Regular $14 / Gel $26"
+        }
+      ]
+    }
+  ]
+}
