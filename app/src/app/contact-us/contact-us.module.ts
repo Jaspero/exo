@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {SharedModule} from '../shared.module';
+import {MarkdownModule} from '../shared/modules/markdown/markdown.module';
 import {ContactUsRoutingModule} from './contact-us-routing.module';
 import {ContactUsComponent} from './contact-us.component';
 
@@ -7,7 +8,8 @@ import {ContactUsComponent} from './contact-us.component';
   declarations: [ContactUsComponent],
   imports: [
     SharedModule,
-    ContactUsRoutingModule
+    ContactUsRoutingModule,
+    MarkdownModule
   ]
 })
 export class ContactUsModule {}

@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {environment} from '../../../../environments/environment';
 
@@ -9,7 +9,8 @@ declare var ng: any;
   templateUrl: './shop.component.html',
   styleUrls: ['./shop.component.scss'],
   preserveWhitespaces: true,
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.Emulated,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ShopComponent implements OnInit, AfterViewInit {
   constructor(private route: ActivatedRoute) {}

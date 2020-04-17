@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ScullyRoutesService} from '@scullyio/ng-lib';
 import {ScullyRoute} from '@scullyio/ng-lib/lib/route-service/scully-routes.service';
@@ -8,7 +8,8 @@ import {map} from 'rxjs/operators';
 @Component({
   selector: 'exo-news-list',
   templateUrl: './news-list.component.html',
-  styleUrls: ['./news-list.component.scss']
+  styleUrls: ['./news-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NewsListComponent implements OnInit {
   constructor(

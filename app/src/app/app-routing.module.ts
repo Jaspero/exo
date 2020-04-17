@@ -80,6 +80,22 @@ const routes: Routes = [
     }
   },
   {
+    path: 'location',
+    loadChildren: () =>
+      import('./locations/locations.module').then(m => m.LocationsModule),
+    resolve: {
+      delay: DelayResolver
+    }
+  },
+  {
+    path: 'experiences',
+    loadChildren: () =>
+      import('./experiences/experiences.module').then(m => m.ExperiencesModule),
+    resolve: {
+      delay: DelayResolver
+    }
+  },
+  {
     path: '404',
     loadChildren: () =>
       import('./not-found/not-found.module').then(m => m.NotFoundModule)

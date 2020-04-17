@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 
 @Component({
   selector: 'exo-intro',
@@ -6,8 +6,7 @@ import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./intro.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class IntroComponent implements OnInit {
-  constructor() {}
+export class IntroComponent {
 
   get bg() {
     return {'background-image': `url(${this.data.background})`};
@@ -19,8 +18,6 @@ export class IntroComponent implements OnInit {
     subTitle?: string;
     background?: string;
   } = {};
-
-  ngOnInit() {}
 
   scrollDown() {
     window.scrollTo({

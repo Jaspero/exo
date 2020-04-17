@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ScullyRoutesService} from '@scullyio/ng-lib';
 import {ScullyRoute} from '@scullyio/ng-lib/lib/route-service/scully-routes.service';
@@ -8,7 +8,8 @@ import {map} from 'rxjs/operators';
 @Component({
   selector: 'exo-events-list',
   templateUrl: './events-list.component.html',
-  styleUrls: ['./events-list.component.scss']
+  styleUrls: ['./events-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventsListComponent implements OnInit {
   constructor(

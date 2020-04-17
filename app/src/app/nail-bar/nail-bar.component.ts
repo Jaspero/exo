@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'exo-nail-bar',
   templateUrl: './nail-bar.component.html',
-  styleUrls: ['./nail-bar.component.scss']
+  styleUrls: ['./nail-bar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NailBarComponent implements OnInit {
   constructor(

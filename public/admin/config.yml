@@ -267,7 +267,61 @@ collections:
       - label: "Contact"
         name: "contact"
         file: "public/collections/pages/contact.json"
-        fields: *pageLight
+        fields:
+          - <<: *showcase
+          - <<: *meta
+          - { label: "First Segment", name: "firstSegment", widget: "markdown", required: false }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Address", name: "address", widget: "text" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+          - label: "Get in Touch"
+            name: "getInTouch"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Lounge", name: "lounge", widget: "string" }
+              - { label: "Nail Bar", name: "nailBar", widget: "string" }
+              - { label: "Events", name: "events", widget: "string" }
+              - { label: "Press", name: "press", widget: "string" }
+          - label: "Visit Us"
+            name: "visitUs"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+              - label: "Lounge"
+                name: "lounge"
+                widget: "object"
+                fields:
+                  - { label: "Monday", name: "monday", widget: "string" }
+                  - { label: "Tuesday", name: "tuesday", widget: "string" }
+                  - { label: "Wednesday", name: "wednesday", widget: "string" }
+                  - { label: "Thursday", name: "thursday", widget: "string" }
+                  - { label: "Friday", name: "friday", widget: "string" }
+                  - { label: "Saturday", name: "saturday", widget: "string" }
+                  - { label: "Sunday", name: "sunday", widget: "string" }
+              - label: "Nail Bar"
+                name: "nailBar"
+                widget: "object"
+                fields:
+                  - { label: "Monday", name: "monday", widget: "string" }
+                  - { label: "Tuesday", name: "tuesday", widget: "string" }
+                  - { label: "Wednesday", name: "wednesday", widget: "string" }
+                  - { label: "Thursday", name: "thursday", widget: "string" }
+                  - { label: "Friday", name: "friday", widget: "string" }
+                  - { label: "Saturday", name: "saturday", widget: "string" }
+                  - { label: "Sunday", name: "sunday", widget: "string" }
+          - label: "Address"
+            name: "address"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Latitude", name: "lat", widget: "number" }
+              - { label: "Longitude", name: "lng", widget: "number" }
       - label: "Blog"
         name: "blog"
         file: "public/collections/pages/blog.json"
@@ -283,6 +337,10 @@ collections:
       - label: "Shop"
         name: "shop"
         file: "public/collections/pages/shop.json"
+        fields: *pageLight
+      - label: "Locations"
+        name: "locations"
+        file: "public/collections/pages/locations.json"
         fields: *pageLight
       - name: "loungeMenu"
         label: "Lounge Menu"

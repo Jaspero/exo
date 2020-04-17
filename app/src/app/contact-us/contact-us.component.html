@@ -1,55 +1,55 @@
 <exo-header></exo-header>
 <exo-intro [data]="page.showcase || {}"></exo-intro>
-<div class="grid m-y-l">
-  <div class="col-7 col-xs-12 ta-center">
-    <p class="font-tertiary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
+<div class="grid m-y-l" *ngIf="page.firstSegment">
+  <div class="col-7 col-xs-12 ta-center font-tertiary" [innerHTML]="page.firstSegment | MTH"></div>
 </div>
-<section class="contact m-y-l">
-  <div class="grid m-y-l">
+<section class="contact">
+  <div class="grid">
     <div class="col-12 ta-center">
-      <h3>Contact Us</h3>
+      <h3 [innerHTML]="page.contact.title | text"></h3>
     </div>
     <div class="col-4 col-xs-12 flex ai-center jc-center font-primary">
       <img src="assets/icons/pin.svg" alt="" class="m-r-xs icon m-b-s">
-      <p>2 157 Center,<br> Edwardsville IL 62025</p>
+      <p [innerHTML]="page.contact.address | text">
+        {{page.contact.address}}
+      </p>
     </div>
     <div class="col-4 col-xs-12 flex ai-center jc-center">
       <img src="assets/icons/phone.svg" alt="" class="m-r-xs icon">
-      <p>Phone: 618-692-XOXO</p>
+      <p>Phone: {{page.contact.phone}}</p>
     </div>
     <div class="col-4 col-xs-12 flex ai-center jc-center">
       <img src="assets/icons/mail.svg" alt="" class="m-r-xs icon">
-      <p>info@visitexo.com</p>
+      <p>{{page.contact.email}}</p>
     </div>
     <div class="col-12 m-y-l ta-center">
-      <h1>Get in Touch Directly</h1>
+      <h1 [innerHTML]="page.getInTouch.title | text"></h1>
     </div>
     <div class="col-3 col-xs-6 ta-center">
       <h5 class="contact-title font-primary fw-normal">Exo Lounge</h5>
-      <a href="mailto:lounge@visitexo.com" class="mail">lounge@visitexo.com</a>
+      <a [href]="'mailto:' + page.getInTouch.lounge" class="mail">{{page.getInTouch.lounge}}</a>
     </div>
     <div class="col-3 col-xs-6 ta-center">
       <h5 class="contact-title font-primary fw-normal">EXO Nail Bar</h5>
-      <a href="mailto:nailbar@visitexo.com" class="mail">nailbar@visitexo.com</a>
+      <a [href]="'mailto:' + page.getInTouch.nailBar" class="mail">{{page.getInTouch.nailBar}}</a>
     </div>
     <div class="col-3 col-xs-6 ta-center">
       <h5 class="contact-title font-primary fw-normal">Events</h5>
-      <a href="mailto:events@visitexo.com" class="mail">events@visitexo.com</a>
+      <a [href]="'mailto:' + page.getInTouch.events" class="mail">{{page.getInTouch.events}}</a>
     </div>
     <div class="col-3 col-xs-6 ta-center">
       <h5 class="contact-title font-primary fw-normal">Press</h5>
-      <a href="mailto: marketing@visitexo.com" class="mail">marketing@visitexo.com</a>
+      <a [href]="'mailto:' + page.getInTouch.press" class="mail">{{page.getInTouch.press}}</a>
     </div>
     <div class="col-12 m-y-l ta-center">
-      <h3>Visit Us</h3>
+      <h3 [innerHTML]="page.visitUs.title | text"></h3>
     </div>
     <div class="col-8 col-s-12 fw-wrap no-padding flex jc-around">
-      <div class="col-6 col-xs-12 flex fd-col ai-center fw-wrap" *ngFor="let services of exo.services">
-        <p class="m-y-m contact-title fw-normal">{{services.name}}</p>
-        <div class="flex jc-between col-8 no-padding" *ngFor="let day of week.days">
-          <p class="day">{{day.day}}</p>
-          <p class="day">{{day.time}}</p>
+      <div class="col-6 col-xs-12 flex fd-col ai-center fw-wrap" *ngFor="let service of exo.services">
+        <p class="m-y-m contact-title fw-normal">{{service.name}}</p>
+        <div class="flex jc-between col-8 no-padding" *ngFor="let day of exo.days">
+          <p class="day">{{day | titlecase}}</p>
+          <p class="day">{{page.visitUs[service.key][day]}}</p>
         </div>
       </div>
     </div>
@@ -106,12 +106,26 @@
       </div>
     </div>
     <div class="col-12 ta-center">
-      <h3 class="m-y-m">Where are we</h3>
-      <div class="location w-full m-y-l"></div>
+      <h3 class="m-y-m" [innerHTML]="page.address.title | text"></h3>
+
+      <div class="mapouter">
+        <div class="gmap_canvas">
+          <iframe
+            width="1600"
+            height="500"
+            id="gmap_canvas"
+            [src]="mapSrc"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0">
+          </iframe>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<section class="exo-events m-t-l flex jc-center ai-center">
+<section class="exo-events flex jc-center ai-center">
   <div class="col-6 col-xs-12 wrapper relative c-light z-index ta-center flex fd-col ai-center jc-center">
     <h1 class="z-index m-y-m">Exo Events</h1>
     <button class="btn-secondary z-index">Inquire Now</button>

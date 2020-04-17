@@ -1,60 +1,49 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'exo-contact-us',
   templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss']
+  styleUrls: ['./contact-us.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContactUsComponent implements OnInit {
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private domSanitizer: DomSanitizer
+  ) {}
 
   exo = {
     services: [
       {
-        name: 'EXO Lounge'
+        name: 'EXO Lounge',
+        key: 'lounge'
       },
       {
-        name: 'EXO Nail Bar'
+        name: 'EXO Nail Bar',
+        key: 'nailBar'
       }
-    ]
-  };
-
-  week = {
+    ],
     days: [
-      {
-        day: 'Monday',
-        time: '8:30am to 5pm'
-      },
-      {
-        day: 'Tuesday',
-        time: '8:30am to 5pm'
-      },
-      {
-        day: 'Wednesday',
-        time: '8:30am to 5pm'
-      },
-      {
-        day: 'Thursday',
-        time: '8:30am to 5pm'
-      },
-      {
-        day: 'Friday',
-        time: '8:30am to 5pm'
-      },
-      {
-        day: 'Saturday',
-        time: 'Closed'
-      },
-      {
-        day: 'Sunday',
-        time: 'Closed'
-      }
+      'monday',
+      'tuesday',
+      'wednesday',
+      'thursday',
+      'friday',
+      'saturday',
+      'sunday'
     ]
   };
 
   page: any;
-  data: any;
+
+  get mapSrc() {
+    return this.domSanitizer.bypassSecurityTrustResourceUrl(
+      'https://maps.google.com/maps?ll=' + this.page.address.lat + ',' + this.page.address.lng + '&z=17&ie=UTF8&iwloc&output=embed'
+    )
+  }
+
   ngOnInit() {
     this.page = this.activatedRoute.snapshot.data.page;
   }

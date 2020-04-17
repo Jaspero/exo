@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {BlogComponent} from '../blog/components/blog/blog.component';
 import {EventsComponent} from '../events/component/events/events.component';
@@ -7,7 +7,8 @@ import {NewsComponent} from '../news/component/news/news.component';
 @Component({
   selector: 'exo-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
   constructor(

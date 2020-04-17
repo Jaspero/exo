@@ -5,5 +5,45 @@
   },
   "meta": {
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "firstSegment": "example",
+  "contact": {
+    "title": "Contact us",
+    "address": "2 157 Center,\n Edwardsville IL 62025",
+    "phone": "123",
+    "email": "info@visitexo.com"
+  },
+  "getInTouch": {
+    "title": "Get in Touch Directly",
+    "lounge": "lounge@visitexo.com",
+    "nailBar": "nailbar@visitexo.com",
+    "events": "events@visitexo.com",
+    "press": "marketing@visitexo.com"
+  },
+  "visitUs": {
+    "title": "Visit Us",
+    "lounge": {
+      "monday": "8:30am to 5pm",
+      "tuesday": "8:30am to 5pm",
+      "wednesday": "8:30am to 5pm",
+      "thursday": "8:30am to 5pm",
+      "friday": "8:30am to 5pm",
+      "saturday": "Closed",
+      "sunday": "Closed"
+    },
+    "nailBar": {
+      "monday": "8:30am to 5pm",
+      "tuesday": "8:30am to 5pm",
+      "wednesday": "8:30am to 5pm",
+      "thursday": "8:30am to 5pm",
+      "friday": "8:30am to 5pm",
+      "saturday": "Closed",
+      "sunday": "Closed"
+    }
+  },
+  "address": {
+    "title": "Where we are",
+    "lat": 38.7845355,
+    "lng": -89.9819148
   }
 }
