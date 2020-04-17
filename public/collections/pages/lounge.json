@@ -22,7 +22,8 @@
     },
     {
       "type": "imageFull",
-      "image": "/uploads/lounge-3.png"
+      "image": "/uploads/lounge-3.png",
+      "animation": "fade-in"
     },
     {
       "type": "imageL",
@@ -43,7 +44,8 @@
       "image": "/uploads/lounge.png",
       "title": "EXO Lounge",
       "link": "/contact",
-      "buttonTitle": "Contact Us"
+      "buttonTitle": "Contact Us",
+      "animation": "fade-in-from-left"
     }
   ],
   "showcase": {
