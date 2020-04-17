@@ -19,7 +19,10 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     ScullyLibModule,
     IntersectionModule.forRoot(),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      registrationStrategy: 'registerImmediately'
+    })
   ],
   providers: [
     {
