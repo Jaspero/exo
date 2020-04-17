@@ -106,7 +106,8 @@
         },
         {
           "title": "Mini Manicure",
-          "price": "Regular $14 / Gel $26"
+          "price": "Regular $14 / Gel $26",
+          "image": "/uploads/kids-service.png"
         }
       ]
     }
