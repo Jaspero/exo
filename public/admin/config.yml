@@ -55,6 +55,7 @@ blocks: &blocks
       name: "imageLarge"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Image", name: "image", widget: "image", required: false }
 
     - label: "Logo Block"
@@ -81,12 +82,14 @@ blocks: &blocks
       name: "imageFull"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Image", name: "image", widget: "image", required: false }
 
     - label: "Image Full Button"
       name: "imageFullButton"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Link", name: "link", widget: "string", required: false }
@@ -104,6 +107,7 @@ blocks: &blocks
       name: "eventImageBlock"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }

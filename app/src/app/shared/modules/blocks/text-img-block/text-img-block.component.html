@@ -1,8 +1,8 @@
 <div class="grid m-y-l">
-  <div class="col-6  ta-center p-a-l p-s-0">
+  <div class="col-6  ta-center p-a-l p-s-0" intersecting [attr.data-animation]="data.animation || 'none'">
     <img [src]="data.image" alt="">
   </div>
-  <div class="col-7 col-s-12 ta-center text-wrapper">
+  <div class="col-7 col-s-12 ta-center text-wrapper" intersecting [attr.data-animation]="data.animation || 'none'">
     <p class="font-tertiary">{{data.content}}</p>
   </div>
 </div>

@@ -1,9 +1,9 @@
 <section class="exo-patio m-y-l">
   <div class="grid jc-around">
-    <div class="col-5 col-s-12 ta-left">
+    <div class="col-5 col-s-12 ta-left" intersecting [attr.data-animation]="data.animation || 'none'">
       <img [src]="data.image" alt="">
     </div>
-    <div class="col-4 col-s-12 ta-left">
+    <div class="col-4 col-s-12 ta-left" intersecting [attr.data-animation]="data.animation || 'none'">
       <h3 class="m-t-l">{{data.title}}</h3>
       <div class="m-y-l no-padding text-wrapper"  [innerHTML]="data.content">
       </div>
