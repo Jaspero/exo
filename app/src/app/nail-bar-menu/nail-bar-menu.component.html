@@ -1,25 +1,34 @@
 <exo-header></exo-header>
 <exo-intro [data]="page.showcase || {}"></exo-intro>
 
-<section class="main bg-dark c-light">
+<section class="main bg-light c-dark">
   <div class="col-12 ta-center p-y-l">
     <img src="assets/images/exo.svg" alt="" style="height: 200px">
   </div>
-  <div *ngFor="let category of page.categories">
+  <div *ngFor="let category of page.categories" class="m-y-l p-a-s">
     <div class="container">
-      <div class="category-wrapper ta-center m-t-l p-b-m b-b">
-        <h1 class="category-title">{{category.title}}</h1>
-        <p class="category-subtitle" *ngIf="category.subTitle">{{category.subTitle}}</p>
-        <span *ngIf="category.price">{{category.price}}</span>
+      <div class="category-wrapper flex ai-center fw-wrap jc-between p-b-m b-b">
+        <div class="col-2"></div>
+        <div class="col-8 ta-center no-padding">
+          <h1 class="category-title">{{category.title}}</h1>
+        </div>
+        <div class="col-2 no-padding flex jc-end">
+          <span class="category-price" *ngIf="category.price">{{category.price}}</span>
+        </div>
+        <div class="flex jc-center w-full ta-center">
+          <div class="col-8 no-padding">
+            <p class="category-subtitle" *ngIf="category.subTitle">{{category.subTitle}}</p>
+          </div>
+        </div>
       </div>
     </div>
     <div *ngFor="let item of category.items">
-      <div class="container flex jc-between ai-center b-b p-y-s">
-        <div class="wrapper">
+      <div class="container flex fw-wrap b-b p-y-s">
+        <div class="wrapper flex jc-between ai-center w-full">
           <h4 class="item-title fw-normal">{{item.title}}</h4>
-          <p class="item-subtitle" *ngIf="item.subTitle">{{item.subTitle}}</p>
+          <span class="item-price" *ngIf="item.price">{{item.price}}</span>
         </div>
-        <span class="item-price" *ngIf="item.price">{{item.price}}</span>
+        <p class="item-subtitle" *ngIf="item.subTitle">{{item.subTitle}}</p>
       </div>
       <div class="item-img" *ngIf="item.image" [ngStyle]="{'background-image': 'url('+ item.image +')'}"></div>
     </div>
