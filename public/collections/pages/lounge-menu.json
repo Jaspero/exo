@@ -37,7 +37,8 @@
         {
           "title": "Smoked Manhattan",
           "subTitle": "Smoked Bourbon, Sweet Vermouth, Angostura Bitters, Amarena Cherry",
-          "price": "$10"
+          "price": "$10",
+          "image": "/uploads/hot-beverage.png"
         }
       ]
     },
