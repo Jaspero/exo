@@ -155,6 +155,7 @@ itemMenu: &itemMenu
         - { label: "Title", name: "title", widget: "string" }
         - { label: "Subtitle", name: "subTitle", widget: "string", required: false }
         - { label: "Price", name: "price", widget: "string", required: false }
+        - { label: "Image", name: "image", widget: "image", required: false }
 
 pageDefault: &pageDefault
   - <<: *showcase
