@@ -45,6 +45,7 @@ blocks: &blocks
       name: "imageL"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
