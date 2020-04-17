@@ -14,7 +14,8 @@
     },
     {
       "type": "imageLarge",
-      "image": "/uploads/home-6.png"
+      "image": "/uploads/home-6.png",
+      "animation": "fade-in-from-bottom"
     },
     {
       "type": "imageL",
@@ -26,7 +27,8 @@
     },
     {
       "type": "imageFull",
-      "image": "/uploads/home-8.png"
+      "image": "/uploads/home-8.png",
+      "animation": "fade-in-from-bottom"
     },
     {
       "type": "imageR",
