@@ -1,9 +1,9 @@
 <section class="p-y-l">
   <div class="grid jc-around ai-center">
-    <div class="col-5 col-s-6 col-xs-12 ta-left">
+    <div class="col-5 col-s-6 col-xs-12 ta-left" intersecting [attr.data-animation]="data.animation || 'none'">
       <img [src]="data.image">
     </div>
-    <div class="col-4 col-s-6 col-xs-12 c-dark ta-left">
+    <div class="col-4 col-s-6 col-xs-12 c-dark ta-left" intersecting [attr.data-animation]="data.animation || 'none'">
       <div *ngIf="!data.belowImg; else belowImg">
         <h3>{{data.title}}</h3>
         <div class="m-t-m font-primary" [innerHTML]="data.content"></div>

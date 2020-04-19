@@ -45,6 +45,7 @@ blocks: &blocks
       name: "imageL"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
@@ -54,12 +55,14 @@ blocks: &blocks
       name: "imageLarge"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Image", name: "image", widget: "image", required: false }
 
     - label: "Logo Block"
       name: "textImgBlock"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
 
@@ -67,6 +70,7 @@ blocks: &blocks
       name: "imageShadowR"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
@@ -78,12 +82,14 @@ blocks: &blocks
       name: "imageFull"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Image", name: "image", widget: "image", required: false }
 
     - label: "Image Full Button"
       name: "imageFullButton"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Link", name: "link", widget: "string", required: false }
@@ -93,6 +99,7 @@ blocks: &blocks
       name: "textBlock"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
 
@@ -100,6 +107,7 @@ blocks: &blocks
       name: "eventImageBlock"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
@@ -108,6 +116,7 @@ blocks: &blocks
       name: "imageRightButton"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
@@ -117,6 +126,7 @@ blocks: &blocks
       name: "imageLeftButton"
       widget: "object"
       fields:
+        - <<: *animation
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
