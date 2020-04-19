@@ -27,10 +27,6 @@ const routes: Routes = [
       meta: MetaResolver,
       delay: DelayResolver
     }
-  },
-  {
-    path: '**',
-    component: EventsComponent
   }
 ];
 

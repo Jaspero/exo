@@ -166,6 +166,11 @@ pageLight: &pageLight
   - <<: *showcase
   - <<: *meta
 
+collectionPage: &collectionPage
+  - <<: *showcase
+  - <<: *meta
+  - { label: "First Segment", name: "firstSegment", widget: "text", required: false }
+
 collections:
   - name: "blog"
     label: "Posts"
@@ -325,7 +330,7 @@ collections:
       - label: "Blog"
         name: "blog"
         file: "public/collections/pages/blog.json"
-        fields: *pageLight
+        fields: *collectionPage
       - label: "Events"
         name: "events"
         file: "public/collections/pages/events.json"
@@ -333,7 +338,7 @@ collections:
       - label: "News"
         name: "news"
         file: "public/collections/pages/news.json"
-        fields: *pageLight
+        fields: *collectionPage
       - label: "Shop"
         name: "shop"
         file: "public/collections/pages/shop.json"

@@ -20,19 +20,19 @@ export class HomeComponent implements OnInit {
       {
         name: 'Events',
         background: 'assets/images/home/home-3.png',
-        path: 'events',
+        path: '/events',
         component: EventsComponent
       },
       {
         name: 'Blog',
         background: 'assets/images/home/home-4.png',
-        path: 'blog',
+        path: '/blog',
         component: BlogComponent
       },
       {
         name: 'News & Press',
         background: 'assets/images/home/home-5.png',
-        path: 'news',
+        path: '/news',
         component: NewsComponent
       }
     ]

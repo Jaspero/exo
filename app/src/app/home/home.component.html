@@ -8,7 +8,7 @@
   <div class="col-4 events flex jc-center ai-end" *ngFor="let background of links.backgrounds" [ngStyle]="{'background-image': 'url('+ background.background +')'}">
     <div class="bg-wrapper relative  p-a-s flex fd-col ai-center m-b-m">
       <h1 class="c-light z-index">{{background.name}}</h1>
-      <a routerLink="/{{background.path}}" routerLinkActive="active" class="z-index">
+      <a [routerLink]="background.path" routerLinkActive="active" class="z-index">
         <img src="assets/icons/right.svg" alt="link" class="z-index m-t-m arrow">
       </a>
     </div>
