@@ -6,7 +6,7 @@
     </div>
   </div>
 </section>
-<div class="grid jc-between m-y-xl">
+<div class="grid jc-between m-y-xl" intersecting data-animation="fade-in-from-bottom">
   <div class="col-4 col-s-6 col-xs-12">
     <div class="img-wrapper ta-center b-a">
       <img [src]="activeImage" alt="Product Image">
@@ -24,7 +24,7 @@
     <button id="product-component" class="btn-primary m-t-m">Add to Cart</button>
   </div>
 </div>
-<div class="grid m-y-l">
+<div class="grid m-y-l" intersecting data-animation="fade-in-from-right">
   <div class="col-12 flex b-b">
     <h4 [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode = 'tab1'" class="tab-header">PRODUCT DESCRIPTION</h4>
     <h4 [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode = 'tab2'" class="m-x-s tab-header">ADDITIONAL INFORMATION</h4>

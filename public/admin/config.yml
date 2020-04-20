@@ -190,7 +190,6 @@ collections:
     editor:
       preview: false
     fields:
-      - <<: *animation
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -208,7 +207,6 @@ collections:
     editor:
       preview: false
     fields:
-      - <<: *animation
       - label: "Featured Image"
         name: "image"
         widget: "image"
@@ -238,7 +236,6 @@ collections:
     editor:
       preview: false
     fields:
-      - <<: *animation
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
       - label: "Featured Image"
@@ -254,7 +251,6 @@ collections:
     editor:
       preview: false
     fields:
-      - <<: *animation
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Category", name: "category", widget: "string" }

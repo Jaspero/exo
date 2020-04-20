@@ -5,6 +5,7 @@ import {MarkdownModule} from '../shared/modules/markdown/markdown.module';
 import {ShopListComponent} from './component/shop-list/shop-list.component';
 import {ShopComponent} from './component/shop/shop.component';
 import {ShopRoutingModule} from './shop-routing.module';
+import {IntersectionModule} from '../shared/modules/intersecting/intersection.module';
 
 @NgModule({
   declarations: [ShopComponent, ShopListComponent],
@@ -12,7 +13,8 @@ import {ShopRoutingModule} from './shop-routing.module';
     SharedModule,
     ShopRoutingModule,
     ScullyLibModule,
-    MarkdownModule
+    MarkdownModule,
+    IntersectionModule
   ]
 })
 export class ShopModule {}
