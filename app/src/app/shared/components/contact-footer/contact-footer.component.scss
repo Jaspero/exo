@@ -1,0 +1,28 @@
+.contact-heading {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.footer-logo {
+  height: 150px;
+}
+
+a {
+  color: #e0e0e0;
+}
+a:hover {
+  color: white;
+}
+
+
+
+/* Mobile styles
+ *============================================================================*/
+
+@media (max-width: 600px) {
+
+  .footer {
+    padding: 10px;
+  }
+
+}

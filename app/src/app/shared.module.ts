@@ -5,21 +5,18 @@ import {FooterComponent} from './shared/components/footer/footer.component';
 import {HeaderComponent} from './shared/components/header/header.component';
 import {IntroComponent} from './shared/components/intro/intro.component';
 import {TextPipe} from './shared/pipes/text.pipe';
+import {ContactFooterComponent} from './shared/components/contact-footer/contact-footer.component';
 
-const IMPORTS = [
-  CommonModule,
-  RouterModule,
-];
+const IMPORTS = [CommonModule, RouterModule];
 
 const COMPONENTS = [
   HeaderComponent,
   FooterComponent,
-  IntroComponent
+  IntroComponent,
+  ContactFooterComponent
 ];
 
-const PIPES = [
-  TextPipe
-];
+const PIPES = [TextPipe];
 
 @NgModule({
   declarations: [...COMPONENTS, ...PIPES],
