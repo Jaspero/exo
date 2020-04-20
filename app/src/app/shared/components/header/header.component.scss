@@ -1,6 +1,13 @@
 .header {
-  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   width: 100%;
+  height: 100px;
+}
+
+.header-scrolled {
+  background: black;
 }
 
 .active {

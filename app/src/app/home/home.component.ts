@@ -1,4 +1,9 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  HostListener
+} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {BlogComponent} from '../blog/components/blog/blog.component';
 import {EventsComponent} from '../events/component/events/events.component';
@@ -11,9 +16,7 @@ import {NewsComponent} from '../news/component/news/news.component';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
-  constructor(
-    private activatedRoute: ActivatedRoute
-  ) {}
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   links = {
     backgrounds: [

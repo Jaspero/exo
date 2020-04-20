@@ -6,6 +6,7 @@
   min-height: 100vh;
   color: white;
   position: relative;
+  margin-top: -100px;
 
   &::before {
     content: '';
@@ -67,7 +68,7 @@
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 30px!important;
     text-align: center;
   }
 }
