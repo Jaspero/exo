@@ -5,93 +5,93 @@
 </div>
 <section class="contact">
   <div class="grid">
-    <div class="col-12 ta-center">
+    <div class="col-12 ta-center" intersecting data-animation="fade-in-from-bottom">
       <h3 [innerHTML]="page.contact.title | text"></h3>
     </div>
-    <div class="col-4 col-xs-12 flex ai-center jc-center font-primary">
+    <div class="col-4 col-xs-12 flex ai-center jc-center font-primary" intersecting data-animation="fade-in-from-bottom">
       <img src="assets/icons/pin.svg" alt="" class="m-r-xs icon m-b-s">
       <p [innerHTML]="page.contact.address | text">
         {{page.contact.address}}
       </p>
     </div>
-    <div class="col-4 col-xs-12 flex ai-center jc-center">
+    <div class="col-4 col-xs-12 flex ai-center jc-center" intersecting data-animation="fade-in-from-bottom">
       <img src="assets/icons/phone.svg" alt="" class="m-r-xs icon">
       <p>Phone: {{page.contact.phone}}</p>
     </div>
-    <div class="col-4 col-xs-12 flex ai-center jc-center">
+    <div class="col-4 col-xs-12 flex ai-center jc-center" intersecting data-animation="fade-in-from-bottom">
       <img src="assets/icons/mail.svg" alt="" class="m-r-xs icon">
       <p>{{page.contact.email}}</p>
     </div>
-    <div class="col-12 m-y-l ta-center">
+    <div class="col-12 m-y-l ta-center" intersecting data-animation="fade-in-from-bottom">
       <h1 [innerHTML]="page.getInTouch.title | text"></h1>
     </div>
-    <div class="col-3 col-xs-6 ta-center">
+    <div class="col-3 col-xs-6 ta-center" intersecting data-animation="fade-in-from-left">
       <h5 class="contact-title font-primary fw-normal">Exo Lounge</h5>
       <a [href]="'mailto:' + page.getInTouch.lounge" class="mail">{{page.getInTouch.lounge}}</a>
     </div>
-    <div class="col-3 col-xs-6 ta-center">
+    <div class="col-3 col-xs-6 ta-center" intersecting data-animation="fade-in-from-left">
       <h5 class="contact-title font-primary fw-normal">EXO Nail Bar</h5>
       <a [href]="'mailto:' + page.getInTouch.nailBar" class="mail">{{page.getInTouch.nailBar}}</a>
     </div>
-    <div class="col-3 col-xs-6 ta-center">
+    <div class="col-3 col-xs-6 ta-center" intersecting data-animation="fade-in-from-right">
       <h5 class="contact-title font-primary fw-normal">Events</h5>
       <a [href]="'mailto:' + page.getInTouch.events" class="mail">{{page.getInTouch.events}}</a>
     </div>
-    <div class="col-3 col-xs-6 ta-center">
+    <div class="col-3 col-xs-6 ta-center" intersecting data-animation="fade-in-from-right">
       <h5 class="contact-title font-primary fw-normal">Press</h5>
       <a [href]="'mailto:' + page.getInTouch.press" class="mail">{{page.getInTouch.press}}</a>
     </div>
-    <div class="col-12 m-y-l ta-center">
+    <div class="col-12 m-y-l ta-center" intersecting data-animation="fade-in-from-bottom">
       <h3 [innerHTML]="page.visitUs.title | text"></h3>
     </div>
     <div class="col-8 col-s-12 fw-wrap no-padding flex jc-around">
       <div class="col-6 col-xs-12 flex fd-col ai-center fw-wrap" *ngFor="let service of exo.services">
-        <p class="m-y-m contact-title fw-normal">{{service.name}}</p>
+        <p class="m-y-m contact-title fw-normal" intersecting data-animation="fade-in-from-top">{{service.name}}</p>
         <div class="flex jc-between col-8 no-padding" *ngFor="let day of exo.days">
-          <p class="day">{{day | titlecase}}</p>
-          <p class="day">{{page.visitUs[service.key][day]}}</p>
+          <p class="day" intersecting data-animation="fade-in-from-left">{{day | titlecase}}</p>
+          <p class="day" intersecting data-animation="fade-in-from-right">{{page.visitUs[service.key][day]}}</p>
         </div>
       </div>
     </div>
-    <div class="col-12 m-y-l ta-center">
+    <div class="col-12 m-y-l ta-center" intersecting data-animation="fade-in-from-bottom">
       <h3>Request A Call Back</h3>
     </div>
     <div class="col-10 col-s-12 flex  fw-wrap">
-    <div class="col-6 col-xs-12 relative m-y-m">
+    <div class="col-6 col-xs-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
         <input type="text" required class="w-full inputs">
         <span class="highlight"></span>
         <span class="bar"></span>
         <label>Name</label>
     </div>
-    <div class="col-6 col-xs-12 relative m-y-m">
+    <div class="col-6 col-xs-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
       <input type="text" required class="w-full inputs">
       <span class="highlight"></span>
       <span class="bar"></span>
       <label>Email</label>
     </div>
-    <div class="col-6 col-xs-12 relative m-y-m">
+    <div class="col-6 col-xs-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
       <input type="number" required class="w-full inputs">
       <span class="highlight"></span>
       <span class="bar"></span>
       <label>Phone</label>
     </div>
-    <div class="col-6 col-xs-12 relative m-y-m">
+    <div class="col-6 col-xs-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
       <input type="text" required class="w-full inputs">
       <span class="highlight"></span>
       <span class="bar"></span>
       <label>Subject</label>
     </div>
-    <div class="col-12 relative m-y-m">
+    <div class="col-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
       <textarea type="text" required class="w-full inputs"></textarea>
       <span class="highlight"></span>
       <span class="bar"></span>
       <label>Your message</label>
     </div>
     </div>
-    <div class="col-3 col-s-6 ta-center">
+    <div class="col-3 col-s-6 ta-center" intersecting data-animation="fade-in-from-bottom">
       <button class="send">Send</button>
     </div>
-    <div class="col-12 ta-center m-y-l">
+    <div class="col-12 ta-center m-y-l" intersecting data-animation="fade-in-from-bottom">
       <h3>Keep In Touch</h3>
       <div class="flex jc-center w-full ai-center m-t-m">
       <a href="">
@@ -105,7 +105,7 @@
       </a>
       </div>
     </div>
-    <div class="col-12 ta-center">
+    <div class="col-12 ta-center" intersecting data-animation="fade-in-from-top">
       <h3 class="m-y-m" [innerHTML]="page.address.title | text"></h3>
 
       <div class="mapouter">
