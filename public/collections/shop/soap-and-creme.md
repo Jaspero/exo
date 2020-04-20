@@ -1,5 +1,6 @@
 ---
 image: /uploads/shop-cards.png
+displayImage: /uploads/single-product-main.png
 galleryImages:
   - image: /uploads/product-small.png
   - image: /uploads/product-small.png
@@ -24,5 +25,6 @@ additionalInfo: |-
 
     item 5
 price: 99.00$
+productId: soap
 ---
 something
