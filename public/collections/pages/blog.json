@@ -1,1 +1,9 @@
-{}
+{
+  "showcase": {
+    "background": "/uploads/blog-main.png",
+    "title": "Quite Simply, EXtraOrdinary"
+  },
+  "meta": {
+    "title": "Blog"
+  }
+}
