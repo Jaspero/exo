@@ -22,10 +22,11 @@
 }
 
 
-.bg-wrapper:hover .arrow {
+.events:hover .arrow {
   opacity: 1;
 }
 .arrow {
+  transition: .4s ease-in;
   opacity: .4;
 }
 
@@ -49,21 +50,11 @@
 
 
 @media (max-width: 600px) {
-
-  .exo-headline {
-    font-size: 30px;
-    text-align: center;
-  }
-
   .bg-wrapper {
     text-align: center;
     min-width: 100%;
     min-height: 176px;
     justify-content: space-between;
-  }
-
-  .main {
-    height: 500px;
   }
 
   h1 {

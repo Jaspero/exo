@@ -25,9 +25,9 @@
     </div>
       <div class="flex fw-wrap jc-center ai-center bg-light c-dark fd-col z-index slide-menu" [class.active-menu]="menu">
         <a routerLink="/blog" routerLinkActive="active-mobile"  [routerLinkActiveOptions]="{exact: true}" class="mobile-link">EXO Blog</a>
-        <a routerLink="/events" routerLinkActive="active-mobile" class="mobile-link">Events</a>
-        <a routerLink="/news" routerLinkActive="active-mobile" class="mobile-link">New & Press</a>
-        <a routerLink="/" routerLinkActive="active-mobile" class="mobile-link">Gallery</a>
+        <a routerLink="/events" routerLinkActive="active-mobile" class="mobile-link" [class.active-menu]="menu">Events</a>
+        <a routerLink="/news" routerLinkActive="active-mobile" class="mobile-link" [class.active-menu]="menu">New & Press</a>
+        <a routerLink="/" routerLinkActive="active-mobile" class="mobile-link" [class.active-menu]="menu">Gallery</a>
       </div>
   </div>
 </div>

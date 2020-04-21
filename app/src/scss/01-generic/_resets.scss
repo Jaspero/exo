@@ -27,6 +27,7 @@ html {
   overflow-wrap: break-word; /* [2] */
   -moz-osx-font-smoothing: grayscale; /* [3] */
   -webkit-font-smoothing: antialiased; /* [3] */
+  text-rendering: optimizeLegibility;
 }
 
 body {
