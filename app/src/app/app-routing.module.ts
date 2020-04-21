@@ -33,6 +33,14 @@ const routes: Routes = [
     }
   },
   {
+    path: 'exo-events',
+    loadChildren: () =>
+      import('./exo-events/exo-events.module').then(m => m.ExoEventsModule),
+    resolve: {
+      delay: DelayResolver
+    }
+  },
+  {
     path: 'shop',
     loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule),
     resolve: {
