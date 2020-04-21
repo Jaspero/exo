@@ -279,6 +279,10 @@ collections:
         name: "lounge"
         file: "public/collections/pages/lounge.json"
         fields: *pageDefault
+      - label: "Exo Events"
+        name: "exoEvents"
+        file: "public/collections/pages/exoEvents.json"
+        fields: *pageDefault
       - label: "Contact"
         name: "contact"
         file: "public/collections/pages/contact.json"
@@ -344,10 +348,6 @@ collections:
       - label: "Events"
         name: "events"
         file: "public/collections/pages/events.json"
-        fields: *pageLight
-      - label: "Exo Events"
-        name: "exoEvents"
-        file: "public/collections/pages/exoEvents.json"
         fields: *pageLight
       - label: "News"
         name: "news"
