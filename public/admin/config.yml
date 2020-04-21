@@ -134,7 +134,7 @@ blocks: &blocks
 
     - label: "March Events"
       name: "marchEvents"
-      widget: "object"
+      widget: "list"
       fields:
         - <<: *animation
         - { label: "Title", name: "title", widget: "string", required: false }
