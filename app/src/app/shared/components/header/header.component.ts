@@ -15,18 +15,14 @@ import {DOCUMENT} from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
   constructor(@Inject(DOCUMENT) private _document: Document) {}
+
   menu = false;
-  height = window.innerHeight;
   scrolled = false;
+  height: number;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll($event: any) {
-    console.log(window.pageYOffset, this.height);
-    if ($event > this.height) {
-      console.log('if');
-    } else {
-      console.log('else');
-    }
+    this.scrolled = window.pageYOffset >= this.height;
   }
 
   toggleMenu() {
@@ -35,6 +31,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.height);
+    this.height = window.innerHeight;
   }
 }
