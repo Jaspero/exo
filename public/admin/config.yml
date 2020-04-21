@@ -347,7 +347,7 @@ collections:
         fields: *pageLight
       - label: "exoEvents"
         name: "Exo Events"
-        file: "public/collections/pages/exo-events.json"
+        file: "public/collections/pages/exoEvents.json"
         fields: *pageLight
       - label: "News"
         name: "news"

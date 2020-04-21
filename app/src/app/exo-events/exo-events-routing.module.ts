@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     component: ExoEventsComponent,
     data: {
-      id: 'exo-events'
+      id: 'exoEvents'
     },
     resolve: {
       page: PageResolver
