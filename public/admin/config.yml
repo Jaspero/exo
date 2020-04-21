@@ -138,9 +138,12 @@ blocks: &blocks
       fields:
         - <<: *animation
         - { label: "Title", name: "title", widget: "string", required: false }
-        - { label: "content", name: "content", widget: "markdown", required: false }
+        - { label: "content", name: "content", widget: "string", required: false }
+        - label: "Events"
+          name: "events"
+          fields:
         - { label: "Event Done", name: "eventDone", widget: "string", required: false }
-        - { label: "Event Canceled", name: "eventDone", widget: "string", required: false }
+        - { label: "Event Canceled", name: "eventCanceled", widget: "string", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
 
 meta: &meta
