@@ -174,4 +174,16 @@
   }
 }
 
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 600px) {
+    .slide-menu {
+      width: 100%;
+      &:before {
+        right: 0;
+      }
+    }
+}
 
