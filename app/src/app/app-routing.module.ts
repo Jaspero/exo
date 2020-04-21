@@ -66,7 +66,9 @@ const routes: Routes = [
   {
     path: 'nail-bar-menu',
     loadChildren: () =>
-      import('./nail-bar-menu/nail-bar-menu.module').then(m => m.NailBarMenuModule),
+      import('./nail-bar-menu/nail-bar-menu.module').then(
+        m => m.NailBarMenuModule
+      ),
     resolve: {
       delay: DelayResolver
     }
@@ -96,7 +98,7 @@ const routes: Routes = [
     }
   },
   {
-    path: '404',
+    path: 'not-found',
     loadChildren: () =>
       import('./not-found/not-found.module').then(m => m.NotFoundModule)
   }

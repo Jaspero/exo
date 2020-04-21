@@ -3,16 +3,15 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {NotFoundComponent} from './not-found.component';
 
-const ROUTES: Routes = [{
-  path: '/',
-  component: NotFoundComponent
-}];
+const ROUTES: Routes = [
+  {
+    path: '/not-found',
+    component: NotFoundComponent
+  }
+];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(ROUTES)
-  ],
+  imports: [CommonModule, RouterModule.forChild(ROUTES)],
   declarations: [NotFoundComponent]
 })
-export class NotFoundModule { }
+export class NotFoundModule {}
