@@ -1,4 +1,4 @@
 <exo-header></exo-header>
-
-<h1>bobo</h1>
+<exo-intro [data]="page.showcase || {}"></exo-intro>
+<exo-block-renderer *ngIf="page.blocks" [blocks]="page.blocks"></exo-block-renderer>
 <exo-footer></exo-footer>

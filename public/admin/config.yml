@@ -132,6 +132,17 @@ blocks: &blocks
         - { label: "content", name: "content", widget: "markdown", required: false }
         - { label: "Below Image", name: "belowImg", widget: "image", required: false }
 
+    - label: "March Events"
+      name: "marchEvents"
+      widget: "object"
+      fields:
+        - <<: *animation
+        - { label: "Title", name: "title", widget: "string", required: false }
+        - { label: "content", name: "content", widget: "markdown", required: false }
+        - { label: "Event Done", name: "eventDone", widget: "string", required: false }
+        - { label: "Event Canceled", name: "eventDone", widget: "string", required: false }
+        - { label: "Image", name: "image", widget: "image", required: false }
+
 meta: &meta
   label: "Meta"
   name: "meta"
