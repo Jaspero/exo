@@ -132,16 +132,29 @@ blocks: &blocks
         - { label: "content", name: "content", widget: "markdown", required: false }
         - { label: "Below Image", name: "belowImg", widget: "image", required: false }
 
-    - label: "March Events"
-      name: "marchEvents"
+    - label: "Events Block"
+      name: "eventsBlock"
       widget: "list"
-      fields:
-        - <<: *animation
-        - { label: "Title", name: "title", widget: "string", required: false }
-        - { label: "content", name: "content", widget: "string", required: false }
-        - { label: "Event Done", name: "eventDone", widget: "string", required: false }
-        - { label: "Event Canceled", name: "eventCanceled", widget: "string", required: false }
-        - { label: "Image", name: "image", widget: "image", required: false }
+      types:
+        - label: "Image"
+          name: "image"
+          widget: "object"
+          fields:
+            - { label: "Image", name: "image", widget: "image", required: false }
+            - { label: "content", name: "content", widget: "markdown", required: false }
+            - { label: "Title", name: "title", widget: "markdown", required: false }
+        - label: "Done"
+          name: "done"
+          widget: "object"
+          fields:
+            - { label: "content", name: "content", widget: "markdown", required: false }
+            - { label: "Title", name: "title", widget: "markdown", required: false }
+        - label: "Canceled"
+          name: "canceled"
+          widget: "object"
+          fields:
+            - { label: "Title", name: "title", widget: "markdown", required: false }
+            - { label: "content", name: "content", widget: "markdown", required: false }
 
 meta: &meta
   label: "Meta"

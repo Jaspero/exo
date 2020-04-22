@@ -1,6 +1,6 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {MarchEventsBlockComponent} from './march-events-block.component';
+import {MarchEventsBlockComponent} from './events-block.component';
 
 describe('MarchEventsBlockComponent', () => {
   let component: MarchEventsBlockComponent;

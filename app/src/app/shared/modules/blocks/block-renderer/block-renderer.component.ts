@@ -17,7 +17,7 @@ import {TextBlockComponent} from '../text-block/text-block.component';
 import {EventImageBlockComponent} from '../event-image-block/event-image-block.component';
 import {ImageRButtonComponent} from '../image-r-button/image-r-button.component';
 import {ImageLButtonComponent} from '../image-l-button/image-l-button.component';
-import {MarchEventsBlockComponent} from '../march-events-block/march-events-block.component';
+import {EventsBlockComponent} from '../events-block/events-block.component';
 
 const BLOCKS_MAP: {[key: string]: any} = {
   [Block.ImageR]: ImageRBlockComponent,
@@ -31,7 +31,7 @@ const BLOCKS_MAP: {[key: string]: any} = {
   [Block.EventImageBlock]: EventImageBlockComponent,
   [Block.ImageRightButton]: ImageRButtonComponent,
   [Block.ImageLeftButton]: ImageLButtonComponent,
-  [Block.MarchEvents]: MarchEventsBlockComponent
+  [Block.EventsBlock]: EventsBlockComponent
 };
 
 @Component({

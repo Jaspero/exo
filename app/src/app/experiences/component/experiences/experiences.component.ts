@@ -1,4 +1,9 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  ViewEncapsulation
+} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 declare var ng: any;
@@ -7,6 +12,8 @@ declare var ng: any;
   selector: 'exo-experiences',
   templateUrl: './experiences.component.html',
   styleUrls: ['./experiences.component.scss'],
+  preserveWhitespaces: true,
+  encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExperiencesComponent implements OnInit {

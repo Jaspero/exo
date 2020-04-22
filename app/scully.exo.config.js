@@ -7,7 +7,7 @@ const lazyImages = require("@notiz/scully-plugin-lazy-images");
 const postRenderers = [MinifyHtml];
 const dynamicPages = [
   'blog',
-  'events',
+  'experiences',
   'shop',
   'news'
 ];

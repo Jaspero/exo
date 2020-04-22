@@ -14,7 +14,7 @@ import {EventImageBlockComponent} from './event-image-block/event-image-block.co
 import {ImageRButtonComponent} from './image-r-button/image-r-button.component';
 import {ImageLButtonComponent} from './image-l-button/image-l-button.component';
 import {IntersectionModule} from '../intersecting/intersection.module';
-import {MarchEventsBlockComponent} from './march-events-block/march-events-block.component';
+import {EventsBlockComponent} from './events-block/events-block.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +28,8 @@ import {MarchEventsBlockComponent} from './march-events-block/march-events-block
     TextBlockComponent,
     EventImageBlockComponent,
     ImageRButtonComponent,
-    MarchEventsBlockComponent,
     ImageLButtonComponent,
+    EventsBlockComponent,
 
     BlockRendererComponent
   ],

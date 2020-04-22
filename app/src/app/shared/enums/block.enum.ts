@@ -10,5 +10,5 @@ export enum Block {
   EventImageBlock = 'eventImageBlock',
   ImageRightButton = 'imageRightButton',
   ImageLeftButton = 'imageLeftButton',
-  MarchEvents = 'marchEvents'
+  EventsBlock = 'eventsBlock'
 }
