@@ -1,6 +1,8 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
+declare var ng: any;
+
 @Component({
   selector: 'exo-experiences',
   templateUrl: './experiences.component.html',
@@ -8,9 +10,7 @@ import {ActivatedRoute} from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExperiencesComponent implements OnInit {
-  constructor(
-    private activatedRoute: ActivatedRoute
-  ) {}
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   page: any;
 
