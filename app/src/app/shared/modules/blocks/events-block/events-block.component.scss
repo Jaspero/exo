@@ -1,0 +1,28 @@
+.image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.events-container {
+  height: 400px;
+}
+
+.canceled {
+  background: #ECECEC;
+  color: #959595;
+}
+
+.done {
+  border: 1px solid #07B500!important;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.box {
+  width: 350px;
+  height: 350px;
+  border: 1px solid #000000;
+}

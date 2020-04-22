@@ -1,18 +1,35 @@
-<div class="grid m-y-l">
+<div class="grid m-y-l jc-between">
 
   <ng-container *ngFor="let block of blocks">
     <ng-container [ngSwitch]="block[0]">
       <ng-container *ngSwitchCase="'image'">
-        <img src="" alt="">
+        <div class="col-4 events-container flex jc-center ai-center">
+          <div class="box flex fd-col ai-center jc-center image"  [ngStyle]="{'background-image': 'url('+ block[1].image +')'}"></div>
+        </div>
       </ng-container>
       <ng-container *ngSwitchCase="'active'">
-        <p>{{block[1].title}}</p>
+        <div class="col-4 events-container flex jc-center ai-center ta-center">
+          <div class="box flex fd-col ai-center jc-center">
+            <h3 class="title">{{block[1].title}}</h3>
+            <p>{{block[1].content}}</p>
+          </div>
+        </div>
       </ng-container>
       <ng-container *ngSwitchCase="'done'">
-        <p>done</p>
+        <div class="col-4 events-container flex jc-center ai-center ta-center">
+          <div class="box flex fd-col ai-center jc-center done">
+            <h3 class="title">{{block[1].title}}</h3>
+            <p>{{block[1].content}}</p>
+          </div>
+        </div>
       </ng-container>
       <ng-container *ngSwitchCase="'canceled'">
-        <p>canceled</p>
+        <div class="col-4 events-container flex jc-center ai-center">
+          <div class="box flex fd-col ai-center jc-center canceled">
+            <h3 class="title">{{block[1].title}}</h3>
+            <p>{{block[1].content}}</p>
+          </div>
+        </div>
       </ng-container>
     </ng-container>
   </ng-container>
