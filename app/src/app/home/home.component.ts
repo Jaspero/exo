@@ -1,13 +1,5 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit,
-  HostListener
-} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {BlogComponent} from '../blog/components/blog/blog.component';
-import {EventsComponent} from '../events/component/events/events.component';
-import {NewsComponent} from '../news/component/news/news.component';
 
 @Component({
   selector: 'exo-home',
@@ -23,20 +15,17 @@ export class HomeComponent implements OnInit {
       {
         name: 'Events',
         background: 'assets/images/home/home-3.png',
-        path: '/events',
-        component: EventsComponent
+        path: '/exo-events',
       },
       {
         name: 'Blog',
         background: 'assets/images/home/home-4.png',
         path: '/blog',
-        component: BlogComponent
       },
       {
         name: 'News & Press',
         background: 'assets/images/home/home-5.png',
         path: '/news',
-        component: NewsComponent
       }
     ]
   };

@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'exo-exo-events',
   templateUrl: './exo-events.component.html',
-  styleUrls: ['./exo-events.component.scss']
+  styleUrls: ['./exo-events.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExoEventsComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) {}

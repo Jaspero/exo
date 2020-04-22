@@ -6,7 +6,7 @@
   </div>
 </div>
 <section class="m-y-l">
-  <div class="grid jc-between ai-center b-b p-y-m" *ngFor="let news of news$ | async;" intersecting data-animation="fade-in-from-bottom">
+  <div class="grid jc-evenly ai-center p-y-m" *ngFor="let news of news$ | async; last as last" [class.b-b]="!last" intersecting data-animation="fade-in-from-bottom">
     <div class="col-5 col-s-6 col-xs-12 ta-left">
       <img src="{{news.image}}">
     </div>

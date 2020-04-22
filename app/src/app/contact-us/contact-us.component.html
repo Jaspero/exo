@@ -56,72 +56,74 @@
     <div class="col-12 m-y-l ta-center" intersecting data-animation="fade-in-from-bottom">
       <h3>Request A Call Back</h3>
     </div>
-    <div class="col-10 col-s-12 flex  fw-wrap">
-    <div class="col-6 col-xs-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
-        <input type="text" required class="w-full inputs">
-        <span class="highlight"></span>
-        <span class="bar"></span>
-        <label>Name</label>
-    </div>
-    <div class="col-6 col-xs-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
-      <input type="text" required class="w-full inputs">
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label>Email</label>
-    </div>
-    <div class="col-6 col-xs-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
-      <input type="number" required class="w-full inputs">
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label>Phone</label>
-    </div>
-    <div class="col-6 col-xs-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
-      <input type="text" required class="w-full inputs">
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label>Subject</label>
-    </div>
-    <div class="col-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
-      <textarea type="text" required class="w-full inputs"></textarea>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label>Your message</label>
-    </div>
-    </div>
-    <div class="col-3 col-s-6 ta-center" intersecting data-animation="fade-in-from-bottom">
-      <button class="send">Send</button>
-    </div>
+
+    <form class="grid" [formGroup]="form">
+      <div class="col-10 col-s-12 flex fw-wrap">
+        <div class="col-6 col-xs-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
+          <input class="w-full inputs" formControlName="name">
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Name</label>
+        </div>
+        <div class="col-6 col-xs-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
+          <input type="email" class="w-full inputs" formControlName="email">
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Email</label>
+        </div>
+        <div class="col-6 col-xs-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
+          <input class="w-full inputs" formControlName="phone">
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Phone</label>
+        </div>
+        <div class="col-6 col-xs-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
+          <input class="w-full inputs" formControlName="subject">
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Subject</label>
+        </div>
+        <div class="col-12 relative m-y-m" intersecting data-animation="fade-in-from-right">
+          <textarea class="w-full inputs" formControlName="message"></textarea>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Your message</label>
+        </div>
+      </div>
+      <div class="col-3 col-s-6 ta-center" intersecting data-animation="fade-in-from-bottom">
+        <button type="submit" class="send" [disabled]="form.invalid" [jpLoadClick]="submit()">Send</button>
+      </div>
+    </form>
+
     <div class="col-12 ta-center m-y-l" intersecting data-animation="fade-in-from-bottom">
       <h3>Keep In Touch</h3>
       <div class="flex jc-center w-full ai-center m-t-m">
-      <a href="">
-        <img src="assets/icons/facebook-black.svg" alt="social-icon">
-      </a>
-      <a href="">
-        <img src="assets/icons/instagram-black.svg" alt="social-icon" class="m-x-m">
-      </a>
-      <a href="">
-        <img src="assets/icons/twitter-black.svg" alt="social-icon">
-      </a>
+        <a href="">
+          <img src="assets/icons/facebook-black.svg" alt="social-icon">
+        </a>
+        <a href="">
+          <img src="assets/icons/instagram-black.svg" alt="social-icon" class="m-x-m">
+        </a>
+        <a href="">
+          <img src="assets/icons/twitter-black.svg" alt="social-icon">
+        </a>
       </div>
     </div>
-    <div class="col-12 ta-center" intersecting data-animation="fade-in-from-top">
-      <h3 class="m-y-m" [innerHTML]="page.address.title | text"></h3>
+  </div>
 
-      <div class="mapouter">
-        <div class="gmap_canvas">
-          <iframe
-            width="1600"
-            height="500"
-            id="gmap_canvas"
-            [src]="mapSrc"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0">
-          </iframe>
-        </div>
-      </div>
+  <h3 class="m-y-m ta-center" [innerHTML]="page.address.title | text"></h3>
+
+  <div class="mapouter">
+    <div class="gmap_canvas">
+      <iframe
+        id="gmap_canvas"
+        [src]="mapSrc"
+        style="width: 100%;height: 100%;"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0">
+      </iframe>
     </div>
   </div>
 </section>

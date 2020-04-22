@@ -1,6 +1,9 @@
+import {HttpClient} from '@angular/common/http';
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {DomSanitizer} from '@angular/platform-browser';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 import {ActivatedRoute} from '@angular/router';
+import {tap} from 'rxjs/operators';
 
 @Component({
   selector: 'exo-contact-us',
@@ -11,7 +14,9 @@ import {ActivatedRoute} from '@angular/router';
 export class ContactUsComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
+    private fb: FormBuilder,
+    private http: HttpClient
   ) {}
 
   exo = {
@@ -38,13 +43,33 @@ export class ContactUsComponent implements OnInit {
 
   page: any;
 
-  get mapSrc() {
-    return this.domSanitizer.bypassSecurityTrustResourceUrl(
-      'https://maps.google.com/maps?ll=' + this.page.address.lat + ',' + this.page.address.lng + '&z=17&ie=UTF8&iwloc&output=embed'
-    )
-  }
+  mapSrc: SafeResourceUrl;
+  form: FormGroup;
 
   ngOnInit() {
     this.page = this.activatedRoute.snapshot.data.page;
+    this.form = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', Validators.required],
+      subject: ['', Validators.required],
+      message: ['', Validators.required]
+    });
+    this.mapSrc = this.domSanitizer.bypassSecurityTrustResourceUrl(
+      'https://maps.google.com/maps?ll=' + this.page.address.lat + ',' + this.page.address.lng + '&z=17&ie=UTF8&iwloc&output=embed'
+    );
+  }
+
+  submit() {
+    return () =>
+      this.http.post(
+        '/api/contact',
+        this.form.getRawValue()
+      )
+        .pipe(
+          tap(() => {
+            this.form.reset();
+          })
+        )
   }
 }

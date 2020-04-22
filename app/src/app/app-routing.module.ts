@@ -25,14 +25,6 @@ const routes: Routes = [
     }
   },
   {
-    path: 'events',
-    loadChildren: () =>
-      import('./events/events.module').then(m => m.EventsModule),
-    resolve: {
-      delay: DelayResolver
-    }
-  },
-  {
     path: 'exo-events',
     loadChildren: () =>
       import('./exo-events/exo-events.module').then(m => m.ExoEventsModule),

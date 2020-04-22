@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 
 interface IElement {
+  id?: string;
   element: HTMLElement;
   callback: () => void;
   intersectionRatio: number;
@@ -11,6 +12,10 @@ export class IntersectionService {
   supported: boolean;
   observer: IntersectionObserver;
   elements: Array<IElement> = [];
+  elementCache: Array<string> = [];
+
+  itemCounter = 0;
+  url: string;
 
   initialize(
     options = {
@@ -30,6 +35,14 @@ export class IntersectionService {
 
   add(el: IElement) {
     if (this.supported) {
+
+      el.id = `${this.url}-${this.itemCounter}`;
+      this.itemCounter++;
+
+      if (this.elementCache.includes(el.id)) {
+        el.callback();
+      }
+
       this.observer.observe(el.element);
       this.elements.push(el);
     } else {
@@ -48,9 +61,10 @@ export class IntersectionService {
       );
 
       if (elIndex !== -1) {
-        const {intersectionRatio, callback} = this.elements[elIndex];
+        const {intersectionRatio, callback, id} = this.elements[elIndex];
 
         if (entry.intersectionRatio >= intersectionRatio) {
+          this.elementCache.push(id as string);
           callback();
           this.elements.splice(elIndex, 1);
           this.observer.unobserve(entry.target);

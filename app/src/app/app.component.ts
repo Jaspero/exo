@@ -33,11 +33,18 @@ export class AppComponent implements OnInit {
 
     this.router.events.pipe(
       filter(e =>
-        e instanceof NavigationStart && updateOnChange && onePageLoaded
+        e instanceof NavigationStart
       )
-    ).subscribe((e: NavigationStart) =>
-      location.assign(e.url)
-    );
+    ).subscribe((e: NavigationStart) => {
+
+      if (updateOnChange && onePageLoaded) {
+        location.assign(e.url)
+      } else {
+        this.intersection.itemCounter = 0;
+        this.intersection.url = e.url;
+      }
+
+    });
 
     if (this.swUpdate.isEnabled) {
       /**
