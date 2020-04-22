@@ -254,6 +254,22 @@ collections:
         widget: "image"
       - { label: "Body", name: "body", widget: "markdown" }
 
+
+  - name: "experiences"
+    label: "Experiences"
+    folder: "public/collections/experiences"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - label: "Featured Image"
+        name: "image"
+        widget: "image"
+      - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "news"
     label: "News"
     folder: "public/collections/news"
