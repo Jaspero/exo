@@ -135,7 +135,7 @@ blocks: &blocks
     - label: "Events Block"
       name: "eventsBlock"
       widget: "list"
-      types:
+      fields:
         - label: "Image"
           name: "image"
           widget: "object"
