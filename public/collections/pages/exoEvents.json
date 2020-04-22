@@ -25,6 +25,22 @@
       "title": "Wine Flight Wednesdays",
       "image": "/uploads/events-wine.png",
       "content": "EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses."
+    },
+    {
+      "type": "eventsBlock",
+      "image": {
+        "image": "/uploads/march-events.png",
+        "content": "Live music, Skylark Brothers",
+        "title": "Friday March 3 7pm-9pm"
+      },
+      "done": {
+        "title": "Friday March 3 7pm-9pm",
+        "content": "Live music, Skylark Brothers"
+      },
+      "canceled": {
+        "title": "Friday March 3 7pm-9pm",
+        "content": "Live music, Skylark Brothers"
+      }
     }
   ]
 }
