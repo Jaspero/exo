@@ -141,6 +141,10 @@ blocks: &blocks
           widget: "object"
           fields:
             - { label: "Image", name: "image", widget: "image", required: false }
+        - label: "Active"
+          name: "active"
+          widget: "object"
+          fields:
             - { label: "content", name: "content", widget: "markdown", required: false }
             - { label: "Title", name: "title", widget: "markdown", required: false }
         - label: "Done"

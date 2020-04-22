@@ -2,7 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   HostListener,
-  Inject,
+  Inject, OnDestroy,
   OnInit
 } from '@angular/core';
 import {DOCUMENT} from '@angular/common';
@@ -13,7 +13,7 @@ import {DOCUMENT} from '@angular/common';
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   constructor(@Inject(DOCUMENT) private _document: Document) {}
 
   menu = false;
@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   height: number;
 
   @HostListener('window:scroll', ['$event'])
-  onWindowScroll($event: any) {
+  onWindowScroll() {
     this.scrolled = window.pageYOffset >= this.height;
   }
 
@@ -31,6 +31,10 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.height = window.innerHeight;
+    this.height = window.innerHeight - 60;
+  }
+
+  ngOnDestroy() {
+    this._document.body.classList.remove('of-hidden');
   }
 }

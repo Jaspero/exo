@@ -1,27 +1,44 @@
-<div class="grid m-y-l" [ngSwitch]="eventsBlock">
-  <h1 class="w-full ta-center">March Events</h1>
-  <div class="col-4 flex fd-col ai-center jc-center" *ngSwitchCase="'done'">
-    <div class="box w-full m-y-m flex fd-col jc-center ai-center">
-      <h3>{{data.title}}</h3>
-      <p class="m-y-xs">{{data.content}}</p>
-    </div>
-    <div class="box cocktail w-full m-y-m flex fd-col jc-center ai-center">
-    </div>
-  </div>
-  <div class="col-4 flex fd-col ai-center jc-center" *ngSwitchCase="'canceled'">
-    <div class="box w-full m-y-m flex fd-col jc-center ai-center">
-      <h3>{{data.title}}</h3>
-      <p class="m-y-xs">{{data.content}}</p>
-    </div>
-    <div class="box cocktail w-full m-y-m flex fd-col jc-center ai-center">
-    </div>
-  </div>
-  <div class="col-4 flex fd-col ai-center jc-center" *ngSwitchCase="'canceled'">
-    <div class="box w-full m-y-m flex fd-col jc-center ai-center">
-      <h3>{{data.title}}</h3>
-      <p class="m-y-xs">{{data.content}}</p>
-    </div>
-    <div class="box cocktail w-full m-y-m flex fd-col jc-center ai-center">
-    </div>
-  </div>
+<div class="grid m-y-l">
+
+  <ng-container *ngFor="let block of blocks">
+    <ng-container [ngSwitch]="block[0]">
+      <ng-container *ngSwitchCase="'image'">
+        <img src="" alt="">
+      </ng-container>
+      <ng-container *ngSwitchCase="'active'">
+        <p>{{block[1].title}}</p>
+      </ng-container>
+      <ng-container *ngSwitchCase="'done'">
+        <p>done</p>
+      </ng-container>
+      <ng-container *ngSwitchCase="'canceled'">
+        <p>canceled</p>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+<!--  <div class="col-4 flex fd-col ai-center jc-center" *ngSwitchCase="'done'">-->
+<!--    <div class="box w-full m-y-m flex fd-col jc-center ai-center">-->
+<!--      <h3>{{data.title}}</h3>-->
+<!--      <p class="m-y-xs">{{data.content}}</p>-->
+<!--    </div>-->
+<!--    <div class="box cocktail w-full m-y-m flex fd-col jc-center ai-center">-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="col-4 flex fd-col ai-center jc-center" *ngSwitchCase="'canceled'">-->
+<!--    <div class="box w-full m-y-m flex fd-col jc-center ai-center">-->
+<!--      <h3>{{data.title}}</h3>-->
+<!--      <p class="m-y-xs">{{data.content}}</p>-->
+<!--    </div>-->
+<!--    <div class="box cocktail w-full m-y-m flex fd-col jc-center ai-center">-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="col-4 flex fd-col ai-center jc-center" *ngSwitchCase="'canceled'">-->
+<!--    <div class="box w-full m-y-m flex fd-col jc-center ai-center">-->
+<!--      <h3>{{data.title}}</h3>-->
+<!--      <p class="m-y-xs">{{data.content}}</p>-->
+<!--    </div>-->
+<!--    <div class="box cocktail w-full m-y-m flex fd-col jc-center ai-center">-->
+<!--    </div>-->
+<!--  </div>-->
 </div>
