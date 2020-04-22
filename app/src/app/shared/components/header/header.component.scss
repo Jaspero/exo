@@ -177,6 +177,13 @@
   }
 }
 
+@media (max-width: 950px) {
+  .link {
+    margin: 0px 5px;
+  }
+}
+
+
 @media (max-width: 900px) {
     .slide-menu {
       transition: .6s;
@@ -185,6 +192,10 @@
         right: 0;
       }
     }
+
+  .mobile-link {
+    opacity: 1!important;
+  }
 
   .slide-menu.active-menu {
     .mobile-link:nth-child(n) {
@@ -247,7 +258,7 @@
 
 @media (max-width: 600px) {
   .mobile-link {
-    font-size: 25px;
+    font-size: 25px!important;
   }
 }
 

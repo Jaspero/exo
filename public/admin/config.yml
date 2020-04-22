@@ -359,6 +359,9 @@ collections:
       - label: "Events"
         name: "events"
         file: "public/collections/pages/events.json"
+      - label: "Experiences"
+        name: "experiences"
+        file: "public/collections/pages/experiences.json"
         fields: *pageLight
       - label: "News"
         name: "news"
