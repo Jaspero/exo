@@ -28,15 +28,15 @@
         <a routerLink="/events" routerLinkActive="active-mobile" class="mobile-link" [class.active-menu]="menu">Events</a>
         <a routerLink="/news" routerLinkActive="active-mobile" class="mobile-link" [class.active-menu]="menu">New & Press</a>
         <a routerLink="/" routerLinkActive="active-mobile" class="mobile-link" [class.active-menu]="menu">Gallery</a>
-        <div class="show-s 1 z-index ">
-          <a routerLink="/" routerLinkActive="active-mobile"  [routerLinkActiveOptions]="{exact: true}" class="link">HOME</a>
-          <a routerLink="/lounge" routerLinkActive="active-mobile" class="mobile-link">LOUNGE</a>
-          <a routerLink="/nail" routerLinkActive="active-mobile" class="mobile-link">NAIL BAR</a>
-          <a routerLink="/experiences" routerLinkActive="active-mobile" class="mobile-link">EXPERIENCES</a>
-          <a routerLink="/location" routerLinkActive="active-mobile" class="mobile-link">LOCATION</a>
-          <a routerLink="/shop" routerLinkActive="active-mobile" class="mobile-link">SHOP</a>
-          <a routerLink="/contact" routerLinkActive="active-mobile" class="mobile-link">CONTACT US</a>
-        </div>
+
+        <a routerLink="/" routerLinkActive="active-mobile"  [routerLinkActiveOptions]="{exact: true}" class="mobile-link show-s">HOME</a>
+        <a routerLink="/lounge" routerLinkActive="active-mobile" class="mobile-link show-s" [class.active-menu]="menu">LOUNGE</a>
+        <a routerLink="/nail" routerLinkActive="active-mobile" class="mobile-link show-s" [class.active-menu]="menu">NAIL BAR</a>
+        <a routerLink="/experiences" routerLinkActive="active-mobile" class="mobile-link show-s" [class.active-menu]="menu">EXPERIENCES</a>
+        <a routerLink="/location" routerLinkActive="active-mobile" class="mobile-link show-s" [class.active-menu]="menu">LOCATION</a>
+        <a routerLink="/shop" routerLinkActive="active-mobile" class="mobile-link show-s" [class.active-menu]="menu">SHOP</a>
+        <a routerLink="/contact" routerLinkActive="active-mobile" class="mobile-link show-s" [class.active-menu]="menu">CONTACT US</a>
+
       </div>
   </div>
 </div>
