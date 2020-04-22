@@ -8,6 +8,8 @@ import {Component, OnInit} from '@angular/core';
 export class EventsBlockComponent implements OnInit {
   data: any;
 
+  eventsBlock = '';
+
   ngOnInit() {
     console.log(this.data);
   }

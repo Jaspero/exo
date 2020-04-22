@@ -1,19 +1,27 @@
-<div class="grid m-y-l">
+<div class="grid m-y-l" [ngSwitch]="eventsBlock">
   <h1 class="w-full ta-center">March Events</h1>
-  <div class="col-4 flex fd-col ai-center jc-center">
+  <div class="col-4 flex fd-col ai-center jc-center" *ngSwitchCase="'done'">
     <div class="box w-full m-y-m flex fd-col jc-center ai-center">
       <h3>{{data.title}}</h3>
       <p class="m-y-xs">{{data.content}}</p>
     </div>
     <div class="box cocktail w-full m-y-m flex fd-col jc-center ai-center">
     </div>
+  </div>
+  <div class="col-4 flex fd-col ai-center jc-center" *ngSwitchCase="'canceled'">
     <div class="box w-full m-y-m flex fd-col jc-center ai-center">
-      <h3>Friday March 3 <br> 7pm-9pm</h3>
-      <p class="m-y-xs">Live music, Skylark Brothers</p>
+      <h3>{{data.title}}</h3>
+      <p class="m-y-xs">{{data.content}}</p>
     </div>
+    <div class="box cocktail w-full m-y-m flex fd-col jc-center ai-center">
+    </div>
+  </div>
+  <div class="col-4 flex fd-col ai-center jc-center" *ngSwitchCase="'canceled'">
     <div class="box w-full m-y-m flex fd-col jc-center ai-center">
-      <h3>Friday March 3 <br> 7pm-9pm</h3>
-      <p class="m-y-xs">Live music, Skylark Brothers</p>
+      <h3>{{data.title}}</h3>
+      <p class="m-y-xs">{{data.content}}</p>
+    </div>
+    <div class="box cocktail w-full m-y-m flex fd-col jc-center ai-center">
     </div>
   </div>
 </div>
