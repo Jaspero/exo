@@ -15,12 +15,12 @@ export class ExperiencesListComponent implements OnInit {
     private activatedRoute: ActivatedRoute
   ) {}
 
-  events$: Observable<ScullyRoute[]>;
+  experiences$: Observable<ScullyRoute[]>;
   page: any;
 
   ngOnInit() {
     this.page = this.activatedRoute.snapshot.data.page;
-    this.events$ = this.scully.available$.pipe(
+    this.experiences$ = this.scully.available$.pipe(
       map(items => items.filter(it => it.route.includes('/experiences/')))
     );
   }

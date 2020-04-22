@@ -4,11 +4,12 @@ import {PageResolver} from '../shared/resolvers/page.resolver';
 import {ExperiencesComponent} from './component/experiences/experiences.component';
 import {MetaResolver} from '../shared/resolvers/meta.resolver';
 import {DelayResolver} from '../shared/resolvers/delay.resolver';
+import {ExperiencesListComponent} from './component/experiences-list/experiences-list.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ExperiencesComponent,
+    component: ExperiencesListComponent,
     data: {
       id: 'experiences'
     },

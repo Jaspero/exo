@@ -1,4 +1,16 @@
 <exo-header></exo-header>
-<exo-intro [data]="page.showcase || {}"></exo-intro>
-<exo-block-renderer *ngIf="page.blocks" [blocks]="page.blocks"></exo-block-renderer>
+<section class="main relative">
+  <div class="main-wrapper flex fw-wrap jc-start ai-end p-x-xl p-s-0">
+    <div class="col-6 col-s-12 z-index m-l-l m-s-0">
+      <h1 class="c-light ta-left exo-headline">Quite Simply, <br> EXtraOrdinary</h1>
+    </div>
+    <div class="col-12 flex  jc-between ai-center c-light z-index">
+      <div class="col-6 m-l-m m-s-0">
+        <h4>A journey of the senses</h4>
+        <p>Scroll down</p>
+      </div>
+    </div>
+  </div>
+</section>
+<scully-content></scully-content>
 <exo-footer></exo-footer>
