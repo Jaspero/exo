@@ -26,14 +26,14 @@
 </div>
 <div class="grid m-y-l" intersecting data-animation="fade-in-from-right">
   <div class="col-12 flex b-b">
-    <h4 [class.active]="viewMode == 'tab1'" rel="tab1" (click)="viewMode = 'tab1'" class="tab-header">PRODUCT DESCRIPTION</h4>
-    <h4 [class.active]="viewMode == 'tab2'" rel="tab2" (click)="viewMode = 'tab2'" class="m-x-s tab-header">ADDITIONAL INFORMATION</h4>
+    <h4 [class.active]="viewMode == 'productDescription'" rel="tab1" (click)="viewMode = 'productDescription'" class="tab-header">PRODUCT DESCRIPTION</h4>
+    <h4 [class.active]="viewMode == 'additionalInformation'" rel="tab2" (click)="viewMode = 'additionalInformation'" class="m-x-s tab-header">ADDITIONAL INFORMATION</h4>
   </div>
   <div class="tab-container w-full" [ngSwitch]="viewMode">
-    <div class="col-12 tab-content" *ngSwitchCase="'tab1'">
+    <div class="col-12 tab-content" *ngSwitchCase="'productDescription'">
       <div class="m-y-s" [innerHTML]="item.productDescription | MTH"></div>
     </div>
-    <div class="col-12 tab-content" *ngSwitchCase="'tab2'">
+    <div class="col-12 tab-content" *ngSwitchCase="'additionalInformation'">
       <div class="m-y-s" [innerHTML]="item.additionalInfo | MTH"></div>
     </div>
   </div>

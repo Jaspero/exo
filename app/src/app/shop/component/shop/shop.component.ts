@@ -1,4 +1,10 @@
-import {AfterViewInit, ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  ViewEncapsulation
+} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {environment} from '../../../../environments/environment';
 
@@ -16,17 +22,19 @@ export class ShopComponent implements OnInit, AfterViewInit {
   constructor(private route: ActivatedRoute) {}
 
   item: any;
-  viewMode = 'tab1';
+  viewMode = 'productDescription';
   activeImage: string;
 
   get bg() {
-    return {'background-image': `url(${this.item.displayImage})`}
+    return {'background-image': `url(${this.item.displayImage})`};
   }
 
   ngOnInit() {
     this.item = this.route.snapshot.data.meta;
     // TODO: Add placeholder image
-    this.activeImage = this.item.galleryImages[0] ? this.item.galleryImages[0].image : '';
+    this.activeImage = this.item.galleryImages[0]
+      ? this.item.galleryImages[0].image
+      : '';
   }
 
   ngAfterViewInit() {
@@ -34,7 +42,8 @@ export class ShopComponent implements OnInit, AfterViewInit {
   }
 
   private loadShopify() {
-    const scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    const scriptURL =
+      'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
     const id = this.item.productId;
     const env = environment.shopify;
     // @ts-ignore
@@ -52,7 +61,10 @@ export class ShopComponent implements OnInit, AfterViewInit {
       const script = document.createElement('script');
       script.async = true;
       script.src = scriptURL;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+      (
+        document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]
+      ).appendChild(script);
       script.onload = ShopifyBuyInit;
     }
     function ShopifyBuyInit() {
@@ -60,7 +72,7 @@ export class ShopComponent implements OnInit, AfterViewInit {
       const client = window.ShopifyBuy.buildClient(env);
 
       // @ts-ignore
-      window.ShopifyBuy.UI.onReady(client).then( (ui) => {
+      window.ShopifyBuy.UI.onReady(client).then(ui => {
         ui.createComponent('product', {
           id,
           node: document.getElementById('product-component'),
@@ -120,7 +132,7 @@ export class ShopComponent implements OnInit, AfterViewInit {
                 button: 'Checkout'
               }
             }
-          },
+          }
         });
       });
     }
