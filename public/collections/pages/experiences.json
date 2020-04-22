@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "test",
+    "title": "Experiences",
     "description": "example description",
     "keywords": "example keyword1,example keyword2"
   },
@@ -42,6 +42,6 @@
   "showcase": {
     "title": "Quite Simply,\nEXtraOrdinary",
     "subTitle": "Subtitle",
-    "background": "/uploads/home-main.png"
+    "background": "/uploads/events-bg.png"
   }
 }
