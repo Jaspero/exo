@@ -239,22 +239,6 @@ collections:
       - { label: "Shopify Product ID", name: "productId", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "events"
-    label: "Events"
-    folder: "public/collections/events"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "markdown" }
-      - label: "Featured Image"
-        name: "image"
-        widget: "image"
-      - { label: "Body", name: "body", widget: "markdown" }
-
-
   - name: "experiences"
     label: "Experiences"
     folder: "public/collections/experiences"
@@ -372,10 +356,6 @@ collections:
         name: "blog"
         file: "public/collections/pages/blog.json"
         fields: *collectionPage
-      - label: "Events"
-        name: "events"
-        file: "public/collections/pages/events.json"
-        fields: *pageLight
       - label: "Experiences"
         name: "experiences"
         file: "public/collections/pages/experiences.json"
