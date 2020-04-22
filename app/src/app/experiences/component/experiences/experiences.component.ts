@@ -10,11 +10,11 @@ declare var ng: any;
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExperiencesComponent implements OnInit {
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) {}
 
-  page: any;
+  item: any;
 
   ngOnInit() {
-    this.page = this.activatedRoute.snapshot.data.page;
+    this.item = this.route.snapshot.data.meta;
   }
 }

@@ -359,7 +359,7 @@ collections:
       - label: "Experiences"
         name: "experiences"
         file: "public/collections/pages/experiences.json"
-        fields: *pageLight
+        fields: *collectionPage
       - label: "News"
         name: "news"
         file: "public/collections/pages/news.json"

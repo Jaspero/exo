@@ -17,13 +17,13 @@
   </div>
 </section>
 <section class="m-y-l bg-full" intersecting data-animation="fade-in-from-bottom"></section>
-<section class="relative flex bg-container m-y-l" *ngFor="let experiences of experiences$ | async; odd as odd" intersecting data-animation="fade-in-from-bottom">
+<section class="relative flex bg-container m-y-l" *ngFor="let experience of experiences$ | async; odd as odd" intersecting data-animation="fade-in-from-bottom">
   <div [class.even]="odd" class="custom-bg-r">
-    <div class="experiencess-container relative" [ngStyle]="{'background-image': 'url('+ experiences.image +')'}">
+    <div class="experiences-container relative" [ngStyle]="{'background-image': 'url('+ experience.image +')'}">
       <div [class.left]="odd"  class="card-right bg-light p-a-l flex fd-col ai-start jc-center">
-        <h3>{{experiences.title}}</h3>
-        <p class="m-y-m">{{experiences.description}}</p>
-        <a class="btn-primary m-t-s" [routerLink]="experiences.route">Read More</a>
+        <h3>{{experience.title}}</h3>
+        <p class="m-y-m">{{experience.description}}</p>
+        <a class="btn-primary m-t-s" [routerLink]="experience.route">Read More</a>
       </div>
     </div>
   </div>
