@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'exo-events-block',
@@ -6,7 +6,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   styleUrls: ['./events-block.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EventsBlockComponent {
+export class EventsBlockComponent implements OnInit {
   data: any;
 
   blocks: any[];
