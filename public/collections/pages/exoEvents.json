@@ -45,6 +45,15 @@
           "type": "active",
           "title": "Cool event",
           "content": "something"
+        },
+        {
+          "type": "image",
+          "image": "/uploads/march-events.png"
+        },
+        {
+          "type": "done",
+          "title": "This event is Done",
+          "content": "It was great"
         }
       ]
     }
