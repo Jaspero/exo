@@ -53,6 +53,17 @@
         "title": "This event has been canceled",
         "content": "Content"
       }
+    },
+    {
+      "type": "eventsBlock",
+      "done": {
+        "title": "This event is done",
+        "content": "It was great"
+      },
+      "canceled": {
+        "title": "Unfortunatley Canceled",
+        "content": "Unexpected problems"
+      }
     }
   ]
 }
