@@ -63,7 +63,8 @@
         {
           "type": "done",
           "title": "Friday March 3 7pm-9pm",
-          "content": "Done"
+          "content": "Done",
+          "image": "/uploads/done.svg"
         }
       ]
     }
