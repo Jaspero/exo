@@ -3,11 +3,12 @@
     <ng-container [ngSwitch]="block[0]">
       <ng-container *ngSwitchCase="'image'">
         <div class="col-4 events-container flex jc-center ai-center">
-          <div class="box flex fd-col ai-center jc-center image"  [ngStyle]="{'background-image': 'url('+ block[1].image +')'}"></div>
+          <div class="box flex fd-col ai-center jc-center image" *ngIf="block[1].image"  [ngStyle]="{'background-image': 'url('+ block[1].image +')'}"></div>
         </div>
       </ng-container>
       <ng-container *ngSwitchCase="'active'">
         <div class="col-4 events-container flex jc-center ai-center ta-center">
+          <div class="box flex fd-col ai-center jc-center image" *ngIf="block[1].image"  [ngStyle]="{'background-image': 'url('+ block[1].image +')'}"></div>
           <div class="box flex fd-col ai-center jc-center">
             <h3 class="title">{{block[1].title}}</h3>
             <p>{{block[1].content}}</p>
@@ -16,6 +17,7 @@
       </ng-container>
       <ng-container *ngSwitchCase="'done'">
         <div class="col-4 events-container flex jc-center ai-center ta-center">
+          <div class="box flex fd-col ai-center jc-center image" *ngIf="block[1].image"  [ngStyle]="{'background-image': 'url('+ block[1].image +')'}"></div>
           <div class="box flex fd-col ai-center jc-center done">
             <h3 class="title">{{block[1].title}}</h3>
             <p>{{block[1].content}}</p>
@@ -24,6 +26,7 @@
       </ng-container>
       <ng-container *ngSwitchCase="'canceled'">
         <div class="col-4 events-container flex jc-center ai-center">
+          <div class="box flex fd-col ai-center jc-center image" *ngIf="block[1].image"  [ngStyle]="{'background-image': 'url('+ block[1].image +')'}"></div>
           <div class="box flex fd-col ai-center jc-center canceled">
             <h3 class="title">{{block[1].title}}</h3>
             <p>{{block[1].content}}</p>
