@@ -29,51 +29,15 @@
     {
       "type": "eventsBlock",
       "image": {
-        "image": "/uploads/march-events.png",
-        "content": "Live music, Skylark Brothers",
-        "title": "Friday March 3 7pm-9pm"
-      },
-      "done": {
-        "title": "Friday March 3 7pm-9pm",
-        "content": "Live music, Skylark Brothers"
-      },
-      "canceled": {
-        "title": "Friday March 3 7pm-9pm",
-        "content": "Live music, Skylark Brothers"
+        "image": "/uploads/march-events.png"
       },
       "active": {
-        "title": "Friday March 3 7pm-9pm",
-        "content": "Live music, Skylark Brothers"
-      }
-    },
-    {
-      "type": "eventsBlock",
-      "active": {
-        "title": "",
-        "content": "",
-        "image": "/uploads/happy-hour.png"
-      },
-      "done": {
-        "content": "Live music, Skylark Brothers",
-        "title": "Friday March 3 7pm-9pm"
-      },
-      "canceled": {
-        "title": "Friday March 3 7pm-9pm",
-        "content": "Live music, Skylark Brothers"
-      },
-      "image": {
         "title": "Title",
-        "content": "Content"
-      }
-    },
-    {
-      "type": "eventsBlock",
-      "image": {
-        "image": "/uploads/march-events-1.png"
+        "content": "content"
       },
       "canceled": {
-        "title": "Friday March 3 7pm-9pm",
-        "content": "Live music, Skylark Brothers"
+        "title": "This is Canceled",
+        "content": "Unexpected  events"
       }
     }
   ]
