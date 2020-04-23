@@ -53,7 +53,8 @@
         {
           "type": "done",
           "title": "This event is Done",
-          "content": "It was great"
+          "content": "It was great",
+          "done": "Done"
         },
         {
           "type": "canceled",
