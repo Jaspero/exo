@@ -1,35 +1,37 @@
+<h1>{{data.title}}</h1>
+
 <div class="grid m-y-l jc-between">
-  <ng-container *ngFor="let block of blocks">
-    <ng-container [ngSwitch]="block[0]">
+  <ng-container *ngFor="let block of data.blocks">
+    <ng-container [ngSwitch]="block.type">
       <ng-container *ngSwitchCase="'image'">
         <div class="col-4 events-container flex jc-center ai-center">
-          <div class="box flex fd-col ai-center jc-center image" *ngIf="block[1].image"  [ngStyle]="{'background-image': 'url('+ block[1].image +')'}"></div>
+          <div class="box flex fd-col ai-center jc-center image" *ngIf="block.image"  [ngStyle]="{'background-image': 'url('+ block.image +')'}"></div>
         </div>
       </ng-container>
       <ng-container *ngSwitchCase="'active'">
         <div class="col-4 events-container flex jc-center ai-center ta-center">
-          <div class="box flex fd-col ai-center jc-center image" *ngIf="block[1].image"  [ngStyle]="{'background-image': 'url('+ block[1].image +')'}"></div>
+          <div class="box flex fd-col ai-center jc-center image" *ngIf="block.image"  [ngStyle]="{'background-image': 'url('+ block.image +')'}"></div>
           <div class="box flex fd-col ai-center jc-center">
-            <h3 class="title">{{block[1].title}}</h3>
-            <p>{{block[1].content}}</p>
+            <h3 class="title">{{block.title}}</h3>
+            <p>{{block.content}}</p>
           </div>
         </div>
       </ng-container>
       <ng-container *ngSwitchCase="'done'">
         <div class="col-4 events-container flex jc-center ai-center ta-center">
-          <div class="box flex fd-col ai-center jc-center image" *ngIf="block[1].image"  [ngStyle]="{'background-image': 'url('+ block[1].image +')'}"></div>
+          <div class="box flex fd-col ai-center jc-center image" *ngIf="block.image"  [ngStyle]="{'background-image': 'url('+ block.image +')'}"></div>
           <div class="box flex fd-col ai-center jc-center done">
-            <h3 class="title">{{block[1].title}}</h3>
-            <p>{{block[1].content}}</p>
+            <h3 class="title">{{block.title}}</h3>
+            <p>{{block.content}}</p>
           </div>
         </div>
       </ng-container>
       <ng-container *ngSwitchCase="'canceled'">
         <div class="col-4 events-container flex jc-center ai-center">
-          <div class="box flex fd-col ai-center jc-center image" *ngIf="block[1].image"  [ngStyle]="{'background-image': 'url('+ block[1].image +')'}"></div>
+          <div class="box flex fd-col ai-center jc-center image" *ngIf="block.image"  [ngStyle]="{'background-image': 'url('+ block.image +')'}"></div>
           <div class="box flex fd-col ai-center jc-center canceled">
-            <h3 class="title">{{block[1].title}}</h3>
-            <p>{{block[1].content}}</p>
+            <h3 class="title">{{block.title}}</h3>
+            <p>{{block.content}}</p>
           </div>
         </div>
       </ng-container>
