@@ -56,6 +56,22 @@
           "content": "It was great"
         }
       ]
+    },
+    {
+      "type": "eventsBlock",
+      "blocks": [
+        {
+          "type": "canceled",
+          "title": "This was canceled",
+          "content": "Unknown reason"
+        },
+        {
+          "type": "done",
+          "title": "Friday March 3 7pm-9pm",
+          "content": "Friday March 3 7pm-9pm"
+        }
+      ],
+      "title": "Title"
     }
   ]
 }
