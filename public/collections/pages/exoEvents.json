@@ -59,7 +59,8 @@
         {
           "type": "canceled",
           "title": "Friday March 3 7pm-9pm",
-          "content": "This was canceled"
+          "content": "This was canceled",
+          "canceled": "Canceled"
         },
         {
           "type": "done",
