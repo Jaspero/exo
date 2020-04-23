@@ -140,24 +140,29 @@ blocks: &blocks
           name: "image"
           widget: "object"
           fields:
+            - { label: "Title", name: "title", widget: "markdown", required: false }
             - { label: "Image", name: "image", widget: "image", required: false }
+            - { label: "content", name: "content", widget: "markdown", required: false }
         - label: "Active"
           name: "active"
           widget: "object"
           fields:
-            - { label: "content", name: "content", widget: "markdown", required: false }
             - { label: "Title", name: "title", widget: "markdown", required: false }
+            - { label: "Image", name: "image", widget: "image", required: false }
+            - { label: "content", name: "content", widget: "markdown", required: false }
         - label: "Done"
           name: "done"
           widget: "object"
           fields:
-            - { label: "content", name: "content", widget: "markdown", required: false }
             - { label: "Title", name: "title", widget: "markdown", required: false }
+            - { label: "Image", name: "image", widget: "image", required: false }
+            - { label: "content", name: "content", widget: "markdown", required: false }
         - label: "Canceled"
           name: "canceled"
           widget: "object"
           fields:
             - { label: "Title", name: "title", widget: "markdown", required: false }
+            - { label: "Image", name: "image", widget: "image", required: false }
             - { label: "content", name: "content", widget: "markdown", required: false }
 
 meta: &meta
