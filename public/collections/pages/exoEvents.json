@@ -41,6 +41,21 @@
         "title": "Friday March 3 7pm-9pm",
         "content": "Live music, Skylark Brothers"
       }
+    },
+    {
+      "type": "eventsBlock",
+      "active": {
+        "title": "Friday March 3 7pm-9pm",
+        "content": "Live music, Skylark Brothers"
+      },
+      "done": {
+        "content": "Live music, Skylark Brothers",
+        "title": "Friday March 3 7pm-9pm"
+      },
+      "canceled": {
+        "title": "Friday March 3 7pm-9pm",
+        "content": "Live music, Skylark Brothers"
+      }
     }
   ]
 }
