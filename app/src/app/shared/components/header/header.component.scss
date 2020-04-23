@@ -24,6 +24,7 @@
   color: #e0e0e0;
   text-transform: uppercase;
   margin: 0 10px;
+  transition: all .5s;
 }
 
 .link:hover {
@@ -42,7 +43,6 @@
   color: white;
   background: white;
   height: 1px;
-  transition: all .5s;
 }
 
 .link:hover:before {
