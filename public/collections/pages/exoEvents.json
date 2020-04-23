@@ -65,7 +65,8 @@
         {
           "type": "done",
           "title": "Friday March 3 7pm-9pm",
-          "content": "Done"
+          "content": "Great Event",
+          "done": "Done"
         }
       ]
     }
