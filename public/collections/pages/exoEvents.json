@@ -38,32 +38,15 @@
       "canceled": {
         "title": "This is Canceled",
         "content": "Unexpected  events"
-      }
-    },
-    {
-      "type": "eventsBlock",
-      "active": {
-        "title": "This is active event",
-        "content": "Live music, Skylark Brothers"
       },
-      "done": {
-        "image": "/uploads/march-events-1.png"
-      },
-      "canceled": {
-        "title": "This event has been canceled",
-        "content": "Content"
-      }
-    },
-    {
-      "type": "eventsBlock",
-      "done": {
-        "title": "This event is done",
-        "content": "It was great"
-      },
-      "canceled": {
-        "title": "Unfortunatley Canceled",
-        "content": "Unexpected problems"
-      }
+      "title": "April Events",
+      "blocks": [
+        {
+          "type": "active",
+          "title": "Cool event",
+          "content": "something"
+        }
+      ]
     }
   ]
 }
