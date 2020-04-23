@@ -160,12 +160,14 @@ blocks: &blocks
               fields:
                 - { label: "Title", name: "title", widget: "string", required: false }
                 - { label: "content", name: "content", widget: "markdown", required: false }
+                - { label: "Done", name: "done", widget: "markdown", required: false }
             - label: "Canceled"
               name: "canceled"
               widget: "object"
               fields:
                 - { label: "Title", name: "title", widget: "string", required: false }
                 - { label: "content", name: "content", widget: "markdown", required: false }
+                - { label: "canceled", name: "canceled", widget: "markdown", required: false }
 
 meta: &meta
   label: "Meta"
