@@ -56,7 +56,6 @@
 
 .mobile-menu {
   display: flex;
-  width: 50px;
   flex-direction: column;
   align-items: flex-end;
   cursor: pointer;
@@ -85,7 +84,6 @@
   }
 
   &.active-menu {
-    padding: 25px 0;
 
     .line-1 {
       width: 30px;
@@ -155,24 +153,24 @@
   }
 }
 
+.mobile-link {
+  transition: 1s;
+}
+
 .slide-menu.active-menu {
   .mobile-link:nth-child(8) {
     transform: translateX(0%);
-    transition: 1s;
   }
   .mobile-link:nth-child(9) {
     transform: translateX(0%);
-    transition: 1s;
     transition-delay: .1s;
   }
   .mobile-link:nth-child(10) {
     transform: translateX(0%);
-    transition: 1s;
     transition-delay: .2s;
   }
   .mobile-link:nth-child(11) {
     transform: translateX(0%);
-    transition: 1s;
     transition-delay: .3s;
   }
 }

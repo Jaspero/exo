@@ -15,13 +15,11 @@
       <a routerLink="/shop" routerLinkActive="active" class="link">SHOP</a>
       <a routerLink="/contact" routerLinkActive="active" class="link">CONTACT US</a>
       </div>
-      <div class="z-index m-x-s">
-        <div class="mobile-menu flex ai-center jc-center z-index" (click)="toggleMenu()" [class.active-menu]="menu">
+        <div class="mobile-menu z-index flex ai-center jc-center z-index" (click)="toggleMenu()" [class.active-menu]="menu">
           <span class="line-1"></span>
           <span class="line-2"></span>
           <span class="line-3"></span>
         </div>
-      </div>
     </div>
       <div class="flex fw-wrap jc-center ai-center bg-light c-dark fd-col z-index slide-menu" [class.active-menu]="menu">
         <a routerLink="/" routerLinkActive="active-mobile"  [routerLinkActiveOptions]="{exact: true}" class="mobile-link show-s">Home</a>
