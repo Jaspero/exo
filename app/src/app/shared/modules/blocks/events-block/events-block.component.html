@@ -4,12 +4,12 @@
   <ng-container *ngFor="let block of data.blocks">
     <ng-container [ngSwitch]="block.type">
       <ng-container *ngSwitchCase="'image'">
-        <div class="col-4 m-y-m events-container flex jc-center ai-center">
+        <div class="col-4 col-s-12 m-y-m events-container flex jc-center ai-center" intersecting [attr.data-animation]="data.animation || 'none'">
           <div class="box flex fd-col ai-center jc-center image" *ngIf="block.image"  [ngStyle]="{'background-image': 'url('+ block.image +')'}"></div>
         </div>
       </ng-container>
       <ng-container *ngSwitchCase="'active'">
-        <div class="col-4 m-y-m events-container flex jc-center ai-center ta-center">
+        <div class="col-4 col-s-12 m-y-m events-container flex jc-center ai-center ta-center" intersecting [attr.data-animation]="data.animation || 'none'">
           <div class="box flex fd-col ai-center jc-center image" *ngIf="block.image"  [ngStyle]="{'background-image': 'url('+ block.image +')'}"></div>
           <div class="box flex fd-col ai-center jc-center">
             <h3 class="title">{{block.title}}</h3>
@@ -18,7 +18,7 @@
         </div>
       </ng-container>
       <ng-container *ngSwitchCase="'done'">
-        <div class="col-4 m-y-m events-container flex jc-center ai-center ta-center">
+        <div class="col-4 col-s-12 m-y-m events-container flex jc-center ai-center ta-center" intersecting [attr.data-animation]="data.animation || 'none'">
           <div class="box flex fd-col ai-center jc-center image" *ngIf="block.image"  [ngStyle]="{'background-image': 'url('+ block.image +')'}"></div>
           <div class="box flex fd-col ai-center jc-center done">
             <h3 class="title">{{block.title}}</h3>
@@ -30,8 +30,8 @@
           </div>
         </div>
       </ng-container>
-      <ng-container *ngSwitchCase="'canceled'">
-        <div class="col-4 m-y-m events-container flex jc-center ai-center">
+      <ng-container *ngSwitchCase="'canceled'" intersecting [attr.data-animation]="data.animation || 'none'">
+        <div class="col-4 col-s-12 m-y-m events-container flex jc-center ai-center">
           <div class="box flex fd-col ai-center jc-center image" *ngIf="block.image"  [ngStyle]="{'background-image': 'url('+ block.image +')'}"></div>
           <div class="box flex fd-col ai-center jc-center canceled">
             <h3 class="title">{{block.title}}</h3>

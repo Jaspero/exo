@@ -7,9 +7,9 @@
       </div>
       <ng-template #belowImg>
         <div class="ta-left">
-          <h3>{{data.title}}</h3>
-          <div class="m-t-m font-primary" [innerHTML]="data.content"></div>
-          <img [src]="data.belowImg" alt="" class="m-t-xxl w-full img-wrapper">
+          <h3 >{{data.title}}</h3>
+          <div class="m-t-m font-primary" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'"></div>
+          <img [src]="data.belowImg" alt="" class="m-t-xxl w-full img-wrapper" intersecting [attr.data-animation]="data.animation || 'none'">
         </div>
       </ng-template>
     </div>
