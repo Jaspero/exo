@@ -6,7 +6,7 @@
   min-height: 100vh;
   color: white;
   position: relative;
-  margin-top: -100px;
+  margin-top: -60px;
 
   &::before {
     content: '';
@@ -70,6 +70,9 @@
 
 @media (max-width: 600px) {
 
+  .-sroll {
+    opacity: 1;
+  }
 
   h1 {
     font-size: 30px!important;

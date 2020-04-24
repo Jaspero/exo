@@ -18,7 +18,7 @@
   height: 100%;
   width: 100%;
   background: #000000;
-  opacity: .4;
+  opacity: .8;
 }
 
 
@@ -49,20 +49,18 @@
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
+
   .bg-wrapper {
-    text-align: center;
-    min-width: 100%;
-    min-height: 176px;
-    justify-content: space-between;
+    min-height: 170px;
   }
 
   h1 {
     font-size: 30px;
   }
 
-  .wrapper {
-    width: 100%;
+  .events {
+    height: 300px;
   }
 
   .arrow {
@@ -77,6 +75,11 @@
   }
 
   .bg-wrapper {
-    min-height: 130px;
+    text-align: center;
+    min-width: 100%;
+    min-height: 136px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }

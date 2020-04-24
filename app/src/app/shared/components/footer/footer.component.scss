@@ -35,7 +35,23 @@ a:hover {
   .footer {
     padding: 10px;
   }
+
+  .footer-logo {
+    height: 75px;
+  }
+
   .learn {
-    text-align: right;
+    text-align: center;
+    a {
+      margin: 0;
+    }
+  }
+
+  .contact {
+    text-align: center;
+  }
+
+  .logo-container {
+    text-align: center;
   }
 }
