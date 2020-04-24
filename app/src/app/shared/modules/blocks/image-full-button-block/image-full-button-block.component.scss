@@ -1,7 +1,6 @@
 .wrapper {
   background: transparent;
   height: 300px;
-  width: 40%;
 }
 
 .wrapper:before {
@@ -12,7 +11,7 @@
   height: 100%;
   width: 100%;
   background: black;
-  opacity: .3;
+  opacity: .7;
 }
 
 
@@ -24,13 +23,25 @@
 }
 
 
+@media (max-width: 900px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+
 @media (max-width: 600px) {
   .wrapper {
     text-align: center;
-    min-width: 100%;
+    min-width: 80%;
+    height: 200px;
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 20px;
+  }
+
+  .main {
+    height: 400px;
   }
 }

@@ -7,12 +7,12 @@
 </div>
 <section class="m-y-l">
   <div class="grid jc-start">
-    <div class="col-6 col-s-12 m-y-m relative" *ngFor="let product of product$ | async;" intersecting data-animation="fade-in">
+    <div class="col-6 col-s-12 p-y-m relative product" *ngFor="let product of product$ | async;" intersecting data-animation="fade-in">
       <div class="product-wrapper" [ngStyle]="{'background-image': 'url('+ product.image +')'}">
       </div>
       <h3 class="m-t-l">{{product.title}}</h3>
-      <p class="m-t-s m-b-l">{{product.description}}</p>
-      <a class="btn-primary" [routerLink]="product.route">Read More</a>
+      <p class="m-y-s">{{product.description}}</p>
+      <a class="btn-primary flex ai-center jc-center" [routerLink]="product.route">Read More</a>
     </div>
   </div>
 </section>

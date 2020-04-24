@@ -51,7 +51,7 @@
   border:1px solid black;
   background: white;
   color: black;
-  min-width: 150px;
+  max-width: 150px;
   text-align: center;
   transition: .3s;
 }
@@ -70,11 +70,26 @@
   border:1px solid white;
   background: transparent;
   color: white;
-  min-width: 150px;
+  max-width: 150px;
   transition: .3s;
 }
 
 .btn-secondary:hover {
   background: white;
   color: black;
+}
+
+
+@media (max-width: 600px) {
+  .btn-primary {
+    font-size: 18px;
+    max-width: 150px;
+    padding: 10px;
+  }
+
+  .btn-secondary {
+    font-size: 18px;
+    max-width: 150px;
+    padding: 10px;
+  }
 }

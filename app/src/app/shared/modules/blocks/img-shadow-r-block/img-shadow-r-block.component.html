@@ -1,9 +1,9 @@
-<section class="p-y-l">
+<section class="m-y-l">
   <div class="grid jc-around ai-center">
     <div class="col-4 col-s-6 col-xs-12 c-dark ta-left" intersecting [attr.data-animation]="data.animation || 'none'">
       <h3>{{data.title}}</h3>
-      <div class="m-y-l text-wrapper font-primary" [innerHTML]="data.content"></div>
-      <a [routerLink]="[data.link]" routerLinkActive="active" class="btn-primary z-index m-t-l">{{data.buttonTitle}}</a>
+      <div class="m-y-s text-wrapper font-primary" [innerHTML]="data.content"></div>
+      <a [routerLink]="[data.link]" routerLinkActive="active" class="btn-primary z-index flex ai-center jc-center">{{data.buttonTitle}}</a>
     </div>
     <div class="col-5 col-s-6 col-xs-12 ta-right" intersecting [attr.data-animation]="data.animation || 'none'">
       <img [src]="data.image" class="shadow">

@@ -6,18 +6,18 @@
   </div>
 </div>
 <section class="m-y-l">
-  <div class="grid jc-evenly ai-center p-y-m" *ngFor="let blog of blogs$ | async; even as even; last as last;" [class.b-b]="!last" [class.even]="even" intersecting data-animation="fade-in-from-bottom">
-      <div class="col-4 col-s-6 col-xs-12 c-dark">
-        <h1>{{blog.title}}</h1>
-        <div class="flex ai-center jc-between w-full m-t-s">
+  <div class="grid jc-evenly ai-center p-y-s" *ngFor="let blog of blogs$ | async; even as even; last as last;" [class.b-b]="!last" [class.even]="even" intersecting data-animation="fade-in-from-bottom">
+      <div class="col-4 col-s-6 col-xs-12 c-dark text-container">
+        <h2>{{blog.title}}</h2>
+        <div class="flex ai-center jc-between  m-t-s">
           <span class="category">{{blog.date | date}}</span>
           <span class="category">Category: {{blog.category}}</span>
         </div>
-        <p class="m-t-s m-b-l">{{blog.description}}</p>
-        <a class="btn-primary"  [routerLink]="blog.route">Read More</a>
+        <p class="m-y-s">{{blog.description}}</p>
+        <a class="btn-primary flex ai-center jc-center"  [routerLink]="blog.route">Read More</a>
       </div>
-      <div class="col-5 col-s-6 col-xs-12 ta-right" [class.text-align]="even">
-        <img [src]="blog.image" [attr.alt]="blog.alt || ''">
+      <div class="col-4 col-s-6 col-xs-12 ta-right" [class.text-align]="even">
+        <img [src]="blog.image" [attr.alt]="blog.alt || ''" class="blog-image">
       </div>
     </div>
 </section>
