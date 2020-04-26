@@ -7,7 +7,7 @@
       <h3 class="m-t-m" intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h3>
       <div class="m-y-m no-padding text-wrapper"  [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'">
       </div>
-      <button class="btn-primary">Contact us</button>
+      <button class="btn-primary" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'">Contact us</button>
       <img [src]="data.belowImg" alt="" class="m-t-l w-full" intersecting [attr.data-animation]="data.animation || 'none'">
     </div>
   </div>

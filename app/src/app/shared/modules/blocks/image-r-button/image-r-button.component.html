@@ -3,7 +3,7 @@
     <div class="col-4 col-s-12 ta-left">
       <h1 class="m-t-l" intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h1>
       <div class="m-y-l no-padding"  [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'"></div>
-      <button class="btn-primary">Contact us</button>
+      <button class="btn-primary" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'">Contact us</button>
       <img [src]="data.belowImg" alt="" class="m-t-l w-full" intersecting [attr.data-animation]="data.animation || 'none'">
     </div>
     <div class="col-5 col-s-12 ta-right" intersecting [attr.data-animation]="data.animation || 'none'">
