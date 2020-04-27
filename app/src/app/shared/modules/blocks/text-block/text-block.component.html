@@ -1,8 +1,10 @@
-<div class="grid m-y-m">
-  <div *ngIf="data.title" class="col-12 ta-center" intersecting [attr.data-animation]="data.animation || 'none'">
+<div class="grid m-y-m m-s-0">
+  <div class="col-12 ta-center">
+  <div *ngIf="data.title" class="w-full ta-center" intersecting [attr.data-animation]="data.animation || 'none'">
     <h3>{{data.title}}</h3>
   </div>
-  <div *ngIf="data.content" class="col-6 col-s-12 ta-center text-wrapper" intersecting [attr.data-animation]="data.animation || 'none'">
+  <div *ngIf="data.content" class="col-6 col-s-12 no-padding ta-center text-wrapper" intersecting [attr.data-animation]="data.animation || 'none'">
     <p class="font-tertiary">{{data.content}}</p>
+  </div>
   </div>
 </div>

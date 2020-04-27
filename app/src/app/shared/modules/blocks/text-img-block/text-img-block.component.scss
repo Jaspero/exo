@@ -5,7 +5,14 @@
 @media (max-width: 600px) {
   .text-wrapper {
     text-align: justify;
-    margin-top: 30px;
     font-size: 16px;
+  }
+
+  section, .grid {
+    margin: 0;
+  }
+
+  img {
+    height: 100px;
   }
 }

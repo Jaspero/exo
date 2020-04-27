@@ -24,7 +24,7 @@
   color: #e0e0e0;
   text-transform: uppercase;
   margin: 0 10px;
-  transition: all .5s;
+  transition: all .2s;
 }
 
 .link:hover {
@@ -60,6 +60,7 @@
   align-items: flex-end;
   cursor: pointer;
   height: 30px;
+  margin: 0 10px;
   transition: .4s ease-in-out;
 
   .line-1 {

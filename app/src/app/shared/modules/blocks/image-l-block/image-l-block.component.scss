@@ -3,12 +3,13 @@
 
 @media (max-width: 600px) {
 
-  section {
+  section, .grid {
     padding: 0;
   }
 
-  h4 {
-    font-size: 20px;
+
+  .title {
+    margin: 10px 0;
   }
 
   h1 {

@@ -5,12 +5,12 @@
     </div>
     <div class="col-4 col-s-6 col-xs-12 c-dark ta-left">
       <div *ngIf="!data.belowImg; else belowImg">
-        <h3 class="m-y-m"  intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h3>
+        <h3 class="m-y-m title"  intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h3>
         <div class="font-primary" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'"></div>
       </div>
       <ng-template #belowImg>
         <div class="ta-left">
-          <h3 class="m-y-m" intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h3>
+          <h3 class="m-y-m title" intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h3>
           <div class="font-primary" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'"></div>
           <img [src]="data.belowImg" alt="" class="m-t-xl w-full img-wrapper" intersecting [attr.data-animation]="data.animation || 'none'">
         </div>
