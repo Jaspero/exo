@@ -4,14 +4,23 @@
   }
   .img-wrapper {
     text-align: left;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   img {
     width: 100%;
   }
 
+  section, .title {
+    margin: 0;
+  }
+
   .text-wrapper {
+    margin: 10px 0px;
     text-align: justify;
+  }
+
+  .below-img {
+    margin-top: 10px!important;
   }
 
 }

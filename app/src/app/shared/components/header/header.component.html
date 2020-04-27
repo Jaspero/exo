@@ -8,12 +8,12 @@
     <div class="flex fw-wrap jc-end ai-center z-index" id="navbar">
       <div class="hide-s">
       <a routerLink="/" routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}" class="link">HOME</a>
-      <a routerLink="/lounge" routerLinkActive="active" class="link">LOUNGE</a>
-      <a routerLink="/nail" routerLinkActive="active" class="link">NAIL BAR</a>
-      <a routerLink="/experiences" routerLinkActive="active" class="link">EXPERIENCES</a>
-      <a routerLink="/location" routerLinkActive="active" class="link">LOCATION</a>
-      <a routerLink="/shop" routerLinkActive="active" class="link">SHOP</a>
-      <a routerLink="/contact" routerLinkActive="active" class="link">CONTACT US</a>
+      <a routerLink="/lounge" routerLinkActive="active" class="link">Lounge</a>
+      <a routerLink="/nail" routerLinkActive="active" class="link">Nail Bar</a>
+      <a routerLink="/" routerLinkActive="active" class="link">Med Spa</a>
+      <a routerLink="/experiences" routerLinkActive="active" class="link">Experiences</a>
+      <a routerLink="/shop" routerLinkActive="active" class="link">Shop</a>
+      <a routerLink="/contact" routerLinkActive="active" class="link">Contact Us</a>
       </div>
         <div class="mobile-menu z-index flex ai-center jc-center" (click)="toggleMenu()" [class.active-menu]="menu">
           <span class="line-1"></span>
@@ -25,8 +25,8 @@
         <a routerLink="/" routerLinkActive="active-mobile"  [routerLinkActiveOptions]="{exact: true}" class="mobile-link show-s">Home</a>
         <a routerLink="/lounge" routerLinkActive="active-mobile" class="mobile-link show-s" [class.active-menu]="menu">Lounge</a>
         <a routerLink="/nail" routerLinkActive="active-mobile" class="mobile-link show-s" [class.active-menu]="menu">Nail Bar</a>
+        <a routerLink="/" routerLinkActive="active-mobile" class="mobile-link show-s" [class.active-menu]="menu">Med Spa</a>
         <a routerLink="/experiences" routerLinkActive="active-mobile" class="mobile-link show-s" [class.active-menu]="menu">Experiences</a>
-        <a routerLink="/location" routerLinkActive="active-mobile" class="mobile-link show-s" [class.active-menu]="menu">Location</a>
         <a routerLink="/shop" routerLinkActive="active-mobile" class="mobile-link show-s" [class.active-menu]="menu">Shop</a>
         <a routerLink="/contact" routerLinkActive="active-mobile" class="mobile-link show-s" [class.active-menu]="menu">Contact Us</a>
 

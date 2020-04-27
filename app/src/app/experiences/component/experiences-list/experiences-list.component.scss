@@ -29,9 +29,6 @@
   width: 100%;
 }
 
-
-
-
 .bg-container {
   height: 700px;
 }
@@ -42,8 +39,6 @@
   top: 10%;
   right: -15%;
 }
-
-
 
 .exo-events {
   background-image: url("../../../../assets/images/events/exo-events.png");
@@ -104,6 +99,7 @@
   .left {
     left: 0%;
   }
+
 }
 
 
@@ -132,6 +128,7 @@
   }
 
   .text-wrapper {
+    margin-top: 10px;
     text-align: justify;
   }
 
@@ -147,6 +144,18 @@
 
   img {
     width: 100%;
+  }
+
+  .col-4 {
+    order: 1;
+  }
+
+  section, .grid {
+    margin: 10px 0px;
+  }
+
+  .experiences-container {
+    margin: 20px 0px;
   }
 
 }
