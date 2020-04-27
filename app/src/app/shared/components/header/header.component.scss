@@ -158,7 +158,7 @@
 }
 
 .mobile-link {
-  transition: 1s;
+  transition: opacity .3s, transform 1s;
 }
 
 .slide-menu.active-menu {
