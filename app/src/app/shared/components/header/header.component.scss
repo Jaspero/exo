@@ -101,7 +101,7 @@
   transition: .4s ease-in-out;
   z-index: 23;
 
-    &-line-1 {
+  &-line-1 {
     display: block;
     width: 40px;
     transition: all .4s ease-in-out;
@@ -193,7 +193,6 @@
     &:hover {
       opacity: 1;
     }
-
   }
 }
 
