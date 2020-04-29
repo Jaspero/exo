@@ -25,7 +25,7 @@ a:hover {
 /* Mobile styles
  *============================================================================*/
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .social-icons-wrapper {
     justify-content: center;
   }
@@ -33,7 +33,7 @@ a:hover {
     text-align: center;
   }
   .footer {
-    padding: 10px;
+    padding: 20px 10px;
   }
 
   .footer-logo {
@@ -41,13 +41,20 @@ a:hover {
   }
 
   .learn {
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
+    flex-direction: row;
     a {
+      width: 50%;
       margin: 0;
     }
   }
 
   .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
     a {
       margin: 0;

@@ -6,13 +6,13 @@
     </div>
   </div>
 </section>
-<div class="grid jc-between m-y-xl" intersecting data-animation="fade-in-from-bottom">
+<div class="grid jc-between m-y-m" intersecting data-animation="fade-in-from-bottom">
   <div class="col-4 col-s-6 col-xs-12">
     <div class="img-wrapper ta-center b-a">
       <img [src]="activeImage" alt="Product Image">
     </div>
-    <div class="flex ai-center jc-between w-full m-t-s">
-      <div class="ta-center" *ngFor="let image of item.galleryImages" (click)="activeImage = image.image">
+    <div class="flex ai-center jc-start w-full m-t-s">
+      <div class="ta-center col-3 no-padding" *ngFor="let image of item.galleryImages" (click)="activeImage = image.image">
         <img [src]="image.image" alt="Product image gallery item" class="product b-a">
       </div>
     </div>
@@ -24,7 +24,7 @@
     <button id="product-component" class="btn-primary m-t-m">Add to Cart</button>
   </div>
 </div>
-<div class="grid m-y-l" intersecting data-animation="fade-in-from-right">
+<div class="grid m-y-m" intersecting data-animation="fade-in-from-right">
   <div class="col-12 flex b-b">
     <h4 [class.active]="viewMode == 'productDescription'" rel="tab1" (click)="viewMode = 'productDescription'" class="tab-header">PRODUCT DESCRIPTION</h4>
     <h4 [class.active]="viewMode == 'additionalInformation'" rel="tab2" (click)="viewMode = 'additionalInformation'" class="m-x-s tab-header">ADDITIONAL INFORMATION</h4>
