@@ -1,19 +1,19 @@
 <section class="p-y-l">
   <div class="grid jc-around ai-center">
-    <div class="col-4 col-s-6 col-xs-12 c-dark ta-left" intersecting [attr.data-animation]="data.animation || 'none'">
+    <div class="col-4 col-s-6 col-xs-12 c-dark ta-left content-wrapper">
       <div *ngIf="!data.belowImg; else belowImg">
-        <h3 class="m-y-m title" intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h3>
-        <div class="font-primary" [innerHTML]="data.content"></div>
+        <h3 class="m-y-m title"  intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h3>
+        <div class="font-primary" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'"></div>
       </div>
       <ng-template #belowImg>
-        <div class="ta-left">
-          <h3 class="m-y-m title" intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h3>
-          <div class="font-primary" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'"></div>
-          <img [src]="data.belowImg" alt="" class="m-t-xl w-full img-wrapper" intersecting [attr.data-animation]="data.animation || 'none'">
+        <div class="ta-left mobile-wrapper">
+          <h3 class="m-y-m title mobile-wrapper-title" intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h3>
+          <div class="font-primary mobile-wrapper-content" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'"></div>
+          <img [src]="data.belowImg" alt="" class="m-t-xl w-full img-wrapper mobile-wrapper-image" intersecting [attr.data-animation]="data.animation || 'none'">
         </div>
       </ng-template>
     </div>
-    <div class="col-5 col-s-6 col-xs-12 ta-right" intersecting [attr.data-animation]="data.animation || 'none'">
+    <div class="col-5 col-s-6 col-xs-12 ta-right image-container" intersecting [attr.data-animation]="data.animation || 'none'">
       <img [src]="data.image">
     </div>
   </div>

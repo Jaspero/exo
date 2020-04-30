@@ -18,4 +18,30 @@
   img {
     width: 100%;
   }
+
+  .content-wrapper {
+    order: 1;
+  }
+
+  .image-container {
+    order:3;
+  }
+
+  .mobile-wrapper {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    &-content {
+      order:3;
+    }
+    &-title {
+      order: 2;
+    }
+    &-image {
+      order: 1;
+    }
+  }
 }

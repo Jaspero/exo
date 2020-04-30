@@ -11,8 +11,8 @@
     <div class="img-wrapper ta-center b-a">
       <img [src]="activeImage" alt="Product Image">
     </div>
-    <div class="flex ai-center jc-start w-full m-t-s">
-      <div class="ta-center col-3 no-padding" *ngFor="let image of item.galleryImages" (click)="activeImage = image.image">
+    <div class="flex ai-center jc-between w-full m-t-s">
+      <div class="ta-center" *ngFor="let image of item.galleryImages" (click)="activeImage = image.image">
         <img [src]="image.image" alt="Product image gallery item" class="product b-a">
       </div>
     </div>
