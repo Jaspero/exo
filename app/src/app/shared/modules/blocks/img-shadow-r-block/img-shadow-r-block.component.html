@@ -1,11 +1,11 @@
-<section class="m-y-l">
-  <div class="grid jc-around ai-center">
-    <div class="col-4 col-s-6 col-xs-12 c-dark ta-left">
+<section class="p-y-l">
+  <div class="container jc-between ai-center">
+    <div class="col-4 col-s-6 col-xs-12 c-dark ta-left container-content">
       <h3  intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h3>
       <div class="m-y-s text-wrapper font-primary" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'"></div>
       <a [routerLink]="[data.link]" routerLinkActive="active" class="btn-primary z-index flex ai-center jc-center" intersecting [attr.data-animation]="data.animation || 'none'">{{data.buttonTitle}}</a>
     </div>
-    <div class="col-5 col-s-6 col-xs-12 ta-right" intersecting [attr.data-animation]="data.animation || 'none'">
+    <div class="col-5 col-s-6 col-xs-12 ta-right container-image" intersecting [attr.data-animation]="data.animation || 'none'">
       <img [src]="data.image" class="shadow">
     </div>
   </div>

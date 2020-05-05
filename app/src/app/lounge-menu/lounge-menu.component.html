@@ -6,7 +6,7 @@
       <img src="assets/images/exo.svg" alt="" style="height: 200px">
     </div>
     <div *ngFor="let category of page.categories">
-      <div class="container">
+      <div class="lounge-container">
         <div class="category-wrapper ta-center m-t-l p-b-m b-b">
           <h1 class="category-title">{{category.title}}</h1>
           <p class="category-subtitle" *ngIf="category.subTitle">{{category.subTitle}}</p>
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div *ngFor="let item of category.items">
-        <div class="container flex jc-between ai-center b-b p-y-s">
+        <div class="lounge-container flex jc-between ai-center b-b p-y-s">
             <div class="wrapper">
               <h4 class="item-title fw-normal">{{item.title}}</h4>
               <p class="item-subtitle" *ngIf="item.subTitle">{{item.subTitle}}</p>
