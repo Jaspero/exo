@@ -22,7 +22,9 @@
 }
 
 .title {
-  font-size: 25px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: normal;
 }
 
 .box {
@@ -32,11 +34,7 @@
 }
 
 
-.events-container:nth-child(2) {
-  .box {
-    margin-top: 100px;
-  }
-}
+
 
 
 @media (max-width: 900px) {

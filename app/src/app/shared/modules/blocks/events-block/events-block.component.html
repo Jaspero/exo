@@ -1,6 +1,6 @@
 <h1 class="ta-center">{{data.title}}</h1>
 
-<div class="grid m-y-l jc-between">
+<div class="grid m-y-l jc-start">
   <ng-container *ngFor="let block of data.blocks">
     <ng-container [ngSwitch]="block.type">
       <ng-container *ngSwitchCase="'image'">

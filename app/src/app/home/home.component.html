@@ -4,7 +4,7 @@
 
 <exo-block-renderer *ngIf="page.blocks" [blocks]="page.blocks"></exo-block-renderer>
 
-<div class="flex fw-wrap w-full links-wrapper">
+<div class="flex fw-wrap w-full links-wrapper m-t-xl">
   <a [routerLink]="background.path" routerLinkActive="active"  class="col-4 col-xs-12 events flex jc-center ai-end" *ngFor="let background of links.backgrounds" [ngStyle]="{'background-image': 'url('+ background.background +')'}">
     <div class="bg-wrapper relative  p-a-s flex fd-col ai-center">
       <h1 class="c-light z-index">{{background.name}}</h1>

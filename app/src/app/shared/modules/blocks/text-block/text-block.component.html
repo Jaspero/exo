@@ -1,9 +1,9 @@
-<div class="grid m-y-m m-s-0">
+<div class="grid m-y-xl">
   <div class="col-12 flex fw-wrap jc-center ai-center">
     <div *ngIf="data.title" class="w-full ta-center m-y-s m-s-0" intersecting [attr.data-animation]="data.animation || 'none'">
       <h3>{{data.title}}</h3>
     </div>
-    <div *ngIf="data.content" class="col-6 col-s-12 no-padding ta-center text-wrapper" intersecting [attr.data-animation]="data.animation || 'none'">
+    <div *ngIf="data.content" class="col-8 col-s-12 no-padding ta-center text-wrapper" intersecting [attr.data-animation]="data.animation || 'none'">
       <p class="font-tertiary">{{data.content}}</p>
     </div>
   </div>

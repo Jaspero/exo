@@ -1,4 +1,4 @@
-<section class="main m-t-m flex jc-center ai-center"  [ngStyle]="{'background-image': 'url('+ data.image +')'}" intersecting [attr.data-animation]="data.animation || 'none'">
+<section class="main flex jc-center ai-center"  [ngStyle]="{'background-image': 'url('+ data.image +')'}" intersecting [attr.data-animation]="data.animation || 'none'">
   <div class="col-6 wrapper relative c-light z-index ta-center flex fd-col ai-center jc-center">
     <h1 class="m-y-s z-index">{{data.title}}</h1>
     <a [routerLink]="[data.link]" routerLinkActive="active" class="btn-secondary z-index">{{data.buttonTitle}}</a>
