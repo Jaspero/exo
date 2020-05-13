@@ -67,6 +67,11 @@
           "title": "Friday March 3 7pm-9pm",
           "content": "Great Event",
           "done": "Done"
+        },
+        {
+          "type": "done",
+          "title": "Another great event",
+          "content": "Magnificent"
         }
       ]
     }
