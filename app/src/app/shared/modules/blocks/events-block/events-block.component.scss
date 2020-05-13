@@ -8,9 +8,15 @@
   height: 400px;
 }
 
+.active-container:hover {
+  background: black;
+  color: white;
+}
+
 .canceled {
   background: #ECECEC;
   color: #959595;
+  border: 1px solid #959595!important;
 }
 
 .done {
@@ -22,15 +28,20 @@
 }
 
 .title {
-  text-align: center;
   font-size: 30px;
   font-weight: normal;
 }
 
 .box {
-  width: 350px;
-  height: 350px;
+  width: 330px;
+  height: 330px;
   border: 1px solid #000000;
+  transition: .4s;
+}
+
+.box-wrapper {
+  width: 215px;
+  text-align: left;
 }
 
 
@@ -50,3 +61,5 @@
     width: 100%;
   }
 }
+
+
