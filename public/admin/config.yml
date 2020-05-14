@@ -71,7 +71,7 @@ blocks: &blocks
       widget: "object"
       fields:
         - <<: *animation
-        - { label: "Title", name: "title", widget: "string", required: false }
+        - { label: "Title", name: "title", widget: "text", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
         - { label: "Link", name: "link", widget: "string", required: false }
