@@ -1,7 +1,7 @@
 <section class="m-y-xl">
   <div class="container ai-center">
     <div class="col-11 flex ai-center jc-between">
-    <div class="col-4 col-s-6 col-xs-12 c-dark ta-left container-content">
+    <div class="col-5 col-s-6 col-xs-12 c-dark ta-left container-content">
       <h3  intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h3>
       <div class="m-t-s m-b-m text-wrapper font-primary" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'"></div>
       <a [routerLink]="[data.link]" routerLinkActive="active" class="btn-primary z-index flex ai-center jc-center" intersecting [attr.data-animation]="data.animation || 'none'">{{data.buttonTitle}}</a>

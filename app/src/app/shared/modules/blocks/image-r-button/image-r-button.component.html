@@ -1,6 +1,7 @@
 <section class="m-y-xl">
-  <div class="grid jc-around">
-    <div class="col-4 col-s-12 ta-left">
+  <div class="container ai-center">
+    <div class="col-11 flex jc-between">
+    <div class="col-5 col-s-12 ta-left">
       <h1 class="m-t-l" intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h1>
       <div class="m-y-l no-padding"  [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'"></div>
       <button class="btn-primary" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'">Contact us</button>
@@ -9,5 +10,6 @@
     <div class="col-5 col-s-12 ta-right" intersecting [attr.data-animation]="data.animation || 'none'">
       <img [src]="data.image" alt="">
     </div>
+  </div>
   </div>
 </section>
