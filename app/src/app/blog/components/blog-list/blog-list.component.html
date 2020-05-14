@@ -6,8 +6,9 @@
   </div>
 </div>
 <section class="m-y-l">
-  <div class="grid jc-evenly ai-center p-y-s" *ngFor="let blog of blogs$ | async; even as even; last as last;" [class.b-b]="!last" [class.even]="even" intersecting data-animation="fade-in-from-bottom">
-      <div class="col-4 col-s-6 col-xs-12 c-dark text-container">
+  <div class="grid">
+    <div class="blog-wrapper p-y-l flex jc-between ai-center fw-wrap" *ngFor="let blog of blogs$ | async; even as even; last as last;" [class.b-b]="!last" [class.even]="even" >
+      <div class="col-5 col-s-6 col-xs-12 c-dark text-container p-a-0">
         <h2>{{blog.title}}</h2>
         <div class="flex ai-center jc-between  m-t-s">
           <span class="category">{{blog.date | date}}</span>
@@ -16,9 +17,10 @@
         <p class="m-y-s">{{blog.description}}</p>
         <a class="btn-primary flex ai-center jc-center"  [routerLink]="blog.route">Read More</a>
       </div>
-      <div class="col-4 col-s-6 col-xs-12 ta-right" [class.text-align]="even">
+      <div class="col-5 col-s-6 col-xs-12 ta-right p-a-0" [class.text-align]="even">
         <img [src]="blog.image" [attr.alt]="blog.alt || ''" class="blog-image">
       </div>
+    </div>
     </div>
 </section>
 <exo-footer></exo-footer>
