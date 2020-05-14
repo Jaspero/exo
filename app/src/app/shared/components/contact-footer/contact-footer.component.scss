@@ -3,8 +3,12 @@
   font-weight: 300;
 }
 
+.footer {
+  border-bottom: 1px solid #e0e0e0;
+}
+
 .footer-logo {
-  height: 150px;
+  height: 200px;
 }
 
 a {
@@ -14,6 +18,10 @@ a:hover {
   color: white;
 }
 
+.sub-footer {
+  font-family: Roboto, light;
+  color: #e0e0e0;
+}
 
 
 /* Mobile styles
@@ -35,6 +43,10 @@ a:hover {
 
   .contact-heading {
     margin: 0px 5px;
+  }
+
+  .sub-footer {
+    justify-content: center;
   }
 
 }

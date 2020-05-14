@@ -3,6 +3,10 @@
   font-weight: 300;
 }
 
+.footer {
+  border-bottom: 1px solid #e0e0e0;
+}
+
 .footer-logo {
   height: 150px;
 }
@@ -20,6 +24,11 @@ a:hover {
 }
 .social-icon:hover {
   opacity: 1;
+}
+
+.sub-footer {
+  font-family: Roboto, light;
+  color: #e0e0e0;
 }
 
 
@@ -60,6 +69,10 @@ a:hover {
     a {
       margin: 0;
     }
+  }
+
+  .sub-footer {
+    justify-content: center;
   }
 
   .logo-container {
