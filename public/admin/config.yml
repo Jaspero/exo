@@ -36,7 +36,7 @@ blocks: &blocks
       widget: "object"
       fields:
         - <<: *animation
-        - { label: "Title", name: "title", widget: "string", required: false }
+        - { label: "Title", name: "title", widget: "text", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
         - { label: "Below Image", name: "belowImg", widget: "image", required: false }
@@ -46,7 +46,7 @@ blocks: &blocks
       widget: "object"
       fields:
         - <<: *animation
-        - { label: "Title", name: "title", widget: "string", required: false }
+        - { label: "Title", name: "title", widget: "text", required: false }
         - { label: "Image", name: "image", widget: "image", required: false }
         - { label: "content", name: "content", widget: "markdown", required: false }
         - { label: "Below Image", name: "belowImg", widget: "image", required: false }
@@ -91,7 +91,7 @@ blocks: &blocks
       fields:
         - <<: *animation
         - { label: "Image", name: "image", widget: "image", required: false }
-        - { label: "Title", name: "title", widget: "string", required: false }
+        - { label: "Title", name: "title", widget: "text", required: false }
         - { label: "Link", name: "link", widget: "string", required: false }
         - { label: "Button Title", name: "buttonTitle", widget: "string", required: false }
 
