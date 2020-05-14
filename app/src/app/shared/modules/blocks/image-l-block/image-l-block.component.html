@@ -1,9 +1,10 @@
 <section class="m-y-xl">
-  <div class="container jc-around ai-center">
-    <div class="col-5 col-s-6 col-xs-12 ta-left image-container" intersecting [attr.data-animation]="data.animation || 'none'">
-      <img [src]="data.image">
+  <div class="container  ai-center">
+    <div class="col-11 flex jc-between ai-center">
+    <div class="col-5 col-xs-12 ta-left image-container" intersecting [attr.data-animation]="data.animation || 'none'">
+      <img [src]="data.image" class="w-full">
     </div>
-    <div class="col-4 col-s-6 col-xs-12 c-dark ta-left content-wrapper">
+    <div class="col-5 col-s-6 col-xs-12 c-dark ta-left content-wrapper">
       <div *ngIf="!data.belowImg; else belowImg">
         <h3 class="m-y-s title"  intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h3>
         <div class="font-primary" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'"></div>
@@ -16,5 +17,6 @@
         </div>
       </ng-template>
     </div>
+  </div>
   </div>
 </section>
