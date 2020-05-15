@@ -132,6 +132,13 @@ blocks: &blocks
         - { label: "content", name: "content", widget: "markdown", required: false }
         - { label: "Below Image", name: "belowImg", widget: "image", required: false }
 
+    - label: "Gallery"
+      name: "galleryImages"
+      widget: "list"
+      fields:
+        - <<: *animation
+        - {label: Image, name: image, widget: image}
+
     - label: "Events Block"
       name: "eventsBlock"
       widget: "object"
