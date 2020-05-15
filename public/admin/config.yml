@@ -139,8 +139,8 @@ blocks: &blocks
         - <<: *animation
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Subtitle", name: "subTitle", widget: "string", required: false }
-        - label: "Image Gallery"
-            name: "imageGallery"
+        - label: "Image Slider"
+            name: "imageSlider"
             widget: "list"
             field:
               - {label: Image, name: image, widget: image}
