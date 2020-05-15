@@ -134,12 +134,16 @@ blocks: &blocks
 
     - label: "Gallery"
       name: "galleryImages"
-      widget: "list"
+      widget: "object"
       fields:
-          - { label: "Image", name: "image", widget: "list", required: false }
         - <<: *animation
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Subtitle", name: "subTitle", widget: "string", required: false }
+        - label: "Image Gallery"
+            name: "imageGallery"
+            widget: "list"
+            fields:
+              - {label: Image, name: image, widget: image}
 
     - label: "Events Block"
       name: "eventsBlock"
