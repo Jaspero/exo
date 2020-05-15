@@ -142,7 +142,7 @@ blocks: &blocks
         - label: "Image Slider"
             name: "imageSlider"
             widget: "list"
-            field:
+            fields:
               - {label: Image, name: image, widget: image}
 
     - label: "Events Block"
