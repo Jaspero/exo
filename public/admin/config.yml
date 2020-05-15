@@ -136,10 +136,10 @@ blocks: &blocks
       name: "galleryImages"
       widget: "object"
       fields:
+          - { label: "Image", name: "image", widget: "list", required: false }
         - <<: *animation
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Subtitle", name: "subTitle", widget: "string", required: false }
-        - { label: "Image", name: "image", widget: "list", required: false }
 
     - label: "Events Block"
       name: "eventsBlock"
