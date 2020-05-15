@@ -137,11 +137,11 @@ blocks: &blocks
       widget: "object"
       fields:
         - <<: *animation
-        - label: "Image Gallery"
-            name: "imageGallery"
-            widget: "list"
-            fields:
-              - {label: Image, name: image, widget: image}
+          - label: "Image Gallery"
+              name: "imageGallery"
+              widget: "list"
+              fields:
+                - {label: Image, name: image, widget: image}
         - { label: "Title", name: "title", widget: "string", required: false }
         - { label: "Subtitle", name: "subTitle", widget: "string", required: false }
 
