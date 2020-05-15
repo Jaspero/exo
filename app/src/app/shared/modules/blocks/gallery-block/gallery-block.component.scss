@@ -1,0 +1,41 @@
+.gallery-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+
+.full-img {
+  height: 470px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../../../../assets/images/home/home-11.png");
+}
+
+.next-image {
+  height: 470px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../../../../assets/images/home/home-12.png");
+}
+
+
+.next-image:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: .3;
+}
+
+.progress-bar {
+  height: 1px;
+  background: #C9C9C9;
+  width: 80%;
+}

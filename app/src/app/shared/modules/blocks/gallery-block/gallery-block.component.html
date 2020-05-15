@@ -1,1 +1,23 @@
-<p>gallery-block works!</p>
+<section class="m-y-xl">
+  <div class="grid">
+    <div class="col-10 ta-left">
+      <h3>{{data.title}}</h3>
+      <p>{{data.subTitle}}</p>
+    </div>
+  </div>
+  <div class="flex jc-end m-y-m">
+    <div class="gallery-wrapper jc-between">
+      <div class="col-7 full-img flex ai-end jc-start c-light">
+        <h1>slider</h1>
+      </div>
+      <div class="col-4 next-image flex ai-end jc-start c-light relative">
+        <h2 class="z-index">slider</h2>
+      </div>
+      <div class="flex ai-center w-full m-y-m">
+        <img src="assets/icons/arrow-left.svg" alt="">
+        <img src="assets/icons/arrow-right.svg" alt="" class="m-x-s">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+</section>
