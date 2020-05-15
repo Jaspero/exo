@@ -134,7 +134,7 @@ blocks: &blocks
 
     - label: "Gallery"
       name: "galleryImages"
-      widget: "object"
+      widget: "list"
       fields:
           - { label: "Image", name: "image", widget: "list", required: false }
         - <<: *animation
