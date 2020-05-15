@@ -42,6 +42,23 @@
       "content": "EXO Industries is a brand of lifestyle services. The company currently consists of EXO Lounge, a unique cocktail lounge that serves organic, healthy cocktails and EXO Nail Bar, a full-service nail bar dedicated to consistently providing high customer satisfaction by rendering excellent service, quality organic products and furnishing an enjoyable atmosphere that appeals to the senses.",
       "belowImg": "/uploads/home-10.png",
       "animation": "fade-in-from-bottom"
+    },
+    {
+      "type": "galleryImages",
+      "animation": "fade-in-from-right",
+      "imageSlider": [
+        {
+          "image": "/uploads/lounge-3.png"
+        },
+        {
+          "image": "/uploads/contact-main.png"
+        },
+        {
+          "image": "/uploads/blog-main.png"
+        }
+      ],
+      "title": "Slider",
+      "subTitle": "Image Slidaer"
     }
   ],
   "showcaseTitle": "Title of the showcase",
