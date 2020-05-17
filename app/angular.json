@@ -7,7 +7,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "changeDetection": "OnPush"
         }
       },
       "root": "",
@@ -26,7 +27,17 @@
             "assets": [
               "src/favicon.png",
               "src/assets",
-              "src/manifest.webmanifest"
+              "src/manifest.webmanifest",
+              {
+                "input": "../public/collections",
+                "output": "/collections",
+                "glob": "**/**"
+              },
+              {
+                "input": "../public/uploads",
+                "output": "/uploads",
+                "glob": "**/**"
+              }
             ],
             "styles": [
               "src/styles.scss"
@@ -69,8 +80,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "exo:build",
-            "proxyConfig": "./proxy.config.json"
+            "browserTarget": "exo:build"
           },
           "configurations": {
             "production": {

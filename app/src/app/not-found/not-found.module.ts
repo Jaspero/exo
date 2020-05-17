@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {RouterModule} from '@angular/router';
 import {NotFoundComponent} from './not-found.component';
 import {NotFoundRoutingModule} from './not-found-routing.module';
 import {SharedModule} from '../shared.module';

@@ -11,11 +11,17 @@ export class DelayResolver implements Resolve<null> {
   constructor(
     @Inject(DOCUMENT)
     private _document: any
-  ) {
-  }
+  ) {}
+
+  firstPage = true;
 
   resolve() {
     const root = this._document.querySelector('exo-root');
+
+    if (this.firstPage) {
+      this.firstPage = false;
+      return of(null);
+    }
 
     /* TODO */
     /* These happen when the page is loading */

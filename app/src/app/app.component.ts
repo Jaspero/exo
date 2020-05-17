@@ -1,14 +1,15 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivationEnd, NavigationStart, Router} from '@angular/router';
-import {SwUpdate} from '@angular/service-worker';
-import {interval} from 'rxjs';
-import {filter, take, takeUntil} from 'rxjs/operators';
-import {IntersectionService} from './shared/modules/intersecting/intersection.service';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ActivationEnd, NavigationStart, Router } from '@angular/router';
+import { SwUpdate } from '@angular/service-worker';
+import { interval } from 'rxjs';
+import { filter, startWith, take, takeUntil } from 'rxjs/operators';
+import { IntersectionService } from './shared/modules/intersecting/intersection.service';
 
 @Component({
   selector: 'exo-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
   constructor(
@@ -43,7 +44,6 @@ export class AppComponent implements OnInit {
         this.intersection.itemCounter = 0;
         this.intersection.url = e.url;
       }
-
     });
 
     if (this.swUpdate.isEnabled) {
@@ -51,7 +51,10 @@ export class AppComponent implements OnInit {
        * Checks for updates every 5 minutes
        */
       interval(300000)
-        .pipe(takeUntil(this.swUpdate.available))
+        .pipe(
+          startWith(true),
+          takeUntil(this.swUpdate.available)
+        )
         .subscribe(() => {
           this.swUpdate.checkForUpdate();
         });
