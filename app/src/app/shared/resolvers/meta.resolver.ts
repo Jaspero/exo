@@ -30,7 +30,8 @@ export class MetaResolver implements Resolve<any> {
           const page: any = routes.find(rt => rt.route === `/${collection}/${id}`);
 
           if (!page) {
-            this.router.navigate(['/404'])
+            this.router.navigate(['/404']);
+            return false;
           }
 
           const valuesToSet = {...(page.meta || {})};
