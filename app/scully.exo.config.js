@@ -35,7 +35,7 @@ exports.config = {
       type: RouteTypes.contentFolder,
       postRenderers,
       id: {
-        folder: './dist/collections/' + cur
+        folder: './dist/exo/collections/' + cur
       }
     };
 

@@ -98,7 +98,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'not-found',
+    path: '404',
     loadChildren: () =>
       import('./not-found/not-found.module').then(m => m.NotFoundModule)
   }

@@ -13,8 +13,8 @@
     <div class="col-4 col-s-6 col-xs-12 c-dark">
       <h2>{{news.title}}</h2>
       <div class="flex ai-center jc-between w-full m-t-s">
-        <span class="category">{{news.date}}</span>
-        <span class="category">Category:{{news.category}}</span>
+        <span class="category">{{news.date | date}}</span>
+        <span class="category">Category: {{news.category}}</span>
       </div>
       <p class="m-y-s">{{news.description}}</p>
       <a class="btn-primary flex ai-center jc-center" [routerLink]="news.route">Read More</a>

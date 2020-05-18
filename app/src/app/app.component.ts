@@ -1,57 +1,55 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ActivationEnd, NavigationStart, Router} from '@angular/router';
 import {SwUpdate} from '@angular/service-worker';
 import {interval} from 'rxjs';
-import {filter, take, takeUntil} from 'rxjs/operators';
+import {filter, startWith, take, takeUntil} from 'rxjs/operators';
 import {IntersectionService} from './shared/modules/intersecting/intersection.service';
 
 @Component({
   selector: 'exo-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
   constructor(
     private intersection: IntersectionService,
     private swUpdate: SwUpdate,
-    private router: Router,
+    private router: Router
   ) {}
 
   ngOnInit() {
-
     let onePageLoaded = false;
     let updateOnChange = false;
 
     this.intersection.initialize();
 
-    this.router.events.pipe(
-      filter(e => e instanceof ActivationEnd),
-      take(1)
-    ).subscribe(() => {
-      onePageLoaded = true;
-    });
-
-    this.router.events.pipe(
-      filter(e =>
-        e instanceof NavigationStart
+    this.router.events
+      .pipe(
+        filter(e => e instanceof ActivationEnd),
+        take(1)
       )
-    ).subscribe((e: NavigationStart) => {
+      .subscribe(() => {
+        onePageLoaded = true;
+      });
 
-      if (updateOnChange && onePageLoaded) {
-        location.assign(e.url)
-      } else {
-        this.intersection.itemCounter = 0;
-        this.intersection.url = e.url;
-      }
-
-    });
+    this.router.events
+      .pipe(filter(e => e instanceof NavigationStart))
+      .subscribe((e: NavigationStart) => {
+        if (updateOnChange && onePageLoaded) {
+          location.assign(e.url);
+        } else {
+          this.intersection.itemCounter = 0;
+          this.intersection.url = e.url;
+        }
+      });
 
     if (this.swUpdate.isEnabled) {
       /**
        * Checks for updates every 5 minutes
        */
       interval(300000)
-        .pipe(takeUntil(this.swUpdate.available))
+        .pipe(startWith(true), takeUntil(this.swUpdate.available))
         .subscribe(() => {
           this.swUpdate.checkForUpdate();
         });
