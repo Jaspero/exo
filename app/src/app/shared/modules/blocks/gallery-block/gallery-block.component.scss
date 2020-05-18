@@ -1,25 +1,48 @@
 .gallery-wrapper {
   display: flex;
+  position: absolute;
   flex-wrap: wrap;
-  max-width: 1400px;
-  width: 100%;
+  max-height:1400px;
+  top: 0;
+  left: 20%;
+  width: calc(470px + 1px);
+  margin: 0;
+  padding-top: 1px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg) translateY(-470px);
+  transform-origin: right top;
+}
+
+.images {
+  padding: 1400px 0 0 0;
 }
 
 
-.full-img {
-  height: 470px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.current-img {
   background-image: url("../../../../../assets/images/home/home-11.png");
+  padding: 5px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+  width: 470px;
+  height: 470px;
+  margin: 10px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .next-image {
-  height: 470px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-image: url("../../../../../assets/images/home/home-12.png");
+  width: 470px;
+  height: 470px;
+  margin: 10px 0;
+  padding: 5px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 
@@ -38,4 +61,59 @@
   height: 1px;
   background: #C9C9C9;
   width: 80%;
+}
+
+
+$finalHeight: 250px;
+$finalWidth: 3 * $finalHeight;
+$scrollBarHeight: 1px;
+
+::-webkit-scrollbar {
+  width: $scrollBarHeight;
+  height: $scrollBarHeight;
+}
+
+::-webkit-scrollbar-button {
+  width: $scrollBarHeight;
+  height: $scrollBarHeight;
+}
+
+body {
+  background: #111;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.horizontal-scroll-wrapper {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: calc(#{$finalHeight} + #{$scrollBarHeight});
+  max-height: $finalWidth;
+  margin: 0;
+  padding-top: $scrollBarHeight;
+  background: #abc;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg) translateY(-$finalHeight);
+  transform-origin: right top;
+  & > div {
+    display: block;
+    padding: 5px;
+    background: #cab;
+    transform: rotate(90deg);
+    transform-origin: right top;
+  }
+}
+
+.squares {
+  padding: $finalHeight 0 0 0;
+  & > div {
+    width: $finalHeight;
+    height: $finalHeight;
+    margin: 10px 0;
+  }
 }
