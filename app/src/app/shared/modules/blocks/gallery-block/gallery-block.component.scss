@@ -5,12 +5,12 @@
   max-height:1410px;
   top: 0;
   left: 20%;
-  width: calc(600px + 1px);
+  width: calc(470px + 1px);
   margin: 0;
   padding-top: 1px;
   overflow-y: auto;
   overflow-x: hidden;
-  transform: rotate(-90deg) translateY(-560px);
+  transform: rotate(-90deg) translateY(-345px);
   transform-origin: right top;
   scroll-snap-type: y mandatory;
 }
@@ -25,9 +25,9 @@
   padding: 5px;
   transform: rotate(90deg);
   transform-origin: right top;
-  width: 600px;
+  width: 470px;
   height: 470px;
-  margin: 75px 0;
+  margin: 10px 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -37,9 +37,9 @@
 
 .next-image {
   background-image: url("../../../../../assets/images/home/home-12.png");
-  width: 600px;
+  width: 470px;
   height: 470px;
-  margin: 75px 0;
+  margin: 10px 0;
   padding: 5px;
   transform: rotate(90deg);
   transform-origin: right top;
@@ -65,7 +65,7 @@
 .progress-bar {
   height: 1px;
   background: #C9C9C9;
-  width: 80%;
+  width: 75%;
 }
 
 .arrows-container {
@@ -75,6 +75,11 @@
     outline: none;
     background: none;
   }
+}
+
+.gallery-container {
+  height: 600px;
+  overflow: hidden;
 }
 
 
@@ -134,4 +139,9 @@ div {
     height: $finalHeight;
     margin: 10px 0;
   }
+}
+
+
+@media (max-width: 600px) {
+
 }
