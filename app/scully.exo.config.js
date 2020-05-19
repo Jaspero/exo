@@ -4,7 +4,6 @@ const {Sitemap} = require('@gammastream/scully-plugin-sitemap');
 const {Http404} = require('@gammastream/scully-plugin-http404');
 const lazyImages = require("@notiz/scully-plugin-lazy-images");
 
-const postRenderers = [MinifyHtml];
 const dynamicPages = [
   'blog',
   'experiences',
@@ -27,13 +26,13 @@ exports.config = {
     'seoHrefOptimise',
     Sitemap,
     Http404,
-    lazyImages
+    lazyImages,
+    MinifyHtml
   ],
   routes: dynamicPages.reduce((acc, cur) => {
 
     acc[`/${cur}/:id`] = {
       type: RouteTypes.contentFolder,
-      postRenderers,
       id: {
         folder: './dist/exo/collections/' + cur
       }
