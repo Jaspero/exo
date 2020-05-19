@@ -20,3 +20,33 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .item-price {
+    font-size: 18px;
+  }
+
+  .item-subtitle {
+    text-align: left;
+    width: 100%;
+  }
+
+  .item-img {
+    height: 400px;
+  }
+
+  .nail-bar-menu {
+    margin: 20px 0;
+  }
+
+}

@@ -15,3 +15,31 @@
   background-repeat: no-repeat;
   width: 100vw;
 }
+
+
+@media (max-width: 900px) {
+  .lounge-container {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .item-price {
+    font-size: 18px;
+  }
+
+  .item-img {
+    height: 400px;
+  }
+
+  .category-wrapper {
+    margin: 0;
+    padding: 20px 0;
+  }
+
+}
