@@ -1,15 +1,15 @@
 <h1 class="ta-center">{{data.title}}</h1>
 
-<div class="container m-y-l jc-start">
-  <ng-container *ngFor="let block of data.blocks">
+<div class="container m-y-l jc-start" intersecting [attr.data-animation]="data.animation || 'none'">
+  <ng-container *ngFor="let block of data.blocks; index as index">
     <ng-container [ngSwitch]="block.type">
       <ng-container *ngSwitchCase="'image'">
-        <div class="col-4 col-s-12 events-container flex jc-center ai-center" intersecting [attr.data-animation]="data.animation || 'none'">
+        <div class="col-4 col-s-12 events-container flex jc-center ai-center" [class.nested]="index % 3 === 1">
           <div class="box image" *ngIf="block.image"  [ngStyle]="{'background-image': 'url('+ block.image +')'}"></div>
         </div>
       </ng-container>
       <ng-container *ngSwitchCase="'active'">
-        <div class="col-4 col-s-12 events-container flex jc-center ai-center ta-center" intersecting [attr.data-animation]="data.animation || 'none'">
+        <div class="col-4 col-s-12 events-container flex jc-center ai-center ta-center" [class.nested]="index % 3 === 1">
           <div class="box  image" *ngIf="block.image"  [ngStyle]="{'background-image': 'url('+ block.image +')'}"></div>
           <div class="box flex fw-wrap ai-center jc-center active-container">
             <div class="box-wrapper">
@@ -20,7 +20,7 @@
         </div>
       </ng-container>
       <ng-container *ngSwitchCase="'done'">
-        <div class="col-4 col-s-12 events-container flex jc-center ai-center ta-center" intersecting [attr.data-animation]="data.animation || 'none'">
+        <div class="col-4 col-s-12 events-container flex jc-center ai-center ta-center" [class.nested]="index % 3 === 1">
           <div class="box image" *ngIf="block.image"  [ngStyle]="{'background-image': 'url('+ block.image +')'}"></div>
           <div class="box flex ai-center fw-wrap jc-center done">
             <div class="box-wrapper">
@@ -34,8 +34,8 @@
           </div>
         </div>
       </ng-container>
-      <ng-container *ngSwitchCase="'canceled'" intersecting [attr.data-animation]="data.animation || 'none'">
-        <div class="col-4 col-s-12 events-container flex jc-center ai-center">
+      <ng-container *ngSwitchCase="'canceled'">
+        <div class="col-4 col-s-12 events-container flex jc-center ai-center" [class.nested]="index % 3 === 1">
           <div class="box image" *ngIf="block.image"  [ngStyle]="{'background-image': 'url('+ block.image +')'}"></div>
           <div class="box flex fw-wrap  ai-center jc-center canceled">
             <div class="box-wrapper">

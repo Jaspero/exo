@@ -6,6 +6,7 @@ import {
   OnInit
 } from '@angular/core';
 import {DOCUMENT} from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'exo-header',
@@ -14,7 +15,10 @@ import {DOCUMENT} from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  constructor(@Inject(DOCUMENT) private _document: Document) {}
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private router: Router
+  ) {}
 
   menu = false;
   scrolled = false;
@@ -27,7 +31,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   toggleMenu() {
     this.menu = !this.menu;
-    this._document.body.classList.toggle('of-hidden');
+    this.document.body.classList.toggle('of-hidden');
+  }
+
+  goHome() {
+    this.router.navigate(['/']);
   }
 
   ngOnInit() {
@@ -35,6 +43,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this._document.body.classList.remove('of-hidden');
+    this.document.body.classList.remove('of-hidden');
   }
 }
