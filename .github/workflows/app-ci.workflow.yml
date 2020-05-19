@@ -48,7 +48,7 @@ jobs:
           git add public
           git commit -m "cli: new scully build" -a
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@0.5.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: false

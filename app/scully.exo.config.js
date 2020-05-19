@@ -29,9 +29,6 @@ exports.config = {
     lazyImages,
     MinifyHtml
   ],
-  minifyHtmlOptions: {
-    removeComments: false,
-  },
   routes: dynamicPages.reduce((acc, cur) => {
 
     acc[`/${cur}/:id`] = {
