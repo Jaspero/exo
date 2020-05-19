@@ -5,13 +5,14 @@
   max-height:1410px;
   top: 0;
   left: 20%;
-  width: calc(470px + 1px);
+  width: calc(600px + 1px);
   margin: 0;
   padding-top: 1px;
   overflow-y: auto;
   overflow-x: hidden;
-  transform: rotate(-90deg) translateY(-470px);
+  transform: rotate(-90deg) translateY(-560px);
   transform-origin: right top;
+  scroll-snap-type: y mandatory;
 }
 
 .images {
@@ -24,20 +25,21 @@
   padding: 5px;
   transform: rotate(90deg);
   transform-origin: right top;
-  width: 470px;
+  width: 600px;
   height: 470px;
-  margin: 10px 0;
+  margin: 75px 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
+  scroll-snap-align: center;
 }
 
 .next-image {
   background-image: url("../../../../../assets/images/home/home-12.png");
-  width: 470px;
+  width: 600px;
   height: 470px;
-  margin: 10px 0;
+  margin: 75px 0;
   padding: 5px;
   transform: rotate(90deg);
   transform-origin: right top;
@@ -45,6 +47,7 @@
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
+  scroll-snap-align: center;
 }
 
 
@@ -66,7 +69,7 @@
 }
 
 .arrows-container {
-  max-width: 1200px;
+  max-width: 90%;
   button {
     border: none;
     outline: none;

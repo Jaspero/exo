@@ -8,13 +8,13 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
 export class GalleryBlockComponent {
   data: any;
 
-  @ViewChild('widgetsContent', {static: false}) widgetsContent: ElementRef;
+  @ViewChild('widgetsContent', {static: true}) widgetsContent: ElementRef;
 
   scrollLeft() {
-    this.widgetsContent.nativeElement.scrollLeft -= 1410;
+    this.widgetsContent.nativeElement.scrollLeft -= 600;
   }
 
   scrollRight() {
-    this.widgetsContent.nativeElement.scrollLeft += 1410;
+    this.widgetsContent.nativeElement.scrollLeft += 600;
   }
 }
