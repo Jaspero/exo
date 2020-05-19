@@ -8,7 +8,7 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
 export class GalleryBlockComponent {
   data: any;
 
-  @ViewChild('widgetsContent', {static: true}) widgetsContent: ElementRef;
+  @ViewChild('widgetsContent', {static: false}) widgetsContent: ElementRef;
 
   scrollLeft() {
     this.widgetsContent.nativeElement.scrollLeft -= 600;
