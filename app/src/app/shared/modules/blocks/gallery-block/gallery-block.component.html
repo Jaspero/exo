@@ -7,7 +7,7 @@
   </div>
   <div class="flex fw-wrap jc-end ai-end m-y-m relative gallery-container w-full">
     <div class="gallery-wrapper images">
-      <div class="current-img slides flex ai-end jc-start c-light" #widgetsContent>
+      <div class="current-img slides flex ai-end jc-start c-light" #widgetsContent *ngFor="let image of data.image" [ngStyle]="{'background-image': 'url('+ data.image +')'}">
         <h1>slider</h1>
       </div>
       <div class="col-4 next-image slides flex ai-end jc-start c-light relative">
