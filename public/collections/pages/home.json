@@ -27,13 +27,19 @@
       "animation": "fade-in-from-right",
       "imageSlider": [
         {
-          "image": "/uploads/lounge-3.png"
+          "image": "/uploads/lounge-3.png",
+          "title": "title",
+          "link": "/experiences"
         },
         {
-          "image": "/uploads/contact-main.png"
+          "image": "/uploads/contact-main.png",
+          "title": "title",
+          "link": "/experiences"
         },
         {
-          "image": "/uploads/blog-main.png"
+          "image": "/uploads/blog-main.png",
+          "title": "Title",
+          "link": "/experiences"
         }
       ],
       "title": "Slider",
