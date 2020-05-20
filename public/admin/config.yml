@@ -143,7 +143,7 @@ blocks: &blocks
           fields:
             - {label: "Image", name: "image", widget: "image"}
             - {label: "Title", name: "title", widget: "string"}
-
+            - {label: "Link", name: "link", widget: "string" }
 
 
 
