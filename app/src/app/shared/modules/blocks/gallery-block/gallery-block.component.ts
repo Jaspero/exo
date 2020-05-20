@@ -17,4 +17,7 @@ export class GalleryBlockComponent {
   scrollRight() {
     this.widgetsContent.nativeElement.scrollLeft += 600;
   }
+  ngOnInit() {
+    console.log(this.data);
+  }
 }

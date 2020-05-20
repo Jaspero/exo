@@ -16,12 +16,11 @@
 }
 
 .images {
-  padding: 1410px 0 0 0;
+  padding: 1470px 0 0 0;
 }
 
 
-.current-img {
-  //background-image: url("../../../../../assets/images/home/home-11.png");
+.slider-img {
   padding: 5px;
   transform: rotate(90deg);
   transform-origin: right top;
@@ -35,20 +34,7 @@
   scroll-snap-align: center;
 }
 
-.next-image {
-  background-image: url("../../../../../assets/images/home/home-12.png");
-  width: 470px;
-  height: 470px;
-  margin: 10px 0;
-  padding: 5px;
-  transform: rotate(90deg);
-  transform-origin: right top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  box-sizing: border-box;
-  scroll-snap-align: center;
-}
+
 
 
 .next-image:before {
@@ -82,64 +68,44 @@
   overflow: hidden;
 }
 
-
-
-
-
-
-$finalHeight: 250px;
-$finalWidth: 3 * $finalHeight;
-$scrollBarHeight: 1px;
-
-::-webkit-scrollbar {
-  width: $scrollBarHeight;
-  height: $scrollBarHeight;
+.gallery-wrapper::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
 }
 
-::-webkit-scrollbar-button {
-  width: $scrollBarHeight;
-  height: $scrollBarHeight;
+.gallery-wrapper::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
 }
 
-body {
-  background: #111;
-}
 
-div {
-  box-sizing: border-box;
-}
 
-.horizontal-scroll-wrapper {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: calc(#{$finalHeight} + #{$scrollBarHeight});
-  max-height: $finalWidth;
-  margin: 0;
-  padding-top: $scrollBarHeight;
-  background: #abc;
-  overflow-y: auto;
-  overflow-x: hidden;
-  transform: rotate(-90deg) translateY(-$finalHeight);
-  transform-origin: right top;
-  & > div {
-    display: block;
-    padding: 5px;
-    background: #cab;
-    transform: rotate(90deg);
-    transform-origin: right top;
+@media (max-width: 900px) {
+
+  .images {
+    padding: 1470px 0 0 0;
+  }
+
+  .gallery-wrapper {
+    left: 0;
+    max-height: 100%;
+    transform: rotate(-90deg) translateY(-739px);
   }
 }
 
-.squares {
-  padding: $finalHeight 0 0 0;
-  & > div {
-    width: $finalHeight;
-    height: $finalHeight;
-    margin: 10px 0;
+@media (max-width: 750px) {
+
+  .images {
+    padding: 965px 0 0 0;
+  }
+
+  .gallery-wrapper {
+    left: 0;
+    max-height: 100%;
+    transform: rotate(-90deg) translateY(-460px);
   }
 }
+
 
 
 @media (max-width: 600px) {
@@ -147,14 +113,15 @@ div {
     left: 0;
     width: 450px;
     max-height: 100%;
-    transform: rotate(-90deg) translateY(-400px);
+    transform: rotate(-90deg) translateY(-915px);
   }
 
   .arrows-container {
     max-width: 100%;
   }
 
-  .slides {
+  .slider-img {
+    margin: 25px 0;
     width: 450px;
   }
 
