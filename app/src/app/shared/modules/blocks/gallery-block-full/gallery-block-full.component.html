@@ -1,1 +1,9 @@
-<p>gallery-block-full works!</p>
+<section class="m-y-xl relative gallery">
+  <div class="gallery-outer">
+    <div class="gallery-wrapper">
+      <div  class="gallery-image"  *ngFor="let image of data.imageSlider" [ngStyle]="{'background-image': 'url('+ image.image +')'}">
+      </div>
+    </div>
+  </div>
+
+</section>

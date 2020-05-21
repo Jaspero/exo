@@ -1,0 +1,48 @@
+.gallery {
+  height: 700px;
+  &-outer {
+    width: 700px;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-700px);
+    transform-origin: top left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    scroll-snap-type: y mandatory;
+  }
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 1000vw;
+    transform: rotate(90deg) translateY(-700px);
+    transform-origin: top left;
+  }
+  &-image {
+    padding: 5px;
+    transform-origin: right top;
+    width: 100vw;
+    height: 700px;
+    margin: 10px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    scroll-snap-align: center;
+  }
+}
+
+.gallery-outer::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+.gallery-outer::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
+
+
+
+
+
+
