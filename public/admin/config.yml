@@ -145,6 +145,17 @@ blocks: &blocks
             - {label: "Title", name: "title", widget: "string"}
             - {label: "Link", name: "link", widget: "string" }
 
+    - label: "Gallery Full"
+      name: "galleryFull"
+      widget: "object"
+      fields:
+        - <<: *animation
+        - label: "Image Slider"
+          name: "imageSlider"
+          widget: "list"
+          fields:
+            - {label: "Image", name: "image", widget: "image"}
+
 
 
     - label: "Events Block"

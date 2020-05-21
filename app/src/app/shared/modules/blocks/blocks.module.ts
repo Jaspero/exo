@@ -16,6 +16,7 @@ import {ImageLButtonComponent} from './image-l-button/image-l-button.component';
 import {IntersectionModule} from '../intersecting/intersection.module';
 import {EventsBlockComponent} from './events-block/events-block.component';
 import {GalleryBlockComponent} from './gallery-block/gallery-block.component';
+import {GalleryBlockFullComponent} from './gallery-block-full/gallery-block-full.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import {GalleryBlockComponent} from './gallery-block/gallery-block.component';
     EventsBlockComponent,
     GalleryBlockComponent,
 
-    BlockRendererComponent
+    BlockRendererComponent,
+
+    GalleryBlockFullComponent
   ],
   exports: [BlockRendererComponent],
   imports: [CommonModule, RouterModule, IntersectionModule]
