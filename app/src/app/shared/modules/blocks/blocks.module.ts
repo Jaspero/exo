@@ -33,10 +33,9 @@ import {GalleryBlockFullComponent} from './gallery-block-full/gallery-block-full
     ImageLButtonComponent,
     EventsBlockComponent,
     GalleryBlockComponent,
+    GalleryBlockFullComponent,
 
-    BlockRendererComponent,
-
-    GalleryBlockFullComponent
+    BlockRendererComponent
   ],
   exports: [BlockRendererComponent],
   imports: [CommonModule, RouterModule, IntersectionModule]

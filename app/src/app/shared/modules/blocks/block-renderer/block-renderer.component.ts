@@ -19,6 +19,7 @@ import {ImageRButtonComponent} from '../image-r-button/image-r-button.component'
 import {ImageLButtonComponent} from '../image-l-button/image-l-button.component';
 import {EventsBlockComponent} from '../events-block/events-block.component';
 import {GalleryBlockComponent} from '../gallery-block/gallery-block.component';
+import {GalleryBlockFullComponent} from '../gallery-block-full/gallery-block-full.component';
 
 const BLOCKS_MAP: {[key: string]: any} = {
   [Block.ImageR]: ImageRBlockComponent,
@@ -33,7 +34,8 @@ const BLOCKS_MAP: {[key: string]: any} = {
   [Block.ImageRightButton]: ImageRButtonComponent,
   [Block.ImageLeftButton]: ImageLButtonComponent,
   [Block.EventsBlock]: EventsBlockComponent,
-  [Block.GalleryBlock]: GalleryBlockComponent
+  [Block.GalleryBlock]: GalleryBlockComponent,
+  [Block.GalleryFullBlock]: GalleryBlockFullComponent
 };
 
 @Component({

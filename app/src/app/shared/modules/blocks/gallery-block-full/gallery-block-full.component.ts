@@ -6,8 +6,6 @@ import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
   styleUrls: ['./gallery-block-full.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GalleryBlockFullComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class GalleryBlockFullComponent {
+  data: any;
 }
