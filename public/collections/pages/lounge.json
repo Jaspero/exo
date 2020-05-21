@@ -21,9 +21,19 @@
       "animation": "fade-in-from-right"
     },
     {
-      "type": "imageFull",
-      "image": "/uploads/lounge-3.png",
-      "animation": "fade-in"
+      "type": "galleryFull",
+      "animation": "fade-in-from-left",
+      "imageSlider": [
+        {
+          "image": "/uploads/lounge-3.png"
+        },
+        {
+          "image": "/uploads/lounge.png"
+        },
+        {
+          "image": "/uploads/single-product-main.png"
+        }
+      ]
     },
     {
       "type": "imageL",
