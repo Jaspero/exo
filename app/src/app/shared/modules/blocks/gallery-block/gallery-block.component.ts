@@ -18,6 +18,6 @@ export class GalleryBlockComponent {
     this.widgetsContent.nativeElement.scrollLeft += 600;
   }
   ngOnInit() {
-    console.log(this.data);
+    console.log(this.widgetsContent);
   }
 }
