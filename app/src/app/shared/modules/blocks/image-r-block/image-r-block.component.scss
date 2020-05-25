@@ -36,6 +36,7 @@
     justify-content: center;
     flex-wrap: wrap;
     &-content {
+      text-align: justify;
       order:3;
     }
     &-title {

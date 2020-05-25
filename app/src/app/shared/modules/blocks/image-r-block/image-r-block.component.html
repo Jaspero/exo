@@ -4,7 +4,7 @@
     <div class="col-5 col-s-6 col-xs-12 c-dark ta-left content-wrapper">
       <div *ngIf="!data.belowImg; else belowImg">
         <h3 class="m-y-s title"  intersecting [attr.data-animation]="data.animation || 'none'">{{data.title}}</h3>
-        <div class="font-primary" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'"></div>
+        <div class="font-primary mobile-wrapper-content" [innerHTML]="data.content" intersecting [attr.data-animation]="data.animation || 'none'"></div>
       </div>
       <ng-template #belowImg>
         <div class="ta-left mobile-wrapper">
